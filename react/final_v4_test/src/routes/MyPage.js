@@ -54,7 +54,7 @@ const MyPage = () => {
                     <div className="author_thumb veryfied">
                       <figure className="ott_logo">
                         <img
-                          src="img/netflix_logo.jpeg"
+                          src="img/netflix_logo.png"
                           alt=""
                           className="lazy"
                           width="100"

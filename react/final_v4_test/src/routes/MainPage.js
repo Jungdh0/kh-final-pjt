@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MainPage = () => {
   return (
@@ -56,10 +56,7 @@ const MainPage = () => {
         </div>
         {/*/carousel*/}
         <div className="bg_gray">
-          <div
-            className="container margin_120_90"
-            style={{ paddingTop: "90px" }}
-          >
+          <div className="container margin_120_90" style={{ paddingTop: '90px' }}>
             <div className="main_title version_2">
               <span>
                 <em />
@@ -69,7 +66,7 @@ const MainPage = () => {
             {/* /main_title */}
             <div className="row author_list">
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>1</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -86,7 +83,7 @@ const MainPage = () => {
                   <div>
                     <h6>사내맞선</h6>
                     <span>
-                      <img src="img/netflix_logo.jpeg" width="20px" alt="" />
+                      <img src="img/netflix_logo.png" width="20px" alt="" />
                     </span>
                     <span>
                       <img src="img/wavve_logo.png" width="20px" alt="" />
@@ -95,7 +92,7 @@ const MainPage = () => {
                 </a>
               </div>
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>2</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -112,13 +109,13 @@ const MainPage = () => {
                   <div>
                     <h6>사내맞선</h6>
                     <span>
-                      <img src="img/netflix_logo.jpeg" width="20px" alt="" />
+                      <img src="img/netflix_logo.png" width="20px" alt="" />
                     </span>
                   </div>
                 </a>
               </div>
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>3</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -135,13 +132,13 @@ const MainPage = () => {
                   <div>
                     <h6>사내맞선</h6>
                     <span>
-                      <img src="img/netflix_logo.jpeg" width="20px" alt="" />
+                      <img src="img/netflix_logo.png" width="20px" alt="" />
                     </span>
                   </div>
                 </a>
               </div>
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>4</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -165,7 +162,7 @@ const MainPage = () => {
                 </a>
               </div>
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>5</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -188,7 +185,7 @@ const MainPage = () => {
                 </a>
               </div>
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>6</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -205,13 +202,13 @@ const MainPage = () => {
                   <div>
                     <h6>사내맞선</h6>
                     <span>
-                      <img src="img/netflix_logo.jpeg" width="20px" alt="" />
+                      <img src="img/netflix_logo.png" width="20px" alt="" />
                     </span>
                   </div>
                 </a>
               </div>
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>7</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -234,7 +231,7 @@ const MainPage = () => {
                 </a>
               </div>
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>8</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -251,14 +248,14 @@ const MainPage = () => {
                   <div>
                     <h6>사내맞선</h6>
                     <span>
-                      {" "}
-                      <img src="img/netflix_logo.jpeg" width="20px" alt="" />
+                      {' '}
+                      <img src="img/netflix_logo.png" width="20px" alt="" />
                     </span>
                   </div>
                 </a>
               </div>
               <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author">
+                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                   <strong>9</strong>
                   <div className="author_thumb veryfied">
                     {/* <i class="bi bi-check"></i> */}
@@ -275,7 +272,7 @@ const MainPage = () => {
                   <div>
                     <h6>사내맞선</h6>
                     <span>
-                      <img src="img/netflix_logo.jpeg" width="20px" alt="" />
+                      <img src="img/netflix_logo.png" width="20px" alt="" />
                       <img src="img/tving_logo.jpeg" width="20px" alt="" />
                     </span>
                   </div>
@@ -284,7 +281,7 @@ const MainPage = () => {
             </div>
           </div>
         </div>
-      </main>{" "}
+      </main>{' '}
     </div>
   );
 };
