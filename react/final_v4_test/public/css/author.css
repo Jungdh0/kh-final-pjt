@@ -197,8 +197,8 @@
   box-shadow: none !important;
 }
 .form-switch .form-check-input:checked {
-  background-color: var(--color-3);
-  border-color: var(--color-3);
+  background-color: var(--color-1);
+  border-color: var(--color-1);
   box-shadow: none;
 }
 
