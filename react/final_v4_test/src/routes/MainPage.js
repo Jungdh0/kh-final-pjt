@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import movies from '../sampledata/OTT별 작품 - 샘플 데이터.json';
 
 const MainPage = () => {
   return (
@@ -65,214 +66,30 @@ const MainPage = () => {
             </div>
             {/* /main_title */}
             <div className="row author_list">
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>1</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
+              {movies.map((movie, i) => {
+                if (i > 8) {
+                  return;
+                }
+                return (
+                  <div className="col-lg-4 col-md-6" key={i}>
+                    <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
+                      <strong>{i + 1}</strong>
+                      <div className="author_thumb veryfied">
+                        {/* <i class="bi bi-check"></i> */}
+                        <figure>
+                          <img src={movie.content_img_ver} alt="" className="lazy" width={100} height={100} />
+                        </figure>
+                      </div>
+                      <div>
+                        <h6>{movie.content_name}</h6>
+                        <span>
+                          <img src="img/netflix_logo.png" width="20px" alt="" />
+                        </span>
+                      </div>
+                    </a>
                   </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      <img src="img/netflix_logo.png" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>2</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      <img src="img/netflix_logo.png" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>3</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      <img src="img/netflix_logo.png" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>4</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      <img src="img/tving_logo.jpeg" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>5</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      <img src="img/wavve_logo.png" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>6</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      <img src="img/netflix_logo.png" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>7</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      <img src="img/tving_logo.jpeg" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>8</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      {' '}
-                      <img src="img/netflix_logo.png" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
-              <div className="col-lg-4 col-md-6">
-                <a href="author.html" className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                  <strong>9</strong>
-                  <div className="author_thumb veryfied">
-                    {/* <i class="bi bi-check"></i> */}
-                    <figure>
-                      <img
-                        src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                        alt=""
-                        className="lazy"
-                        width={100}
-                        height={100}
-                      />
-                    </figure>
-                  </div>
-                  <div>
-                    <h6>사내맞선</h6>
-                    <span>
-                      <img src="img/tving_logo.jpeg" width="20px" alt="" />
-                    </span>
-                  </div>
-                </a>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>
