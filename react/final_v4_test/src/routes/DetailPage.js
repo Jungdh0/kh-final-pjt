@@ -12,7 +12,7 @@ const DetailPage = () => {
                         >
                             <figure>
                                 <img
-                                    src="img/poster/breaking_bad.jpeg"
+                                    src="img/items/item-1-placeholder.png"
                                     alt=""
                                     className="img-fluid rounded"
                                     height="700"
@@ -34,28 +34,22 @@ const DetailPage = () => {
                                                             src="img/netflix_logo.png"
                                                             alt=""
                                                             className="lazy loaded"
-                                                            width="10"
-                                                            height="100"
                                                             data-was-processed="true"
                                                         />
                                                     </figure>
-                                                    <figure style={{height: 30, width: 30}}>
+                                                    <figure style={{height: 28, width: 28}}>
                                                         <img
                                                             src="img/tving_logo.jpeg"
                                                             alt=""
                                                             className="lazy loaded"
-                                                            width="100"
-                                                            height="100"
                                                             data-was-processed="true"
                                                         />
                                                     </figure>
-                                                    <figure style={{height: 30, width: 30}}>
+                                                    <figure style={{height: 28, width: 28}}>
                                                         <img
                                                             src="img/wavve_logo.png"
                                                             alt=""
                                                             className="lazy loaded"
-                                                            width="100"
-                                                            height="100"
                                                             data-was-processed="true"
                                                         />
                                                     </figure>
@@ -144,14 +138,13 @@ const DetailPage = () => {
                                                 role="tabpanel"
                                                 aria-labelledby="heading-A"
                                             >
-                                                <div className="pt-4">
+                                                <div className="pt-4" id="service_ott">
                                                     <div className="author_list">
                                                         <a href="author.html" className="author">
                                                             <div className="author_thumb veryfied">
                                                                 <figure>
                                                                     <img
-                                                                        src="img/netflix_logo.jpeg"
-                                                                        data-src="img/netflix_logo.jpeg"
+                                                                        src="img/netflix_logo.png"
                                                                         alt=""
                                                                         className="lazy"
                                                                         width="100"

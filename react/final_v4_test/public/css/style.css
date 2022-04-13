@@ -7312,7 +7312,7 @@ ul.top_menu > li a.btn_access:hover {
 }
 .author .author_thumb figure img {
   width: 30px;
-  height: auto;
+  height: -webkit-fill-available;
 }
 .author .author_thumb.veryfied i {
   font-size: 14px;

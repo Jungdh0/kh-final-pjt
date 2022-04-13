@@ -72,7 +72,7 @@ const MainPage = () => {
                 }
                 return (
                   <div className="col-lg-4 col-md-6" key={i}>
-                    <Link to ="/DetailPage"className="author" style={{ padding: '15px 15px 15px 55px' }}>
+                    <Link to="/detailPage" className="author" style={{ padding: '15px 15px 15px 55px' }}>
                       <strong>{i + 1}</strong>
                       <div className="author_thumb veryfied">
                         {/* <i class="bi bi-check"></i> */}

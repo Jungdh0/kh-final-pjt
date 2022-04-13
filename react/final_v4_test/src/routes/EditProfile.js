@@ -63,7 +63,7 @@ const EditProfile = () => {
                               id="custom-switch"
                               // label="Netflix"
                           />
-                          <p>Netflix</p>
+                          <p>넷플릭스</p>
                         </div>
                         <div className="col-md-2"/>
                       </div>
@@ -84,7 +84,7 @@ const EditProfile = () => {
                               type="switch"
                               id="custom-switch"
                           />
-                          <p>Tving</p>
+                          <p>티빙</p>
                         </div>
                       </div>
 
@@ -104,7 +104,7 @@ const EditProfile = () => {
                               type="switch"
                               id="custom-switch"
                           />
-                          <p>Wavve</p>
+                          <p>웨이브</p>
                         </div>
                       </div>
 
