@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import OpenMenu from './OpenMenu';
-import { slide as Menu } from 'react-burger-menu';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
 const Header = () => {
