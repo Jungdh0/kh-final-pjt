@@ -12,7 +12,6 @@ const EditProfile = () => {
               <div className="main_profile edit_section">
                 <div className="author">
                   <div className="author_thumb veryfied">
-                    <i className="bi bi-check"></i>
                     <figure>
                       <img src="img/profile.svg" alt="" className="lazy" width="100" height="100" />
                     </figure>
