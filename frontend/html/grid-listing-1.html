@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PopCon - All about OTT service" />
+    <meta name="author" content="Ansonika" />
+    <title>PopCon</title>
+
+    <!-- FAVICONS-->
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/color/344/popcorn.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      href="img/apple-touch-icon-57x57-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="72x72"
+      href="img/apple-touch-icon-72x72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="114x114"
+      href="img/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="144x144"
+      href="img/apple-touch-icon-144x144-precomposed.png"
+    />
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- SPECIFIC CSS -->
+    <link href="css/listing.css" rel="stylesheet" />
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="header_in clearfix element_to_stick">
+      <div class="layer"></div>
+      <!-- Opacity Mask Menu Mobile -->
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="img/popcon_logo_test.png"
+              alt=""
+              width="160.62"
+              height="31"
+            />
+          </a>
+        </div>
+        <a href="#0" class="open_close">
+          <i class="bi bi-list"></i><span>Menu</span>
+        </a>
+        <nav class="main-menu">
+          <div id="header_menu">
+            <a href="#0" class="open_close">
+              <i class="bi bi-x"></i>
+            </a>
+            <a href="index.html" class="logo_menu">
+              <img
+                src="img/popcon_logo_test.png"
+                alt=""
+                width="160.62"
+                height="31"
+                class="dark lazy"
+              />
+            </a>
+          </div>
+          <ul>
+            <li class="submenu">
+              <a href="index.html" class="show-submenu">Home</a>
+            </li>
+            <li class="submenu">
+              <a href="grid-listing-1.html" class="show-submenu">Explore</a>
+            </li>
+            <li class="submenu">
+              <a href="zzim.html" class="show-submenu">Like</a>
+            </li>
+            <li class="submenu">
+              <a href="mypage.html" class="show-submenu">My page</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="filters_full element_to_stick">
+        <div class="container">
+          <div class="add_bottom_20 clearfix">
+            <div class="custom_select">
+              <select name="sort" id="sort">
+                <option value="popularity" selected="selected">
+                  Sort by Popularity
+                </option>
+                <option value="rating">Sort by Newness</option>
+                <option value="date">Sort by Trending</option>
+              </select>
+            </div>
+            <a
+              href="#collapseFilters"
+              data-bs-toggle="collapse"
+              class="btn_filters"
+              ><i class="bi bi-filter"></i><span>Filters</span></a
+            >
+            <div class="search_bar_list">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search again..."
+              />
+            </div>
+            <a
+              class="btn_search_mobile btn_filters"
+              data-bs-toggle="collapse"
+              href="#collapseSearch"
+              ><i class="bi bi-search"></i
+            ></a>
+          </div>
+        </div>
+        <div class="collapse filters_2" id="collapseFilters">
+          <div class="container margin_detail">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="filter_type">
+                  <h6>Categories</h6>
+                  <ul>
+                    <li>
+                      <label class="container_check"
+                        >드라마 <small>112</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >SF <small>90</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >로맨스 <small>140</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >액션 <small>43</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >공포 <small>23</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >스릴러 <small>23</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--검색옵션
+              <div class="col-md-3">
+                <div class="filter_type">
+                  <h6>Colors</h6>
+                  <ul>
+                    <li>
+                      <label class="container_check"
+                        >Black <small>12</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >Green <small>25</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >Purple <small>56</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >Blue <small>87</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_check"
+                        >White <small>43</small>
+                        <input type="checkbox" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            -->
+              <div class="col-md-3">
+                <div class="filter_type">
+                  <h6>Status</h6>
+                  <ul>
+                    <li>
+                      <label class="container_radio"
+                        >시즌 진행중<small>11</small>
+                        <input type="radio" name="filter_4" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="container_radio"
+                        >완결<small>08</small>
+                        <input type="radio" name="filter_4" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 범위설정
+              <div class="col-md-3">
+                <div class="filter_type">
+                  <h6>Price</h6>
+                  <div class="range_input">
+                    Price range from 0 to <span></span> ETH
+                  </div>
+                  <div>
+                    <input
+                      type="range"
+                      min="1"
+                      max="5"
+                      step="0.2"
+                      value="4"
+                      data-orientation="horizontal"
+                    />
+                  </div>
+                </div>
+              </div>
+            --></div>
+            <!-- /row -->
+          </div>
+        </div>
+        <!-- /filters -->
+        <div class="collapse" id="collapseSearch">
+          <div class="search_bar_list">
+            <input type="text" class="form-control" placeholder="Search..." />
+          </div>
+        </div>
+        <!-- /collapseSearch -->
+      </div>
+      <!-- /filters_full -->
+      <div class="container margin_30_40">
+        <div class="page_header">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">category</a></li>
+              <li>인기 콘텐츠</li>
+            </ul>
+          </div>
+          <h1>All:</h1>
+          <span> 114 found</span>
+          <nav class="sausage-links">
+            <ul>
+              <li><a href="">맛깔나는</a></li>
+              <li><a href="">방구석여행</a></li>
+              <li><a href="">냠냠쩝쩝</a></li>
+              <li><a href="">잔혹한</a></li>
+              <li><a href="">심장마비오는</a></li>
+              <li><a href="">브금맛집</a></li>
+              <li><a href="">감정을 파고드는</a></li>
+              <li><a href="">폰할머니집</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- /page_header -->
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
+                  data-src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>사내 맞선</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb veryfied">
+                      <figure>
+                        <img
+                          src="img/tving_logo.jpeg"
+                          data-src="img/tving_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>티빙</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  129
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="img/items/item-1-placeholder.png"
+                  data-src="img/poster/stranger_things.jpeg"
+                  class="lazy"
+                  alt=""
+                  width="400"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>기묘한 이야기</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb veryfied">
+                      <figure>
+                        <img
+                          src="img/netflix_logo.jpeg"
+                          data-src="img/netflix_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>넷플릭스</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  173
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="img/poster/breaking_bad.jpeg"
+                  data-src="img/poster/breaking_bad.jpeg"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>브레이킹 배드</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb veryfied">
+                      <figure>
+                        <img
+                          src="img/netflix_logo.jpeg"
+                          data-src="img/netflix_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>넷플릭스</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  150
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="img/items/item-1-placeholder.png"
+                  data-src="img/poster/오징어게임.jpeg"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>오징어게임</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb">
+                      <figure>
+                        <img
+                          src="img/netflix_logo.jpeg"
+                          data-src="img/netflix_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>넷플릭스</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  50
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="https://image.tving.com/upload/cms/caip/CAIP0900/P001565742.jpg/dims/resize/F_webp,400"
+                  data-src="https://image.tving.com/upload/cms/caip/CAIP0900/P001565742.jpg/dims/resize/F_webp,400"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>돼지의 왕</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb veryfied">
+                      <figure>
+                        <img
+                          src="img/tving_logo.jpeg"
+                          data-src="img/tving_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>티빙</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  159
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="img/items/item-1-placeholder.png"
+                  data-src="img/poster/엘리트들.jpeg"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>엘리트들</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb">
+                      <figure>
+                        <img
+                          src="img/netflix_logo.jpeg"
+                          data-src="img/netflix_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>넷플릭스</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  112
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="img/items/item-1-placeholder.png"
+                  data-src="img/poster/퀸스갬빗.jpeg"
+                  class="lazy"
+                  alt=""
+                  width="598"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>퀸스갬빗</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb veryfied">
+                      <figure>
+                        <img
+                          src="img/netflix_logo.jpeg"
+                          data-src="img/netflix_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>넷플릭스</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  50
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="https://image.tving.com/upload/cms/caip/CAIP0900/P001568029.jpg/dims/resize/480"
+                  data-src="https://image.tving.com/upload/cms/caip/CAIP0900/P001568029.jpg/dims/resize/480"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>군검사 도베르만</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb veryfied">
+                      <figure>
+                        <img
+                          src="img/tving_logo.jpeg"
+                          data-src="img/tving_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>티빙</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  129
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="https://img.wavve.com/202009/20200907/cf54608dbb9c3c759e65960882ed32ef_w720_h1080_q75.jpg"
+                  data-src="https://img.wavve.com/202009/20200907/cf54608dbb9c3c759e65960882ed32ef_w720_h1080_q75.jpg"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>개는 훌륭하다</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb veryfied">
+                      <figure>
+                        <img
+                          src="img/wavve_logo.png"
+                          data-src="img/wavve_logo.png"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>웨이브</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  138
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="img/items/item-1-placeholder.png"
+                  data-src="https://www.themoviedb.org/t/p/original/a80pxtZrNSyqrME9rmFC6sZevZ7.jpg"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>브리저튼</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb">
+                      <figure>
+                        <img
+                          src="img/netflix_logo.jpeg"
+                          data-src="img/netflix_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>넷플릭스</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  50
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div class="strip">
+              <figure>
+                <img
+                  src="img/items/item-1-placeholder.png"
+                  data-src="https://w.namu.la/s/c48ea86da27e21d0af779a454e2ca64dfdcb1dd0068a685c4443fccdce41f29ddf70ec0618557918004adba35b2702c4fc4a20444fc31a5efb1da82e9761ca51dc8f3f25cafc526687444bd2f6b84b0ac0426cd1f9dd7ce8422e2e6a3f840b04"
+                  class="lazy"
+                  alt=""
+                  width="533"
+                  height="400"
+                />
+                <a href="detail-page.html" class="strip_info">
+                  <div class="item_title">
+                    <h3>지금 우리 학교는</h3>
+                  </div>
+                </a>
+              </figure>
+              <ul>
+                <li>
+                  <a href="" class="author">
+                    <div class="author_thumb">
+                      <figure>
+                        <img
+                          src="img/netflix_logo.jpeg"
+                          data-src="img/netflix_logo.jpeg"
+                          alt=""
+                          class="lazy"
+                          width="100"
+                          height="100"
+                        />
+                      </figure>
+                    </div>
+                    <h6>넷플릭스</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="#0" class="wish_bt"
+                    ><i class="bi bi-heart-fill"></i
+                  ></a>
+                  141
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /strip grid -->
+
+          <!-- /strip grid -->
+        </div>
+        <!-- /row -->
+        <div class="pagination_fg mb-4">
+          <a href="#">«</a>
+          <a href="#" class="active">1</a>
+
+          <a href="#">»</a>
+        </div>
+      </div>
+      <!-- /container -->
+    </main>
+    <!-- /main -->
+
+    <footer>
+      <div class="container">
+        <div class="row add_bottom_25">
+          <div class="col-md-6">
+            <ul class="footer-selector clearfix">
+              <li>
+                <div class="styled-select lang-selector">
+                  <select>
+                    <option value="English">English</option>
+                    <option value="Korean" selected>Korean</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="additional_links">
+              <li><a href="#0">Terms and conditions</a></li>
+              <li>© 2022 PopCon</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toTop"></div>
+    <!-- Back to top button -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="js/common_scripts.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/common_func.js"></script>
+
+    <!-- SPECIFIC SCRIPTS -->
+    <script src="js/sticky_sidebar.min.js"></script>
+    <script src="js/specific_listing.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopCon</title>
+    <!-- FAVICONS-->
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" /> -->
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png" />
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png" />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="114x114"
+      href="img/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="144x144"
+      href="img/apple-touch-icon-144x144-precomposed.png"
+    />
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+    <!-- <link href="css/test-main.css" rel="stylesheet" />
+    <link href="css/question.css" rel="stylesheet" /> -->
+  </head>
+  <body>
+    <div class="container">
+      <section id="main" class="mx-auto my-5 py-5 px-3">
+        <h3>당신의 영화와 드라마 취향을 찾아보세요</h3>
+        <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+          <img src="https://img.icons8.com/color/344/popcorn.png" alt="" class="img-fluid" />
+        </div>
+        <p>
+          간단한 테스트를 통해 취향에 맞는 콘텐츠를 알아 볼 수 있습니다!<br />
+          아래 시작하기 버튼을 눌러 시작해 주세요.
+        </p>
+        <button class="default-btn mt-3" onclick="js:begin();">시작하기</button>
+      </section>
+      <section id="qna">
+        <div class="status mx-auto mt-5">
+          <div class="statusBar"></div>
+        </div>
+        <div class="qBox mx-auto my-5 py-3 text-center"></div>
+        <div class="answerBox"></div>
+
+        <!-- <div class="row justify-content-evenly">
+            <div class="col-lg-4 p-3">
+              <div class="images">
+                <img
+                  src="https://cdn.pixabay.com/photo/2016/11/30/14/08/cafe-1872888_960_720.jpg"
+                  class="rounded float-start"
+                  alt="..."
+                  width="100%"
+                />
+                <h3 class="choice">선택지</h3>
+              </div>
+            </div>
+            <div class="col-lg-4 p-3">
+              <img
+                src="https://cdn.pixabay.com/photo/2016/02/23/23/32/beer-1218742_960_720.jpg"
+                class="rounded float-end"
+                alt="..."
+                width="100%"
+              />
+              <h3 class="choice">선택지</h3>
+            </div>
+          </div>
+        </div> -->
+      </section>
+      <section id="result" class="mx-auto mt-5 py-5 px-3">
+        <div id="resultImg" class="col-lg-6 col-md-8 col-sm-10 mx-auto"></div>
+        <div class="px-3 mt-3 text-center">
+          <h3 class="py-3">당신의 유형은?</h3>
+          <span class="resultname highlight"></span>
+          <div class="resultDesc col-lg-6 col-md-8 col-sm-10 mx-auto py-3"></div>
+        </div>
+        <div class="row" id="resultImgs">
+          <div class="col-sm-4">
+            <img src="" class="leftImage" alt="..." width="100%" />
+          </div>
+          <div class="col-sm-4">
+            <img src="" class="centerImage" alt="..." width="100%" />
+          </div>
+          <div class="col-sm-4">
+            <img src="" class="rightImage" alt="..." width="100%" />
+          </div>
+        </div>
+        <div>
+          <button class="default-btn mt-3" syonclick="location.href='login.html'">더 많은 추천 보러가기</button>
+        </div>
+        <div><button type="button" class="btn btn-warning mt-3 mx-auto"><img src="img/KakaoTalk_logo.png" style="width: 30px;" class="px-1" />공유하기</button></div>
+      </section>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js" charset="utf-8"></script>
+    <script src="js/start.js" charset="uft-8"></script>
+  </body>
+</html>
