@@ -20,7 +20,7 @@
 #login figure,
 #register figure {
   text-align: center;
-  padding: 170px 60px 180px 60px;
+  padding: 170px 0 180px 0;
   margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -76,7 +76,7 @@ a.social_bt {
   border-radius: 3px;
   text-align: center;
   color: #191919;
-  min-width: 200px;
+  /* min-width: 200px; */
   margin-bottom: 5px;
   display: block;
   padding: 12px;
@@ -203,7 +203,6 @@ body{ -ms-overflow-style: none; }
   display: inline-block;
   padding: 10px 15px;
   text-decoration: none;
-  font-weight: bold;
   
 }
 .sausage-links ul li a:hover,
@@ -783,13 +782,6 @@ p {
   padding-bottom: 41px;
 }
 
-/*======================================================*/
-
 #netflix_edit, #tving_edit, #wavve_edit {
   border-radius: 5px;
 }
-
-#service_ott{
-  padding-top: 5.5rem !important;
-}
-
