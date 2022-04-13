@@ -48,9 +48,10 @@ const EditProfile = () => {
                     <div className="row col-md-12 ps-lg-12 edit_ott_logos">
 
                       <div className="row col-lg-4 ps-lg-6" id="ott_edit">
-                        <div className="col-md-7" id="netflix_edit">
+                        <div className="col-md-7">
                           <img
-                              src="img/netflix_logo.jpeg"
+                              id="netflix_edit"
+                              src="img/netflix_logo.png"
                               alt="netflix_logo"
                               className="lazy"
                               width="100"
@@ -69,13 +70,14 @@ const EditProfile = () => {
                       </div>
 
                       <div className="row col-lg-4 ps-lg-6" id="ott_edit">
-                        <div className="col-md-7" id="tving_edit">
+                        <div className="col-md-7">
                           <img
+                            id="tving_edit"
                             src="img/tving_logo.jpeg"
                             alt="tving_logo"
-                            id="lazy"
-                            width="100"
-                            height="100"
+                            className="lazy"
+                            width="95"
+                            height="95"
                           />
                         </div>
                         <div className="col-md-5">
@@ -88,13 +90,14 @@ const EditProfile = () => {
                       </div>
 
                       <div className="row col-lg-4 ps-lg-6" id="ott_edit">
-                        <div className="col-md-7" id="wavve_edit">
+                        <div className="col-md-7">
                           <img
+                              id="wavve_edit"
                               src="img/wavve_logo.png"
                               alt="wavve_logo"
                               className="lazy"
-                              width="100"
-                              height="100"
+                              width="95"
+                              height="95"
                           />
                         </div>
                         <div className="col-md-5">

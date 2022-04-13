@@ -3,7 +3,7 @@ import React from "react";
 const LikePage = () => {
   return <div>
     <main>
-      <div className="container margin_30_40">
+      <div className="container margin_30_40" id="wrapper" style={{paddingTop: 60}}>
         <div className="row justify-content-center">
           <div className="col-lg-3 col-md-6">
             <div className="main_profile">

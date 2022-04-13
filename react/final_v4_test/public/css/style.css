@@ -6794,15 +6794,15 @@ ul.top_menu > li a.btn_access:hover {
   display: block;
 }
 .main_title span em {
-  width: 50px;
+  width: 60px;
   height: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
   background: var(--color-1);
-  background: -webkit-linear-gradient(left, var(--color-1), var(--color-2));
-  background: linear-gradient(to right, var(--color-1), var(--color-2));
+  /*background: -webkit-linear-gradient(left, var(--color-1), var(--color-2));*/
+  /*background: linear-gradient(to right, var(--color-1), var(--color-2));*/
   display: block;
 }
 @media (max-width: 767px) {
@@ -6814,7 +6814,7 @@ ul.top_menu > li a.btn_access:hover {
   font-size: 28px;
   font-size: 1.75rem;
   max-width: 600px;
-  margin: 20px 0 0 0;
+  margin: 12px 0 0 0;
 }
 @media (max-width: 767px) {
   .main_title h2 {

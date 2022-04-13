@@ -13,14 +13,14 @@
   width: 10px;
   z-index: 2;
 }
-.sausage-links:before {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
-  right: 0;
-}
-.sausage-links:after {
-  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
-  left: 0;
-}
+/*.sausage-links:before {*/
+/*  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #7e2ad1 100%);*/
+/*  right: 0;*/
+/*}*/
+/*.sausage-links:after {*/
+/*  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #7e2ad1 100%);*/
+/*  left: 0;*/
+/*}*/
 .sausage-links ul {
   display: flex;
   flex-wrap: nowrap;
@@ -31,20 +31,22 @@
 .sausage-links ul li {
   padding: 0 8px;
   white-space: nowrap;
+  list-style: none;
 }
 .sausage-links ul li a,
 .sausage-links ul li a:visited {
-  border: 1px solid lightgrey;
+  border: 2px solid #36313d;
   border-radius: 50px;
-  color: dodgerblue;
+  color: #7e2ad1;
   display: inline-block;
   padding: 10px 15px;
   text-decoration: none;
 }
 .sausage-links ul li a:hover,
 .sausage-links ul li a:visited:hover {
-  background: #ebf5ff;
-  border-color: dodgerblue;
+  color: #fff;
+  background: #7e2ad1;
+  border: none;
   box-shadow: 0 2px 4px rgba(0, 90, 156, 0.15);
 }
 /* 메인 -슬라이더 추가*/
@@ -649,4 +651,8 @@ p {
 #ott_logos {
   padding-top: 41px;
   padding-bottom: 41px;
+}
+
+#netflix_edit, #tving_edit, #wavve_edit {
+  border-radius: 5px;
 }
