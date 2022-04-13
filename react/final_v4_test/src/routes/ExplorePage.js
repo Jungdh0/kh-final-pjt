@@ -184,7 +184,7 @@ const ExplorePage = () => {
                   <div className="strip" key={i}>
                     <figure>
                       <img src={movie.content_img_ver} className="lazy" alt="" width="533" height="400" />
-                      <Link to="detail-page.html" className="strip_info">
+                      <Link to="/detailPage" className="strip_info">
                         <div className="item_title">
                           <h3>{movie.content_name}</h3>
                         </div>
