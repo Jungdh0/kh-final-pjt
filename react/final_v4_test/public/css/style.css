@@ -5727,7 +5727,7 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   /*font-family: "Poppins", sans-serif;*/
-  font-family: 'KoPubDotumMedium';
+  font-family: 'KoPubDotumMedium' !important;
   color: var(--body-text-color);
 }
 
