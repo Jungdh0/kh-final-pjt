@@ -26,7 +26,7 @@ const Login = () => {
                     <img
                         className="kakao_logo col-2"
                         src="img/KakaoTalk_logo.png"
-                    />{" "}
+                    alt=""/>{" "}
                     카카오로 시작하기
                   </div>
                 </Link>
