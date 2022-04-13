@@ -3711,6 +3711,7 @@ fieldset:disabled .btn {
     padding: 0.5rem 1rem;
     color: #0d6efd;
     text-decoration: none;
+    text-align: center;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -3798,6 +3799,8 @@ fieldset:disabled .btn {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #18141a;
+    border-bottom: 1px solid #36313d;
+    
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -3820,11 +3823,8 @@ fieldset:disabled .btn {
     white-space: nowrap;
 }
 .navbar-nav {
-    position: relative;
-    z-index: 9;
     display: flex;
     margin-left: auto;
-    justify-content: right;
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
@@ -3851,7 +3851,7 @@ fieldset:disabled .btn {
     font-size: 1.25rem;
     line-height: 1;
     background-color: transparent;
-    border: 1px solid transparent;
+    border: transparent;
     border-radius: 0.25rem;
     transition: box-shadow 0.15s ease-in-out;
 }
@@ -3860,14 +3860,14 @@ fieldset:disabled .btn {
         transition: none;
     }
 }
-.navbar-toggler:hover {
+/* .navbar-toggler:hover {
     text-decoration: none;
 }
 .navbar-toggler:focus {
     text-decoration: none;
     outline: 0;
     box-shadow: 0 0 0 0.25rem;
-}
+} */
 .navbar-toggler-icon {
     display: inline-block;
     width: 1.5em;
@@ -4256,7 +4256,7 @@ fieldset:disabled .btn {
 }
 .navbar-dark .navbar-toggler {
     color: rgba(255, 255, 255, 0.55);
-    border-color: rgba(255, 255, 255, 0.1);
+    /* border-color: rgba(255, 255, 255, 0.1); */
 }
 .navbar-dark .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
