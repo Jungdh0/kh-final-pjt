@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
 
 const Login = () => {
   return (
@@ -20,6 +20,7 @@ const Login = () => {
               </figure>
 
               <form>
+                {/*<Redirect to="https://kauth.kakao.com/oauth/authorize?client_id=00ce48db774c8e8effcc16b9758ad126&redirect_uri=http://localhost:8080/auth/kakao/callback&response_type=code" className="social_bt kakao">*/}
                 <Link to="/" className="social_bt kakao">
                   <div className="access_social">
                     <img
@@ -29,6 +30,7 @@ const Login = () => {
                     카카오로 시작하기
                   </div>
                 </Link>
+                {/*</Redirect>*/}
                 <div className="text-center add_top_10">
                   팝콘은 처음이신가요?{" "}
                   <strong>
