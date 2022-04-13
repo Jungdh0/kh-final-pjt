@@ -138,14 +138,18 @@ const ExplorePage = () => {
           <span> 10 found</span>
           <nav className="sausage-links">
             <ul>
-              <li><a href="">맛깔나는</a></li>
-              <li><a href="">방구석여행</a></li>
-              <li><a href="">냠냠쩝쩝</a></li>
-              <li><a href="">잔혹한</a></li>
-              <li><a href="">심장마비오는</a></li>
-              <li><a href="">브금맛집</a></li>
-              <li><a href="">감정을 파고드는</a></li>
-              <li><a href="">폰할머니집</a></li>
+              <li><a href="">#맛깔나는</a></li>
+              <li><a href="">#퀸카가되고싶어?</a></li>
+              <li><a href="">#방구석여행</a></li>
+              <li><a href="">#미친상상력의비밀</a></li>
+              <li><a href="">#냠냠쩝쩝</a></li>
+              <li><a href="">#잔혹한</a></li>
+              <li><a href="">#심장마비오는</a></li>
+              <li><a href="">#브금맛집</a></li>
+              <li><a href="">#빨간맛궁금해허니</a></li>
+              <li><a href="">#감정을파고드는</a></li>
+              <li><a href="">#폰할머니집</a></li>
+              <li><a href="">#당신의기숙사는?</a></li>
             </ul>
           </nav>
         </div>
