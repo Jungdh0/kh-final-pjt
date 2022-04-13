@@ -4,8 +4,7 @@ import {Link, Redirect} from "react-router-dom";
 const Login = () => {
   return (
       <div id="wrapper">
-        <div id="login_bg" className="dark-theme">
-          <div id="login">
+          <div id="login" className="mx-auto my-5">
             <aside className="">
               <figure>
                 <Link to="/coverPage" className="logo_account">
@@ -19,17 +18,20 @@ const Login = () => {
                 </Link>
               </figure>
 
-              <form>
+              <form className=" mx-auto mx-5 px-5">
                 {/*<Redirect to="https://kauth.kakao.com/oauth/authorize?client_id=00ce48db774c8e8effcc16b9758ad126&redirect_uri=http://localhost:8080/auth/kakao/callback&response_type=code" className="social_bt kakao">*/}
-                <Link to="/" className="social_bt kakao">
+
                   <div className="access_social">
-                    <img
-                        className="kakao_logo col-2"
-                        src="img/KakaoTalk_logo.png"
-                    />{" "}
-                    카카오로 시작하기
+                    <Link to="/" className="social_bt kakao">
+                      <img
+                          className="kakao_logo col-2"
+                          src="img/KakaoTalk_logo.png"
+                          style={{height: '20px', width: '20px'}}
+                      />{" "}
+                      카카오로 시작하기
+                    </Link>
                   </div>
-                </Link>
+
                 {/*</Redirect>*/}
                 <div className="text-center add_top_10">
                   팝콘은 처음이신가요?{" "}
@@ -47,7 +49,6 @@ const Login = () => {
           <script src="js/common_scripts.min.js"></script>
           <script src="js/bootstrap.bundle.min.js"></script>
           <script src="js/common_func.js"></script>
-        </div>
       </div>
   );
 };

@@ -8058,7 +8058,8 @@ a.wallet_connect:hover h3 {
 }
 
 .add_top_10 {
-  margin-top: 10px;
+  /*margin-top: 10px;*/
+  margin-top: 20px;
 }
 
 .add_top_30 {
