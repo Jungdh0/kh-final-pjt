@@ -20,7 +20,7 @@ const Login = () => {
               </figure>
 
               <form>
-                <Route path="/" className="social_bt kakao">
+                <Link to="/" className="social_bt kakao">
                   <div className="access_social">
                     <img
                         className="kakao_logo col-2"
@@ -28,7 +28,7 @@ const Login = () => {
                     />{" "}
                     카카오로 시작하기
                   </div>
-                </Route>
+                </Link>
                 <div className="text-center add_top_10">
                   팝콘은 처음이신가요?{" "}
                   <strong>
