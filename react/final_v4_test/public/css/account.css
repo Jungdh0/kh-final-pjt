@@ -159,7 +159,7 @@ body{ -ms-overflow-style: none; }
 
 .sausage-links {
   position: relative;
-  font-size: 14.5px;
+  font-size: 0.887rem;
   -ms-overflow-style: none;
 }
 .sausage-links::-webkit-scrollbar{
@@ -197,12 +197,14 @@ body{ -ms-overflow-style: none; }
 }
 .sausage-links ul li a,
 .sausage-links ul li a:visited {
-  border: 2px solid #36313d;
   border-radius: 50px;
-  color: #7e2ad1;
+  background-color:#7e2ad1 ;
+  color: #fff;
   display: inline-block;
   padding: 10px 15px;
   text-decoration: none;
+  font-weight: bold;
+  
 }
 .sausage-links ul li a:hover,
 .sausage-links ul li a:visited:hover {

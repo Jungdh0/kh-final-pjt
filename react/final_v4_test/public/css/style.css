@@ -73,6 +73,11 @@ Author URI: http://themeforest.net/user/Ansonika/
 /* 2. ICONS */
 /*============================================================================================*/
 @font-face {
+    font-family: 'KoPubDotumMedium';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
   font-family: "bootstrap-icons";
   src: url("bs-icon-font/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d")
       format("woff2"),
@@ -5692,15 +5697,11 @@ html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-@font-face {
-  font-family: "KoPubWorld";
-  src: url("../font/KoPubWorld Dotum_Pro Medium.otf");
-}
 body {
   background-color: var(--body-background);
   font-size: 14px;
   font-size: 0.875rem;
-  font-family: "KoPubWorld";
+  font-family: "KoPubDotumMedium";
   color: var(--body-text-color);
 }
 
