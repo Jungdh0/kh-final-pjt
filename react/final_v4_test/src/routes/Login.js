@@ -20,9 +20,7 @@ const Login = () => {
               </figure>
 
               <form>
-                <Route path="/kakaoLogin" className="social_bt kakao" component={() = {
-                  window.location.href=
-                }}>
+                <Route path="/" className="social_bt kakao">
                   <div className="access_social">
                     <img
                         className="kakao_logo col-2"
