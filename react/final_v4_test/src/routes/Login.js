@@ -20,6 +20,7 @@ const Login = () => {
 
               <form className=" mx-auto mx-5 px-5">
                   <div className="access_social">
+
                     <Link to="/" className="social_bt kakao">
                       <img
                           className="kakao_logo col-2"

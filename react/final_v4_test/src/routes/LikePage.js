@@ -179,8 +179,8 @@ const LikePage = () => {
                                 <div className="author_thumb veryfied">
                                   <figure>
                                     <img
-                                        src="img/netflix_logo.jpeg"
-                                        data-src="img/netflix_logo.jpeg"
+                                        src="img/netflix_logo.png"
+                                        data-src="img/netflix_logo.png"
                                         alt=""
                                         className="lazy"
                                         width="100"
@@ -223,8 +223,8 @@ const LikePage = () => {
                                 <div className="author_thumb">
                                   <figure>
                                     <img
-                                        src="img/netflix_logo.jpeg"
-                                        data-src="img/netflix_logo.jpeg"
+                                        src="img/netflix_logo.png"
+                                        data-src="img/netflix_logo.png"
                                         alt=""
                                         className="lazy"
                                         width="100"
@@ -267,8 +267,8 @@ const LikePage = () => {
                                 <div className="author_thumb">
                                   <figure>
                                     <img
-                                        src="img/netflix_logo.jpeg"
-                                        data-src="img/netflix_logo.jpeg"
+                                        src="img/netflix_logo.png"
+                                        data-src="img/netflix_logo.png"
                                         alt=""
                                         className="lazy"
                                         width="100"

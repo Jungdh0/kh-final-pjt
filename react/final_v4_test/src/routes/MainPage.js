@@ -85,9 +85,6 @@ const MainPage = () => {
                     <span>
                       <img src="img/netflix_logo.png" width="20px" alt="" />
                     </span>
-                    <span>
-                      <img src="img/wavve_logo.png" width="20px" alt="" />
-                    </span>
                   </div>
                 </a>
               </div>
@@ -156,7 +153,6 @@ const MainPage = () => {
                     <h6>사내맞선</h6>
                     <span>
                       <img src="img/tving_logo.jpeg" width="20px" alt="" />
-                      <img src="img/wavve_logo.png" width="20px" alt="" />
                     </span>
                   </div>
                 </a>
@@ -272,7 +268,6 @@ const MainPage = () => {
                   <div>
                     <h6>사내맞선</h6>
                     <span>
-                      <img src="img/netflix_logo.png" width="20px" alt="" />
                       <img src="img/tving_logo.jpeg" width="20px" alt="" />
                     </span>
                   </div>
