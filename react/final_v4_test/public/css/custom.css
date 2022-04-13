@@ -1,7 +1,15 @@
 /* Sausage Links Styling */
+
+body{ -ms-overflow-style: none; }
+::-webkit-scrollbar { display: none; }
+
 .sausage-links {
   position: relative;
   font-size: 0.870rem;
+  -ms-overflow-style: none;
+}
+.sausage-links::-webkit-scrollbar{
+  display: none;
 }
 .sausage-links:before,
 .sausage-links:after {

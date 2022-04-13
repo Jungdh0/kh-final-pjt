@@ -135,52 +135,40 @@ const ExplorePage = () => {
             <nav className="sausage-links">
               <ul>
                 <li>
-                  <a href="">퀸카가되고싶어?</a>
+                  <a href="">#맛깔나는</a>
                 </li>
                 <li>
-                  <a href="">맛깔나는</a>
+                  <a href="">#퀸카가되고싶어?</a>
                 </li>
                 <li>
-                  <a href="">방구석여행</a>
+                  <a href="">#방구석여행</a>
                 </li>
                 <li>
-                  <a href="">냠냠쩝쩝</a>
+                  <a href="">#미친상상력의비밀</a>
                 </li>
                 <li>
-                  <a href="">브금맛집</a>
+                  <a href="">#냠냠쩝쩝</a>
                 </li>
                 <li>
-                  <a href="">감정을파고드는</a>
+                  <a href="">#잔혹한</a>
                 </li>
                 <li>
-                  <a href="">빨간맛궁금해허니</a>
+                  <a href="">#심장마비오는</a>
                 </li>
                 <li>
-                  <a href="">당신의기숙사는?</a>
+                  <a href="">#브금맛집</a>
                 </li>
                 <li>
-                  <a href="">미친상상력의비밀</a>
+                  <a href="">#빨간맛궁금해허니</a>
                 </li>
                 <li>
-                  <a href="">잔혹한</a>
+                  <a href="">#감정을파고드는</a>
                 </li>
                 <li>
-                  <a href="">심장마비오는</a>
+                  <a href="">#폰할머니집</a>
                 </li>
                 <li>
-                  <a href="">브금맛집</a>
-                </li>
-                <li>
-                  <a href="">감정을 파고드는</a>
-                </li>
-                <li>
-                  <a href="">폰할머니집</a>
-                </li>
-                <li>
-                  <a href="">흥미진진한</a>
-                </li>
-                <li>
-                  <a href="">아이들과보기좋은</a>
+                  <a href="">#당신의기숙사는?</a>
                 </li>
               </ul>
             </nav>
@@ -238,7 +226,6 @@ const ExplorePage = () => {
             <Link to="#" className="active">
               1
             </Link>
-
             <Link to="#">»</Link>
           </div>
         </div>
