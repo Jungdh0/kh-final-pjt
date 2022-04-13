@@ -335,7 +335,6 @@ input[type='radio'] {
     font-size: 1rem;
     transform-origin: right;
     transition: all 0.3s ease;
-    /* background: linear-gradient(315deg, #db89d0 0%, #7e2ad1 74%); */
     background-color: #7e2ad1;
     font-weight: bold;
 }
@@ -522,10 +521,6 @@ input[type='radio'] {
     );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b49ace', endColorstr='#7e2ad1',GradientType=0 );
 }
-/* 
-.answerBox{
-  width: 80%;
-} */
 
 @keyframes fadeIn {
     from {
@@ -605,46 +600,17 @@ p {
     font-size: 0.9rem;
     transform-origin: right;
     transition: all 0.3s ease;
-    /* background: linear-gradient(315deg, #db89d0 0%, #7e2ad1 74%); */
     background-color: #FEE500;
     font-weight: bold;
 }
 
-/* .kakao-btn img{
-  width: 30px;
-  padding-right: 10px;
-} */
-/* @media (min-width: 768px) {
-  .kakao-btn {
-    padding: 0 2.25rem;
-    line-height: 50px;
-  }
-}
-.kakao-btn span {
-  position: inherit;
-  z-index: 1;
-}
-.kakao-btn.small-btn {
-  padding: 0 1rem;
-  line-height: 40px;
-  font-size: 0.875rem;
-} */
+
 
 .kakao-btn:hover,
 .kakao-btn:focus {
     background-color: #ffeb3a;
 }
 
-
-/* .btn-link {
-  font-weight: 400;
-  color: #fff
-;
-  text-decoration: none;
-}
-.btn-link:hover {
-  color: #FEE500;
-} */
 /*======================================================
 
 ***************** react-body-footer*****************

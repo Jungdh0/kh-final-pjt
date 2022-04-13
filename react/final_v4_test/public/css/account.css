@@ -27,7 +27,6 @@
   #login,
   #register {
     width: 100%;
-    /*padding: 30px;*/
     box-shadow: none;
   }
 }
@@ -94,10 +93,7 @@ a.social_bt:hover {
   -webkit-filter: brightness(115%);
   filter: brightness(115%);
 }
-/* img.kakao_logo {
-  width: 20px;
-  height: 20px;
-} */
+
 a.social_bt.kakao {
   background: #fee500;
 }

@@ -8,7 +8,6 @@
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
   padding: 30px;
   margin-bottom: 30px;
-  /* margin-top: -170px; */
   position: relative;
   z-index: 9;
   text-align: center;
@@ -53,9 +52,6 @@
   padding: 0;
   margin: 0 0 30px 0;
 }
-/* .main_profile ul li span {
-  float: right;
-} */
 
 .follow_buttons ul {
   list-style: none;
