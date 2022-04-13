@@ -34,7 +34,8 @@ h1 {
   font-size: 1.5rem;
   color: #999;
 }
-.score_in a.wish_bt:hover, .score_in a.wish_bt.liked {
+.score_in a.wish_bt:hover,
+.score_in a.wish_bt.liked {
   color: var(--color-1);
 }
 
@@ -110,7 +111,6 @@ ul.share-buttons li i {
 }
 
 .author_list a.author {
-  padding: 15px;
   position: relative;
 }
 .author_list a.author span {
@@ -166,3 +166,4 @@ ul.share-buttons li i {
     margin-top: 10px;
   }
 }
+
