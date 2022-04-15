@@ -1,5 +1,5 @@
 import React from "react";
-import movies from "../sampledata/OTT별 작품 - 샘플 데이터.json";
+import movies from "../sampledata/샘플.json";
 import {Link} from "react-router-dom";
 
 const LikePage = () => {

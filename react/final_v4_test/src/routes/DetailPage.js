@@ -31,7 +31,7 @@ const DetailPage = () => {
                                                 <div className="author_thumb veryfied" style={{display: "flex"}}>
                                                     <figure style={{height: 30, width: 30}}>
                                                         <img
-                                                            src="img/netflix_logo.png"
+                                                            src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png"
                                                             alt=""
                                                             className="lazy loaded"
                                                             data-was-processed="true"
@@ -39,7 +39,7 @@ const DetailPage = () => {
                                                     </figure>
                                                     <figure style={{height: 28, width: 28}}>
                                                         <img
-                                                            src="img/tving_logo.jpeg"
+                                                            src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
                                                             alt=""
                                                             className="lazy loaded"
                                                             data-was-processed="true"
@@ -47,7 +47,7 @@ const DetailPage = () => {
                                                     </figure>
                                                     <figure style={{height: 28, width: 28}}>
                                                         <img
-                                                            src="img/wavve_logo.png"
+                                                            src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png"
                                                             alt=""
                                                             className="lazy loaded"
                                                             data-was-processed="true"
@@ -144,7 +144,7 @@ const DetailPage = () => {
                                                             <div className="author_thumb veryfied">
                                                                 <figure>
                                                                     <img
-                                                                        src="img/netflix_logo.png"
+                                                                        src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png"
                                                                         alt=""
                                                                         className="lazy"
                                                                         width="100"
@@ -281,8 +281,8 @@ const DetailPage = () => {
                                             <div className="author_thumb veryfied">
                                                 <figure>
                                                     <img
-                                                        src="img/tving_logo.jpeg"
-                                                        data-src="img/tving_logo.jpeg"
+                                                        src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
+                                                        data-src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
                                                         alt=""
                                                         className="lazy"
                                                         width="100"
@@ -325,7 +325,7 @@ const DetailPage = () => {
                                             <div className="author_thumb">
                                                 <figure>
                                                     <img
-                                                        src="img/netflix_logo.png"
+                                                        src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png"
                                                         data-src="img/netflix_logo.jpeg"
                                                         alt=""
                                                         className="lazy"
@@ -369,8 +369,8 @@ const DetailPage = () => {
                                             <div className="author_thumb veryfied">
                                                 <figure>
                                                     <img
-                                                        src="img/tving_logo.jpeg"
-                                                        data-src="img/tving_logo.jpeg"
+                                                        src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
+                                                        data-src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
                                                         alt=""
                                                         className="lazy"
                                                         width="100"
