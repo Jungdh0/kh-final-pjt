@@ -83,7 +83,7 @@ const MainPage = () => {
                       <div>
                         <h6>{movie.content_name}</h6>
                         <span>
-                          <img src="img/netflix_logo.png" width="20px" alt="" />
+                          <img src={movie.ott_code}width="20px" alt="" />
                         </span>
                       </div>
                     </Link>
