@@ -131,7 +131,7 @@ const TestPage = () => {
 
   return (
     <div>
-      <div className="container" id="wrapper">
+      <div className="container">
         <section id="main" className="mx-auto my-5 py-5 px-3">
           <h3>당신의 영화와 드라마 취향을 찾아보세요</h3>
           <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
