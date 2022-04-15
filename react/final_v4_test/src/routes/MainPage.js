@@ -84,7 +84,6 @@ const MainPage = () => {
                         <h6>{movie.content_name}</h6>
                         <figure>
                           <img src={movie.ott_code} width="20px" alt="" />
-                          <img src={movie.age_rating} width="20px" alt="" />
                         </figure>
                       </div>
                     </Link>
