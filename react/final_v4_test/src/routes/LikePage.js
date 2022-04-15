@@ -59,13 +59,7 @@ const LikePage = () => {
                 >
                   <div className="card-header" role="tab" id="heading-A">
                     <h5>
-                      <a
-                          className="collapsed"
-                          data-bs-toggle="collapse"
-                          href="#collapse-A"
-                      >
-                        내가 찜한 목록
-                      </a>
+                       <h6>내가 찜한 목록</h6>
                     </h5>
                   </div>
                   <div id="collapse-A" className="collapse" role="tabpanel">
