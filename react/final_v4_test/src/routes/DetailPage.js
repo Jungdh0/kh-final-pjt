@@ -60,8 +60,8 @@ const DetailPage = () => {
                                     <div className="age">
                                         <figure>
                                             <img
-                                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Republic_Of_Korea_Broadcasting-TV_Rating_System%2815%29.svg/1024px-Republic_Of_Korea_Broadcasting-TV_Rating_System%2815%29.svg.png"
-                                                style={{width: 25}}
+                                                src="img/age/age_fifteen.png"
+                                                style={{width: 30}}
                                             />
                                         </figure>
                                     </div>
