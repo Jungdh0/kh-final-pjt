@@ -1,12 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import movies from '../sampledata/OTT별 작품 - 샘플 데이터.json';
 import Slider from '../components/Slider/Slider';
-=======
 import movies from '../sampledata/샘플.json';
 
->>>>>>> 0718a2cc73cc428ace97e2ace2c5f40e3c73cdb9
 const MainPage = () => {
   return (
     <div>

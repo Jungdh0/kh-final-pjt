@@ -1,6 +1,5 @@
 import './Slider.css';
 import './SliderItem.css';
-import movies from '../../sampledata/OTT별 작품 - 샘플 데이터.json';
 import React, { useLayoutEffect, useRef, useEffect, useState } from 'react';
 import SlideButton from './SlideButton';
 
