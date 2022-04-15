@@ -51,75 +51,66 @@ const LikePage = () => {
                 <h2>나의 찜 목록</h2>
               </div>
               <div className="tabs_detail">
-                <div className="tab-content" role="tablist">
-                  <div
-                    id="pane-A"
-                    className="card tab-pane fade show active"
-                    role="tabpanel"
-                  >
-                    <div id="collapse-A" className="collapse" role="tabpanel">
-                      <div className="row mt-lg-5 mt-3">
-                        {movies.map((movie, i) => {
-                          if (i > 22) {
-                            return;
-                          }
-                          if (i > 5) {
-                            return (
-                              <div className="col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                                <div className="strip" key={i}>
-                                  <figure>
-                                    <img
-                                      src={movie.content_img_ver}
-                                      className="lazy"
-                                      alt=""
-                                      width="533"
-                                      height="400"
-                                    />
-                                    <Link
-                                      to="/detailPage"
-                                      className="strip_info"
-                                    >
-                                      <div className="item_title">
-                                        <h3>{movie.content_name}</h3>
-                                      </div>
-                                    </Link>
-                                  </figure>
-                                  <ul>
-                                    <li>
-                                      <a href="" className="author">
-                                        <div className="author_thumb veryfied">
-                                          <figure>
-                                            <img
-                                              src="img/tving_logo.jpeg"
-                                              alt=""
-                                              className="lazy"
-                                              width="100"
-                                              height="100"
-                                            />
-                                          </figure>
-                                        </div>
-                                        <h6>티빙</h6>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#0" className="wish_bt">
-                                        <i className="bi bi-heart-fill"></i>
-                                      </a>
-                                      159 view: {movie.details_view_count}
-                                    </li>
-                                  </ul>
+                <div className="row">
+                  {movies.map((movie, i) => {
+                    if (i > 5) {
+                      return;
+                    }
+                    if (i) {
+                      return (
+                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                          <div className="strip" key={i}>
+                            <figure>
+                              <img
+                                src={movie.content_img_ver}
+                                className="lazy"
+                                alt=""
+                                width="533"
+                                height="400"
+                              />
+                              <Link to="/detailPage" className="strip_info">
+                                <div className="item_title">
+                                  <h3>{movie.content_name}</h3>
                                 </div>
-                              </div>
-                            );
-                          }
-                        })}
-                      </div>
-                      {/* /row */}
-                    </div>
-                  </div>
-                  {/* /tab */}
+                              </Link>
+                            </figure>
+                            <ul>
+                              <li>
+                                <a href="" className="author">
+                                  <div className="author_thumb veryfied">
+                                    <figure>
+                                      <img
+                                        src={movie.ott_code}
+                                        alt=""
+                                        className="lazy"
+                                        width="100"
+                                        height="100"
+                                      />
+                                      <img
+                                        src={movie.age_rating}
+                                        alt=""
+                                        className="lazy"
+                                        width="100"
+                                        height="100"
+                                      />
+                                    </figure>
+                                  </div>
+                                  <h6>티빙</h6>
+                                </a>
+                              </li>
+                              <li>
+                                <Link to="#0" className="wish_bt">
+                                  <i className="bi bi-heart-fill"></i>
+                                </Link>
+                                view: {movie.details_view_count}
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      );
+                    }
+                  })}
                 </div>
-                {/* /tab-content */}
               </div>
               {/* /tabs_detail */}
             </div>
