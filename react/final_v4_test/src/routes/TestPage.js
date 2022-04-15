@@ -128,9 +128,10 @@ const TestPage = () => {
       goNext(qIdx);
     }, 450);
   }
+
   return (
     <div>
-      <div className="container">
+      <div className="container" id="wrapper">
         <section id="main" className="mx-auto my-5 py-5 px-3">
           <h3>당신의 영화와 드라마 취향을 찾아보세요</h3>
           <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
@@ -141,7 +142,7 @@ const TestPage = () => {
             <br />
             아래 시작하기 버튼을 눌러 시작해 주세요.
           </p>
-          <button className="default-btn mt-3" onClick={begin}>
+          <button className="default-btn mt-3" onClick={()=>begin()}>
             시작하기
           </button>
         </section>
@@ -175,6 +176,7 @@ const TestPage = () => {
               더 많은 추천 보러가기
             </button>
           </div>
+          
           <div>
             {/* <button type="button" className="btn btn-warning mt-3 mx-auto">
               <img src="img/KakaoTalk_logo.png" style={{ width: '30px' }} className="px-1" />
