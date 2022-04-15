@@ -6,8 +6,8 @@ import movies from '../sampledata/샘플.json';
 const MainPage = () => {
   return (
     <div>
-      <main id="wrapper" >
-          {/* <section id="slider">
+      <main id="wrapper">
+        {/* <section id="slider">
             <input type="radio" name="slider" id="s1" defaultChecked />
             <input type="radio" name="slider" id="s2" />
             <input type="radio" name="slider" id="s3" />
@@ -54,7 +54,9 @@ const MainPage = () => {
               />
             </label>
           </section> */}
-          <Slider/>
+        <section id="slider">
+          <Slider />
+        </section>
         {/*/carousel*/}
         <div className="bg_gray">
           <div className="container margin_120_90" style={{ paddingTop: '90px' }}>

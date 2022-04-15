@@ -225,7 +225,7 @@ input[type='radio'] {
 
 #slider {
   margin: 10px;
-  height: 35vw;
+  /* height: 35vw; */
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;

@@ -142,7 +142,6 @@ const TestPage = () => {
             아래 시작하기 버튼을 눌러 시작해 주세요.
           </p>
           <button className="default-btn mt-3" onClick={() => begin()}>
-            
             시작하기
           </button>
         </section>
