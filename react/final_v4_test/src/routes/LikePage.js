@@ -45,23 +45,19 @@ const LikePage = () => {
             </div>
           </div>
           <div className="col-lg-9 ps-lg-5">
+            <div className="main_title version_2">
+                <span>
+                  <em></em>
+                </span>
+              <h2>나의 찜 목록</h2>
+            </div>
             <div className="tabs_detail">
-              <ul className="nav nav-tabs" role="tablist">
-                <li className="nav-item">
-                  <h3>나의 찜 목록</h3>
-                </li>
-              </ul>
               <div className="tab-content" role="tablist">
                 <div
                     id="pane-A"
                     className="card tab-pane fade show active"
                     role="tabpanel"
                 >
-                  <div className="card-header" role="tab" id="heading-A">
-                    <h5>
-                       <h6>내가 찜한 목록</h6>
-                    </h5>
-                  </div>
                   <div id="collapse-A" className="collapse" role="tabpanel">
                     <div className="row mt-lg-5 mt-3">
                       {movies.map((movie, i) => {
