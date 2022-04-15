@@ -1,5 +1,5 @@
 import React from 'react';
-import movies from '../sampledata/OTT별 작품 - 샘플 데이터.json';
+import movies from '../sampledata/샘플.json';
 import { Link } from 'react-router-dom';
 
 const ExplorePage = () => {
@@ -197,12 +197,18 @@ const ExplorePage = () => {
                             <div className="author_thumb veryfied">
                               <figure>
                                 <img
-                                  src="img/tving_logo.jpeg"
-                                  data-src="img/tving_logo.jpeg"
+                                  src={movie.ott_code}
                                   alt=""
                                   className="lazy"
                                   width="100"
                                   height="100"
+                                />
+                                <img
+                                    src={movie.age_rating}
+                                    alt=""
+                                    className="lazy"
+                                    width="100"
+                                    height="100"
                                 />
                               </figure>
                             </div>

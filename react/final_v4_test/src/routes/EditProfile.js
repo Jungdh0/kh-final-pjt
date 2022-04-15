@@ -50,7 +50,7 @@ const EditProfile = () => {
                         <div className="col-md-7">
                           <img
                               id="netflix_edit"
-                              src="img/netflix_logo.png"
+                              src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png"
                               alt="netflix_logo"
                               className="lazy"
                               width="100"
@@ -72,7 +72,7 @@ const EditProfile = () => {
                         <div className="col-md-7">
                           <img
                             id="tving_edit"
-                            src="img/tving_logo.jpeg"
+                            src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
                             alt="tving_logo"
                             className="lazy"
                             width="95"
@@ -92,7 +92,7 @@ const EditProfile = () => {
                         <div className="col-md-7">
                           <img
                               id="wavve_edit"
-                              src="img/wavve_logo.png"
+                              src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png"
                               alt="wavve_logo"
                               className="lazy"
                               width="95"

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Footer = () => {
   return (
@@ -12,7 +12,6 @@ const Footer = () => {
                   <div className="styled-select lang-selector">
                     <select>
                       <option defaultValue="Korean">Korean</option>
-                      <option value="English">English</option>
                     </select>
                   </div>
                 </li>
