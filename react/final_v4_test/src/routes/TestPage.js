@@ -1,8 +1,135 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import qnaList from '../sampledata/qnsList';
+import infoList from '../sampledata/infoList';
 
 const TestPage = () => {
-  
+
+  const main = document.querySelector('#main');
+  const qna = document.querySelector('#qna');
+  const result = document.querySelector('#result');
+  const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //태그수
+  const endPoint = 13; //문제
+  function calResult() {
+    console.log(select);
+    var result = select.indexOf(Math.max(...select));
+    return result;
+  }
+
+  function setResult() {
+    let point = calResult();
+
+    const resultName = document.querySelector('.resultname');
+    resultName.innerHTML = infoList[point].name;
+
+    var resultImg = document.createElement('img');
+    const imgDiv = document.querySelector('#resultImg');
+    var imgURL = 'img/result/image-' + point + '.jpg';
+    resultImg.src = imgURL;
+    resultImg.alt = point;
+    resultImg.classList.add('img-fluid');
+    imgDiv.appendChild(resultImg);
+
+    const resultDesc = document.querySelector('.resultDesc');
+    resultDesc.innerHTML = infoList[point].desc;
+
+    var resultsURL = 'img/result/results/';
+    let leftURL = resultsURL + point + '-A.jpg';
+    let centerURL = resultsURL + point + '-B.jpg';
+    let rightURL = resultsURL + point + '-C.jpg';
+
+    let leftImage = document.querySelector('.leftImage');
+    let centerImage = document.querySelector('.centerImage');
+    let rightImage = document.querySelector('.rightImage');
+    leftImage.src = leftURL;
+    centerImage.src = centerURL;
+    rightImage.src = rightURL;
+
+    // left.src = resultsURL + point + '-A.jpg';
+    // center.src = resultsURL + point + '-B.jpg';
+    // right.src = resultsURL + point + '-C.jpg';
+  }
+
+  function goResult() {
+    qna.style.WebkitAnimation = 'fadeOut 1s';
+    qna.style.animation = 'fadeOut 1s';
+    setTimeout(() => {
+      result.style.WebkitAnimation = 'fadeIn 1s';
+      result.style.animation = 'fadeIn 1s';
+      setTimeout(() => {
+        qna.style.display = 'none';
+        result.style.display = 'block';
+      }, 450);
+    });
+    setResult();
+  }
+
+  function addAnswer(answerText, qIdx, idx) {
+    var a = document.querySelector('.answerBox');
+    var answer = document.createElement('button');
+    answer.classList.add('answerList');
+    answer.classList.add('my-3');
+    answer.classList.add('py-3');
+    answer.classList.add('mx-auto');
+    answer.classList.add('fadeIn');
+
+    a.appendChild(answer);
+    answer.innerHTML = answerText;
+
+    answer.addEventListener(
+      'click',
+      function () {
+        var children = document.querySelectorAll('.answerList');
+        for (let i = 0; i < children.length; i++) {
+          children[i].disabled = true;
+          children[i].style.WebkitAnimation = 'fadeOut 0.5s';
+          children[i].style.animation = 'fadeOut 0.5s';
+        }
+        setTimeout(() => {
+          var target = qnaList[qIdx].a[idx].type;
+          for (let i = 0; i < target.length; i++) {
+            select[target[i]] += 1;
+          }
+
+          for (let i = 0; i < children.length; i++) {
+            children[i].style.display = 'none';
+          }
+          goNext(++qIdx);
+        }, 450);
+      },
+      false
+    );
+  }
+
+  function goNext(qIdx) {
+    if (qIdx === endPoint) {
+      goResult();
+      return;
+    }
+
+    var q = document.querySelector('.qBox');
+    q.innerHTML = qnaList[qIdx].q;
+    for (let i in qnaList[qIdx].a) {
+      addAnswer(qnaList[qIdx].a[i].answer, qIdx, i);
+    }
+    var status = document.querySelector('.statusBar');
+    status.style.width = (100 / endPoint) * (qIdx + 1) + '%';
+  }
+
+  function begin() {
+    main.style.WebkitAnimation = 'fadeOut 1s';
+    main.style.animation = 'fadeOut 1s';
+    setTimeout(() => {
+      qna.style.WebkitAnimation = 'fadeIn 1s';
+      qna.style.animation = 'fadeIn 1s';
+      setTimeout(() => {
+        main.style.display = 'none';
+        qna.style.display = 'block';
+      }, 450);
+      let qIdx = 0;
+      goNext(qIdx);
+    }, 450);
+  }
+
   return (
     <div>
       <div className="container">
@@ -16,7 +143,7 @@ const TestPage = () => {
             <br />
             아래 시작하기 버튼을 눌러 시작해 주세요.
           </p>
-          <button className="default-btn mt-3" onClick="js:begin();">
+          <button className="default-btn mt-3" onClick={()=>begin()}>
             시작하기
           </button>
         </section>
@@ -58,9 +185,6 @@ const TestPage = () => {
           </div>
         </section>
       </div>
-      <Helmet>
-        <script src="src/sampledata/start.js"></script>
-      </Helmet>
     </div>
   );
 };

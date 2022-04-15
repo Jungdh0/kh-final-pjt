@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import movies from '../sampledata/OTT별 작품 - 샘플 데이터.json';
-
+import Slider from '../components/Slider/Slider';
 const MainPage = () => {
   return (
     <div>
-      <main id="wrapper">
-        <div id="carousel-home-2">
-          <section id="slider">
+      <main id="wrapper" >
+          {/* <section id="slider">
             <input type="radio" name="slider" id="s1" defaultChecked />
             <input type="radio" name="slider" id="s2" />
             <input type="radio" name="slider" id="s3" />
@@ -53,8 +52,8 @@ const MainPage = () => {
                 alt=""
               />
             </label>
-          </section>
-        </div>
+          </section> */}
+          <Slider/>
         {/*/carousel*/}
         <div className="bg_gray">
           <div className="container margin_120_90" style={{ paddingTop: '90px' }}>
