@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const MyPage = () => {
+  const [Image, setImage] = useState(
+    "https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
+  );
+  const fileInput = useRef(null);
+
   return (
     <div>
       <main>
@@ -22,8 +27,8 @@ const MyPage = () => {
                   <div className="author_thumb veryfied">
                     <figure>
                       <img
-                        src="img/profile.svg"
-                        alt=""
+                        src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
+                        alt="profile_img"
                         className="lazy"
                         width="105"
                         height="105"
@@ -35,7 +40,8 @@ const MyPage = () => {
                 <ul>
                   <li>
                     <Link to="/myPage">
-                      <i className="bi bi-gear"></i>이메일 : <span>user_id@popcon.com</span>
+                      <i className="bi bi-gear"></i>이메일 :{" "}
+                      <span>user_id@popcon.com</span>
                     </Link>
                   </li>
                   <li>
@@ -60,7 +66,9 @@ const MyPage = () => {
                           height="100"
                         />
                       </figure>
-                      <p className="ott_name" id="ott_name">넷플릭스</p>
+                      <p className="ott_name" id="ott_name">
+                        넷플릭스
+                      </p>
                     </div>
                   </div>
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
@@ -74,7 +82,9 @@ const MyPage = () => {
                           height="100"
                         />
                       </figure>
-                      <p className="ott_name" id="ott_name">티빙</p>
+                      <p className="ott_name" id="ott_name">
+                        티빙
+                      </p>
                     </div>
                   </div>
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
@@ -88,7 +98,9 @@ const MyPage = () => {
                           height="100"
                         />
                       </figure>
-                      <p className="ott_name" id="ott_name">웨이브</p>
+                      <p className="ott_name" id="ott_name">
+                        웨이브
+                      </p>
                     </div>
                   </div>
                   {/*<p className="text-end mt-4" style={{marginBottom:26}}>*/}

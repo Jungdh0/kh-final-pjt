@@ -13,7 +13,7 @@ const EditProfile = () => {
                 <div className="author">
                   <div className="author_thumb veryfied">
                     <figure>
-                      <img src="img/profile.svg" alt="" className="lazy" width="100" height="100" />
+                      <img src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png" alt="" className="lazy" width="100" height="100" />
                     </figure>
                   </div>
                 </div>
