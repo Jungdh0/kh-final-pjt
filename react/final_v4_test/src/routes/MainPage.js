@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import movies from '../sampledata/OTT별 작품 - 샘플 데이터.json';
+import movies from '../sampledata/샘플.json';
 
 const MainPage = () => {
   return (
@@ -82,9 +82,10 @@ const MainPage = () => {
                       </div>
                       <div>
                         <h6>{movie.content_name}</h6>
-                        <span>
-                          <img src={movie.ott_code}width="20px" alt="" />
-                        </span>
+                        <figure>
+                          <img src={movie.ott_code} width="20px" alt="" />
+                          <img src={movie.age_rating} width="20px" alt="" />
+                        </figure>
                       </div>
                     </Link>
                   </div>
