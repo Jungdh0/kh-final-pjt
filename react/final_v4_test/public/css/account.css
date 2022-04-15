@@ -785,3 +785,7 @@ p {
 #netflix_edit, #tving_edit, #wavve_edit {
   border-radius: 5px;
 }
+
+#service_ott {
+  padding-top: 5.5rem !important;
+}

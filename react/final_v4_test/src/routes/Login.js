@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import axios from "axios";
+
 
 const Login = () => {
-  return (
+    const href = "https://kauth.kakao.com/oauth/authorize?client_id=00ce48db774c8e8effcc16b9758ad126&redirect_uri=http://localhost:8080/auth/kakao/callback&response_type=code";
+
+    return (
     <div id="wrapper">
       <div className="container px-4">
         <div id="login" className="mx-auto my-5 px-4">
@@ -13,15 +17,15 @@ const Login = () => {
             </figure>
 
             <form className=" mx-auto mx-5">
-              <div className="access_social">
-                <Link to="/" className="social_bt kakao">
+              <div className="access_social ">
+                  <a className="social_bt kakao" href={href}>
                   <img
                     className="kakao_logo col-2"
                     src="img/KakaoTalk_logo.png"
                     style={{ height: '20px', width: '20px' }}
                   />{' '}
                   카카오로 시작하기
-                </Link>
+                  </a>
               </div>
               <div className="text-center add_top_10">
                 팝콘은 처음이신가요?{' '}
