@@ -40,13 +40,13 @@ const EditProfile = () => {
                 <h2>OTT 수정</h2>
               </div>
               <div className="row mb-4">
-                <div className="col-md-12">
+                <div className="col-md-12 px-2">
                   <div className="form-group">
                     <p>OTT 목록</p>
 
-                    <div className="row col-md-12 ps-lg-12 edit_ott_logos">
+                    <div className="row col-md-12 ps-lg-12 mx-auto edit_ott_logos">
 
-                      <div className="row col-lg-4 ps-lg-6 pt-3" id="ott_edit">
+                      <div className="row col-lg-4 ps-lg-6 pt-3 " id="ott_edit">
                         <div className="col-md-7">
                           <img
                               id="netflix_edit"
