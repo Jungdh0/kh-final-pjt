@@ -8,40 +8,33 @@ const LikePage = () => {
       <div className="container margin_30_40" id="wrapper" style={{paddingTop: 60}}>
         <div className="row justify-content-center">
           <div className="col-lg-3 col-md-6">
-            <div className="main_profile">
+            <div className="main_profile edit_section">
               <div className="author">
                 <div className="author_thumb veryfied">
                   <figure>
                     <img
                         src="img/profile.svg"
-                        data-src="img/profile.svg"
                         alt=""
                         className="lazy"
-                        width="100"
-                        height="100"
+                        width="105"
+                        height="105"
                     />
                   </figure>
                 </div>
               </div>
-              <h1>User Name</h1>
-
-              <small>Member since July 25 2021</small>
-              <div className="follow_buttons">
-                <ul>
-                  <li>
-                    <a href="#0"><i className="bi bi-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#0"><i className="bi bi-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#0"><i className="bi bi-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#0"><i className="bi bi-youtube"></i></a>
-                  </li>
-                </ul>
-              </div>
+              <h1>user_id</h1>
+              <ul>
+                <li>
+                  <Link to="/myPage">
+                    <i className="bi bi-gear"></i>이메일 : <span>user_id@popcon.com</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/login">
+                    <i className="bi bi-box-arrow-right"></i>로그아웃
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="col-lg-9 ps-lg-5">
