@@ -6716,7 +6716,7 @@ ul.top_menu > li a.btn_access:hover {
 }
 @media (max-width: 767px) {
   .page_header {
-    display: none;
+    display: block;
   }
 }
 .page_header h1 {
