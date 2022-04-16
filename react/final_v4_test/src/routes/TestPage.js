@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import qnaList from '../sampledata/qnsList';
 import infoList from '../sampledata/infoList';
+import ReactDOM from 'react-dom';
 
 const TestPage = () => {
   const main = document.querySelector('#main');
@@ -142,7 +143,7 @@ const TestPage = () => {
             <br />
             아래 시작하기 버튼을 눌러 시작해 주세요.
           </p>
-          <button className="default-btn mt-3" onClick={()=>begin()}>
+          <button className="default-btn mt-3" onClick={() => begin()}>
             시작하기
           </button>
         </section>
@@ -176,7 +177,7 @@ const TestPage = () => {
               더 많은 추천 보러가기
             </button>
           </div>
-          
+
           <div>
             {/* <button type="button" className="btn btn-warning mt-3 mx-auto">
               <img src="img/KakaoTalk_logo.png" style={{ width: '30px' }} className="px-1" />

@@ -142,27 +142,27 @@ a.social_bt.google {
   color: #cdffcd;
 }
 
-
-
 /*======================================================
 
 ***************** custom.css *****************
 
 ========================================================*/
 
-
-
 /* Sausage Links Styling */
 
-body{ -ms-overflow-style: none; }
-::-webkit-scrollbar { display: none; }
+body {
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display: none;
+}
 
 .sausage-links {
   position: relative;
   font-size: 0.875rem;
   -ms-overflow-style: none;
 }
-.sausage-links::-webkit-scrollbar{
+.sausage-links::-webkit-scrollbar {
   display: none;
 }
 .sausage-links:before,
@@ -176,11 +176,11 @@ body{ -ms-overflow-style: none; }
   z-index: 2;
 }
 .sausage-links:before {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #25222A 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #25222a 100%);
   right: 0;
 }
 .sausage-links:after {
-  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #25222A 100%);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #25222a 100%);
   left: 0;
 }
 .sausage-links ul {
@@ -198,12 +198,11 @@ body{ -ms-overflow-style: none; }
 .sausage-links ul li a,
 .sausage-links ul li a:visited {
   border-radius: 50px;
-  background-color:#7e2ad1 ;
+  background-color: #7e2ad1;
   color: #fff;
   display: inline-block;
   padding: 10px 15px;
   text-decoration: none;
-  
 }
 .sausage-links ul li a:hover,
 .sausage-links ul li a:visited:hover {
@@ -213,7 +212,6 @@ body{ -ms-overflow-style: none; }
   box-shadow: 0 2px 4px rgba(0, 90, 156, 0.15);
 }
 /* 메인 -슬라이더 추가*/
-
 
 body {
   user-select: none;
@@ -533,7 +531,6 @@ input[type='radio'] {
   overflow: hidden;
 }
 
-
 .item-desc-part .item-desc-content .history-tab .item-histo-list .histo-item::before,
 .item-desc-part .item-desc-content .details-tab .other-info-list .item-other-info .item-info-title:after,
 .item-desc-part .item-desc-content .nav-tabs .nav-link.active:after,
@@ -608,7 +605,6 @@ input[type='radio'] {
 }
 #qna {
   display: none;
-  
 }
 
 .qBox {
@@ -646,34 +642,34 @@ input[type='radio'] {
 
   background: #b49ace;
   background: -moz-linear-gradient(
-          top,
-          #b49ace 25%,
-          #a780ce 25%,
-          #b49ace 25%,
-          #b49ace 25%,
-          #b49ace 25%,
-          #7e2ad1 67%,
-          #7e2ad1 100%
+    top,
+    #b49ace 25%,
+    #a780ce 25%,
+    #b49ace 25%,
+    #b49ace 25%,
+    #b49ace 25%,
+    #7e2ad1 67%,
+    #7e2ad1 100%
   );
   background: -webkit-linear-gradient(
-          top,
-          #b49ace 25%,
-          #a780ce 25%,
-          #b49ace 25%,
-          #b49ace 25%,
-          #b49ace 25%,
-          #7e2ad1 67%,
-          #7e2ad1 100%
+    top,
+    #b49ace 25%,
+    #a780ce 25%,
+    #b49ace 25%,
+    #b49ace 25%,
+    #b49ace 25%,
+    #7e2ad1 67%,
+    #7e2ad1 100%
   );
   background: linear-gradient(
-          to bottom,
-          #b49ace 25%,
-          #a780ce 25%,
-          #b49ace 25%,
-          #b49ace 25%,
-          #b49ace 25%,
-          #7e2ad1 67%,
-          #7e2ad1 100%
+    to bottom,
+    #b49ace 25%,
+    #a780ce 25%,
+    #b49ace 25%,
+    #b49ace 25%,
+    #b49ace 25%,
+    #7e2ad1 67%,
+    #7e2ad1 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b49ace', endColorstr='#7e2ad1',GradientType=0 );
 }
@@ -747,7 +743,7 @@ p {
   display: none;
 }
 
-.kakao-btn{
+.kakao-btn {
   text-decoration: none;
   color: #191919;
   padding-right: 10px;
@@ -756,11 +752,9 @@ p {
   font-size: 0.9rem;
   transform-origin: right;
   transition: all 0.3s ease;
-  background-color: #FEE500;
+  background-color: #fee500;
   font-weight: bold;
 }
-
-
 
 .kakao-btn:hover,
 .kakao-btn:focus {
@@ -779,8 +773,8 @@ p {
 }
 
 #ott_logos {
-  padding-top: 41px;
-  padding-bottom: 41px;
+  padding-top: 53.5px;
+  padding-bottom: 53.5px;
 }
 
 #service_ott {
