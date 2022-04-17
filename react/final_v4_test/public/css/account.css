@@ -783,8 +783,11 @@ p {
 }
 
 #ott_logo:hover{
-  -webkit-filter: brightness(120%);
   filter: brightness(120%);
+}
+
+#ott_logo:disabled{
+  opacity: 0.25;
 }
 
 #service_ott {
