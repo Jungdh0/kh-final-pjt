@@ -187,10 +187,10 @@ const ExplorePage = () => {
           {/* /page_header */}
           <div className="row">
             {movies.map((movie, i) => {
-              if (i > 35) {
+              if (i > 10) {
                 return;
               }
-              if (i > 25) {
+              if (i) {
                 return (
                   <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                     <div className="strip" key={i}>

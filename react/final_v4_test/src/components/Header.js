@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Navbar, Container, Nav } from "react-bootstrap";
 
 const Header = () => {
   return (
@@ -17,17 +17,17 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className='navbar-nav'>
-              <Nav.Link as={Link} to="/mainPage">
+            <Nav className="navbar-nav">
+              <Nav.Link as={Link} to="/main">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/explorePage">
+              <Nav.Link as={Link} to="/main/explorePage">
                 Explore
               </Nav.Link>
-              <Nav.Link as={Link} to="/likePage">
+              <Nav.Link as={Link} to="/main/likePage">
                 Like
               </Nav.Link>
-              <Nav.Link as={Link} to="/myPage">
+              <Nav.Link as={Link} to="/main/myPage">
                 Mypage
               </Nav.Link>
             </Nav>
