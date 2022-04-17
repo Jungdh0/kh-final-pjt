@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const MyPage = () => {
   const [Image, setImage] = useState(
@@ -60,15 +61,15 @@ const MyPage = () => {
                 <div className="row" id="ott_logos">
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
-                      <figure className="ott_logo">
+                      <Button id="ott_logo" active>
                         <img
                           src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png"
                           alt=""
                           className="lazy"
-                          width="100"
-                          height="100"
+                          width="120"
+                          height="120"
                         />
-                      </figure>
+                      </Button>
                       <p className="ott_name" id="ott_name">
                         넷플릭스
                       </p>
@@ -76,15 +77,15 @@ const MyPage = () => {
                   </div>
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
-                      <figure>
+                      <Button id="ott_logo" disabled>
                         <img
                           src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
                           alt=""
                           className="lazy"
-                          width="100"
-                          height="100"
+                          width="120"
+                          height="120"
                         />
-                      </figure>
+                      </Button>
                       <p className="ott_name" id="ott_name">
                         티빙
                       </p>
@@ -92,25 +93,20 @@ const MyPage = () => {
                   </div>
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
-                      <figure>
+                      <Button id="ott_logo" disabled>
                         <img
                           src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png"
                           alt=""
                           className="lazy"
-                          width="100"
-                          height="100"
+                          width="120"
+                          height="120"
                         />
-                      </figure>
+                      </Button>
                       <p className="ott_name" id="ott_name">
                         웨이브
                       </p>
                     </div>
                   </div>
-                  {/*<p className="text-end mt-4" style={{marginBottom:26}}>*/}
-                  {/*  <Link to="/editProfile" className="btn_1">*/}
-                  {/*    Edit Profile*/}
-                  {/*  </Link>*/}
-                  {/*</p>*/}
                 </div>
               </div>
               {/*/row*/}

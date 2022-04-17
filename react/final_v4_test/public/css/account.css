@@ -773,8 +773,18 @@ p {
 }
 
 #ott_logos {
-  padding-top: 53.5px;
-  padding-bottom: 53.5px;
+  padding-top: 45.6px;
+  padding-bottom: 45.6px;
+}
+
+#ott_logo{
+  border: none;
+  background-color: rgba(10, 83, 190, 0);
+}
+
+#ott_logo:hover{
+  -webkit-filter: brightness(120%);
+  filter: brightness(120%);
 }
 
 #service_ott {
