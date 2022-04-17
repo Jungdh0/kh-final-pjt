@@ -44,7 +44,7 @@ const MyPage = () => {
                 <ul>
                   <li>
                     <Link to="/main/myPage">
-                      <i className="bi bi-gear"></i>이메일 :{" "}
+                      <i className="bi bi-person"></i>이메일 :{" "}
                       <span>user_id@popcon.com</span>
                     </Link>
                   </li>
@@ -115,7 +115,7 @@ const MyPage = () => {
           <hr className="mt-4 mb-5"></hr>
           <p className="text-end">
             <Link to="/main/editProfile" className="btn_1">
-              OTT 수정하기
+              프로필 수정하기
             </Link>
           </p>
           {/*/row*/}

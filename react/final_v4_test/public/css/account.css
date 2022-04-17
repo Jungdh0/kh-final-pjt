@@ -793,3 +793,7 @@ p {
 #service_ott {
   padding-top: 5.5rem !important;
 }
+
+#profile_edit_btn:hover{
+  cursor: pointer;
+}
