@@ -26,7 +26,10 @@ const ExplorePage = () => {
                 <span>Filters</span>
               </a>
               <form>
-                <div className="search_bar">
+                <div
+                  className="col-md-5 search_bar"
+                  style={{ marginLeft: "auto" }}
+                >
                   <input
                     type="text"
                     className="form-control"
