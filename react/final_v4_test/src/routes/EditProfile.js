@@ -50,8 +50,8 @@ const EditProfile = () => {
                           <div className="col-md-3" id="profile_change_img">
                             <figure>
                               <img
-                                src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
-                                alt=""
+                                src="https://velog.velcdn.com/images/joyoo1221/post/b52f0acf-f560-4bf4-b0d3-033d27ef7159/image.png"
+                                alt="profile_img_1"
                                 className="lazy"
                                 width="100"
                                 height="100"
@@ -61,8 +61,8 @@ const EditProfile = () => {
                           <div className="col-md-3" id="profile_change_img">
                             <figure>
                               <img
-                                src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
-                                alt=""
+                                src="https://velog.velcdn.com/images/joyoo1221/post/119f9fe8-1462-4dd7-84fd-bda979b75919/image.png"
+                                alt="profile_img_2"
                                 className="lazy"
                                 width="100"
                                 height="100"
@@ -72,8 +72,8 @@ const EditProfile = () => {
                           <div className="col-md-3" id="profile_change_img">
                             <figure>
                               <img
-                                src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
-                                alt=""
+                                src="https://velog.velcdn.com/images/joyoo1221/post/53d9047e-4200-4ad2-8e03-d78823fca370/image.png"
+                                alt="profile_img_3"
                                 className="lazy"
                                 width="100"
                                 height="100"
@@ -83,8 +83,8 @@ const EditProfile = () => {
                           <div className="col-md-3" id="profile_change_img">
                             <figure>
                               <img
-                                src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
-                                alt=""
+                                src="https://velog.velcdn.com/images/joyoo1221/post/e98f1252-e298-42ce-b262-74d197a1c286/image.png"
+                                alt="profile_img_4"
                                 className="lazy"
                                 width="100"
                                 height="100"
@@ -94,10 +94,10 @@ const EditProfile = () => {
                         </div>
                       </Modal.Body>
                       <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
+                        <Button id="modal_close_btn" onClick={handleClose}>
                           닫기
                         </Button>
-                        <Button variant="primary" onClick={handleClose}>
+                        <Button id="modal_save_btn" onClick={handleClose}>
                           저장하기
                         </Button>
                       </Modal.Footer>
@@ -125,8 +125,8 @@ const EditProfile = () => {
                 <div className="col-md-12 px-2">
                   <div className="form-group">
                     <div className="row col-md-12 ps-lg-12 mx-auto edit_ott_logos">
-                      <div className="row col-lg-4 ps-lg-6 pt-3 " id="ott_edit">
-                        <div className="col-md-7">
+                      <div className="row col-lg-4 ps-lg-6 pt-3 ">
+                        <div className="col-md-7 col-sm-5" id="ott_edit">
                           <img
                             id="netflix_edit"
                             src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png"
@@ -136,7 +136,7 @@ const EditProfile = () => {
                             height="100"
                           />
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-md-5 col-sm-7">
                           <Form.Check
                             type="switch"
                             id="custom-switch"
@@ -147,8 +147,8 @@ const EditProfile = () => {
                         <div className="col-md-2" />
                       </div>
 
-                      <div className="row col-lg-4 ps-lg-6 pt-3" id="ott_edit">
-                        <div className="col-md-7">
+                      <div className="row col-lg-4 ps-lg-6 pt-3">
+                        <div className="col-md-7" id="ott_edit">
                           <img
                             id="tving_edit"
                             src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
@@ -164,8 +164,8 @@ const EditProfile = () => {
                         </div>
                       </div>
 
-                      <div className="row col-lg-4 ps-lg-6 pt-3" id="ott_edit">
-                        <div className="col-md-7">
+                      <div className="row col-lg-4 ps-lg-6 pt-3">
+                        <div className="col-md-7" id="ott_edit">
                           <img
                             id="wavve_edit"
                             src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png"

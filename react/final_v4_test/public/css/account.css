@@ -772,6 +772,12 @@ p {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  #ott_edit {
+    /*column-width: unset;*/
+  }
+}
+
 #ott_logos {
   padding-top: 45.6px;
   padding-bottom: 45.6px;
@@ -779,7 +785,8 @@ p {
 
 #ott_logo{
   border: none;
-  background-color: rgba(10, 83, 190, 0);
+  outline: none; !important;
+  background: none;
 }
 
 #ott_logo:hover{
@@ -790,10 +797,31 @@ p {
   opacity: 0.25;
 }
 
+#ott_logo:active, #ott_logo:focus{
+  outline: none; !important;
+  box-shadow: none; !important;
+}
+
 #service_ott {
   padding-top: 5.5rem !important;
 }
 
 #profile_edit_btn:hover{
   cursor: pointer;
+}
+
+#modal_close_btn{
+  background-color: #555;
+  border: none;
+  padding: 9px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+#modal_save_btn{
+  background-color: #7E2AD1;
+  border: none;
+  padding: 9px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
 }
