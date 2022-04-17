@@ -9,6 +9,7 @@ const ExplorePage = () => {
         <div className="filters_full element_to_stick">
           <div className="container">
             <div className="add_bottom_20 clearfix">
+
               <div className="custom_select">
                 <select name="sort" id="sort">
                   <option value="popularity" selected="selected">
@@ -17,14 +18,7 @@ const ExplorePage = () => {
                   <option value="rating">최신순</option>
                 </select>
               </div>
-              <a
-                href="#collapseFilters"
-                data-bs-toggle="collapse"
-                className="btn_filters"
-              >
-                <i className="bi bi-filter"></i>
-                <span>Filters</span>
-              </a>
+              
               <div className="search_bar_list">
                 <input
                   type="text"
@@ -32,6 +26,7 @@ const ExplorePage = () => {
                   placeholder="검색어를 입력하세요"
                 />
               </div>
+
               <a
                 className="btn_search_mobile btn_filters"
                 data-bs-toggle="collapse"
@@ -39,6 +34,7 @@ const ExplorePage = () => {
               >
                 <i className="bi bi-search"></i>
               </a>
+              
             </div>
           </div>
           <div className="collapse filters_2" id="collapseFilters">
