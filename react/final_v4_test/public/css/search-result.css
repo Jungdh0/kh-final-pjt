@@ -93,9 +93,9 @@ a.box_topic h3 {
   /*background-color: white;*/
 }
 .search_bar input[type="text"]:focus {
-  border: 0;
+  border: 2px solid var(--border-color-1);
   box-shadow: none;
-  color: #555;
+  color: #fff;
 }
 .search_bar input[type="submit"] {
   position: absolute;
@@ -103,7 +103,7 @@ a.box_topic h3 {
   color: #fff;
   font-weight: 600;
   top: 10px;
-  border: 0;
+  border: 2px solid var(--border-color-1);
   padding: 0 25px;
   height: 40px;
   cursor: pointer;
