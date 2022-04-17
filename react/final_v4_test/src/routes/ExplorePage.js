@@ -1,6 +1,6 @@
-import React from 'react';
-import movies from '../sampledata/샘플.json';
-import { Link } from 'react-router-dom';
+import React from "react";
+import movies from "../sampledata/샘플.json";
+import { Link } from "react-router-dom";
 
 const ExplorePage = () => {
   return (
@@ -17,23 +17,24 @@ const ExplorePage = () => {
                   <option value="rating">최신순</option>
                 </select>
               </div>
-              <a href="#collapseFilters" data-bs-toggle="collapse" className="btn_filters">
+              <a
+                href="#collapseFilters"
+                data-bs-toggle="collapse"
+                className="btn_filters"
+              >
                 <i className="bi bi-filter"></i>
                 <span>Filters</span>
               </a>
               <form>
                 <div className="search_bar">
-                  <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" />
-                  <input type="submit" defaultValue="Search" value={'검색'} />
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="무엇을 찾고 있나요?"
+                  />
+                  <input type="submit" defaultValue="Search" value={"검색"} />
                 </div>
               </form>
-              <div className="search_bar_list">
-                <input type="text" className="form-control" placeholder="검색어를 입력하세요" />
-              </div>
-              <a className="btn_search_mobile btn_filters" data-bs-toggle="collapse" href="#collapseSearch">
-                <i className="bi bi-search"></i>
-              </a>
-              >>>>>>> 6c1e201d4f46116434787b9405503441c78ebdf0
             </div>
           </div>
           <div className="collapse filters_2" id="collapseFilters">
@@ -117,7 +118,11 @@ const ExplorePage = () => {
           {/* /filters */}
           <div className="collapse" id="collapseSearch">
             <div className="search_bar_list">
-              <input type="text" className="form-control" placeholder="Search..." />
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search..."
+              />
             </div>
           </div>
           {/* /collapseSearch */}
@@ -190,7 +195,13 @@ const ExplorePage = () => {
                   <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                     <div className="strip" key={i}>
                       <figure>
-                        <img src={movie.content_img_ver} className="lazy" alt="" width="533" height="400" />
+                        <img
+                          src={movie.content_img_ver}
+                          className="lazy"
+                          alt=""
+                          width="533"
+                          height="400"
+                        />
                         <Link to="/detailPage" className="strip_info">
                           <div className="item_title">
                             <h3>{movie.content_name}</h3>
@@ -202,8 +213,20 @@ const ExplorePage = () => {
                           <a href="" className="author">
                             <div className="author_thumb veryfied">
                               <figure>
-                                <img src={movie.ott_code} alt="" className="lazy" width="100" height="100" />
-                                <img src={movie.age_rating} alt="" className="lazy" width="100" height="100" />
+                                <img
+                                  src={movie.ott_code}
+                                  alt=""
+                                  className="lazy"
+                                  width="100"
+                                  height="100"
+                                />
+                                <img
+                                  src={movie.age_rating}
+                                  alt=""
+                                  className="lazy"
+                                  width="100"
+                                  height="100"
+                                />
                               </figure>
                             </div>
                             <h6>티빙</h6>
