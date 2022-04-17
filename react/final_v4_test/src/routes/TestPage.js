@@ -115,20 +115,20 @@ const TestPage = () => {
     status.style.width = (100 / endPoint) * (qIdx + 1) + '%';
   }
 
-  function begin() {
-    main.style.WebkitAnimation = 'fadeOut 1s';
-    main.style.animation = 'fadeOut 1s';
-    setTimeout(() => {
-      qna.style.WebkitAnimation = 'fadeIn 1s';
-      qna.style.animation = 'fadeIn 1s';
-      setTimeout(() => {
-        main.style.display = 'none';
-        qna.style.display = 'block';
-      }, 450);
-      let qIdx = 0;
-      goNext(qIdx);
-    }, 450);
-  }
+  // function begin() {
+  //   main.style.WebkitAnimation = 'fadeOut 1s';
+  //   main.style.animation = 'fadeOut 1s';
+  //   setTimeout(() => {
+  //     qna.style.WebkitAnimation = 'fadeIn 1s';
+  //     qna.style.animation = 'fadeIn 1s';
+  //     setTimeout(() => {
+  //       main.style.display = 'none';
+  //       qna.style.display = 'block';
+  //     }, 450);
+  //     let qIdx = 0;
+  //     goNext(qIdx);
+  //   }, 450);
+  // }
 
   return (
     <div>
@@ -142,8 +142,24 @@ const TestPage = () => {
             간단한 테스트를 통해 취향에 맞는 콘텐츠를 알아 볼 수 있습니다!
             <br />
             아래 시작하기 버튼을 눌러 시작해 주세요.
-          </p>
-          <button className="default-btn mt-3" onClick={() => begin()}>
+          </p>   
+          <button
+            className="default-btn mt-3"
+            onClick={() => {
+              main.style.WebkitAnimation = 'fadeOut 1s';
+              main.style.animation = 'fadeOut 1s';
+              setTimeout(() => {
+                qna.style.WebkitAnimation = 'fadeIn 1s';
+                qna.style.animation = 'fadeIn 1s';
+                setTimeout(() => {
+                  main.style.display = 'none';
+                  qna.style.display = 'block';
+                }, 450);
+                let qIdx = 0;
+                goNext(qIdx);
+              }, 450);
+            }}
+          >
             시작하기
           </button>
         </section>
