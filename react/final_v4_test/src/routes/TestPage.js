@@ -142,7 +142,7 @@ const TestPage = () => {
             간단한 테스트를 통해 취향에 맞는 콘텐츠를 알아 볼 수 있습니다!
             <br />
             아래 시작하기 버튼을 눌러 시작해 주세요.
-          </p>   
+          </p>  
           <button
             className="default-btn mt-3"
             onClick={() => {
