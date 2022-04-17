@@ -68,7 +68,10 @@ const LikePage = () => {
                                 width="533"
                                 height="400"
                               />
-                              <Link to="/detailPage" className="strip_info">
+                              <Link
+                                to="/main/detailPage"
+                                className="strip_info"
+                              >
                                 <div className="item_title">
                                   <h3>{movie.content_name}</h3>
                                 </div>

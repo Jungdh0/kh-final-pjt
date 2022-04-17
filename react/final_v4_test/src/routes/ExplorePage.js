@@ -1,6 +1,6 @@
-import React from "react";
-import movies from "../sampledata/샘플.json";
-import { Link } from "react-router-dom";
+import React from 'react';
+import movies from '../sampledata/샘플.json';
+import { Link } from 'react-router-dom';
 
 const ExplorePage = () => {
   return (
@@ -24,9 +24,16 @@ const ExplorePage = () => {
               <form>
                 <div className="search_bar">
                   <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" />
-                  <input type="submit" defaultValue="Search" value={"검색"} />
+                  <input type="submit" defaultValue="Search" value={'검색'} />
                 </div>
               </form>
+              <div className="search_bar_list">
+                <input type="text" className="form-control" placeholder="검색어를 입력하세요" />
+              </div>
+              <a className="btn_search_mobile btn_filters" data-bs-toggle="collapse" href="#collapseSearch">
+                <i className="bi bi-search"></i>
+              </a>
+              >>>>>>> 6c1e201d4f46116434787b9405503441c78ebdf0
             </div>
           </div>
           <div className="collapse filters_2" id="collapseFilters">
@@ -175,10 +182,10 @@ const ExplorePage = () => {
           {/* /page_header */}
           <div className="row">
             {movies.map((movie, i) => {
-              if (i > 35) {
+              if (i > 10) {
                 return;
               }
-              if (i > 25) {
+              if (i) {
                 return (
                   <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                     <div className="strip" key={i}>
