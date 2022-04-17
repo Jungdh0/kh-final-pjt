@@ -42,7 +42,7 @@ const ExplorePage = () => {
                   className="form-control"
                   placeholder="무엇을 찾고 있나요?"
                 />
-                <input type="submit" value="Search" value={"검색"} />
+                <input type="submit" value={"검색"} />
               </div>
             </div>
           </div>
