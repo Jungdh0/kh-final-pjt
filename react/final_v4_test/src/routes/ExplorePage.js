@@ -1,6 +1,7 @@
 import React from "react";
 import movies from "../sampledata/샘플.json";
 import { Link } from "react-router-dom";
+import { Dropdown } from "bootstrap";
 
 const ExplorePage = () => {
   return (
@@ -9,26 +10,29 @@ const ExplorePage = () => {
         <div className="filters_full element_to_stick">
           <div className="container">
             <div className="add_top_10 clearfix row">
-              <div className="col-md-5 row">
+              <div className="col-md-5 row" style={{ alignContent: "center" }}>
                 <div className="custom_select">
-                  <select name="sort" id="sort">
-                    <option value="popularity" selected="selected">
-                      인기순
-                    </option>
+                  <select
+                    name="sort"
+                    id="sort"
+                    className="col-md-3"
+                    style={{ marginRight: 10 }}
+                  >
+                    <option defaultValue="popularity">인기순</option>
                     <option value="rating">최신순</option>
                   </select>
+
                   {/*</div>*/}
                   <a
                     href="#collapseFilters"
                     data-bs-toggle="collapse"
-                    className="btn_filters"
+                    className="col-md-5 btn_filters"
                   >
                     <i className="bi bi-filter"></i>
-                    <span>Filters</span>
+                    {/*<span>Filters</span>*/}
                   </a>
                 </div>
               </div>
-              {/*<form>*/}
               <div
                 className="col-md-5 search_bar"
                 style={{ marginLeft: "auto" }}
@@ -38,9 +42,8 @@ const ExplorePage = () => {
                   className="form-control"
                   placeholder="무엇을 찾고 있나요?"
                 />
-                <input type="submit" defaultValue="Search" value={"검색"} />
+                <input type="submit" value="Search" value={"검색"} />
               </div>
-              {/*</form>*/}
             </div>
           </div>
           <div className="collapse filters_2" id="collapseFilters">
@@ -48,7 +51,7 @@ const ExplorePage = () => {
               <div className="row">
                 <div className="col-md-3">
                   <div className="filter_type">
-                    <h6>Categories</h6>
+                    <h6>장르별</h6>
                     <ul>
                       <li>
                         <label className="container_check">
