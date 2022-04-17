@@ -8,36 +8,39 @@ const ExplorePage = () => {
       <main>
         <div className="filters_full element_to_stick">
           <div className="container">
-            <div className="add_bottom_20 clearfix">
-              <div className="custom_select">
-                <select name="sort" id="sort">
-                  <option value="popularity" selected="selected">
-                    인기순
-                  </option>
-                  <option value="rating">최신순</option>
-                </select>
-              </div>
-              <a
-                href="#collapseFilters"
-                data-bs-toggle="collapse"
-                className="btn_filters"
-              >
-                <i className="bi bi-filter"></i>
-                <span>Filters</span>
-              </a>
-              <form>
-                <div
-                  className="col-md-5 search_bar"
-                  style={{ marginLeft: "auto" }}
-                >
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="무엇을 찾고 있나요?"
-                  />
-                  <input type="submit" defaultValue="Search" value={"검색"} />
+            <div className="add_top_10 clearfix row">
+              <div className="col-md-5 row">
+                <div className="custom_select">
+                  <select name="sort" id="sort">
+                    <option value="popularity" selected="selected">
+                      인기순
+                    </option>
+                    <option value="rating">최신순</option>
+                  </select>
+                  {/*</div>*/}
+                  <a
+                    href="#collapseFilters"
+                    data-bs-toggle="collapse"
+                    className="btn_filters"
+                  >
+                    <i className="bi bi-filter"></i>
+                    <span>Filters</span>
+                  </a>
                 </div>
-              </form>
+              </div>
+              {/*<form>*/}
+              <div
+                className="col-md-5 search_bar"
+                style={{ marginLeft: "auto" }}
+              >
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="무엇을 찾고 있나요?"
+                />
+                <input type="submit" defaultValue="Search" value={"검색"} />
+              </div>
+              {/*</form>*/}
             </div>
           </div>
           <div className="collapse filters_2" id="collapseFilters">
