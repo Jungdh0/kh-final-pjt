@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MyPage = () => {
   const [Image, setImage] = useState(
-    'https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png'
+    "https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
   );
   const fileInput = useRef(null);
 
@@ -32,6 +32,9 @@ const MyPage = () => {
                         className="lazy"
                         width="105"
                         height="105"
+                        onClick={() => {
+                          fileInput.current.click();
+                        }}
                       />
                     </figure>
                   </div>
@@ -40,7 +43,8 @@ const MyPage = () => {
                 <ul>
                   <li>
                     <Link to="/myPage">
-                      <i className="bi bi-gear"></i>이메일 : <span>user_id@popcon.com</span>
+                      <i className="bi bi-gear"></i>이메일 :{" "}
+                      <span>user_id@popcon.com</span>
                     </Link>
                   </li>
                   <li>
