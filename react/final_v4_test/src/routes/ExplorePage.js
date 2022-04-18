@@ -52,7 +52,7 @@ const ExplorePage = () => {
                 <div className="col-md-3">
                   <div className="filter_type">
                     <h6>장르별</h6>
-                    <ul>
+                    <ul id="genre_list">
                       <li>
                         <label className="container_check">
                           드라마 <small>112</small>

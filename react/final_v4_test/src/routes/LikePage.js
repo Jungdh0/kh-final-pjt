@@ -30,7 +30,7 @@ const LikePage = () => {
                 <h1>user_id</h1>
                 <ul>
                   <li>
-                    <Link to="/myPage">
+                    <Link to="/main/myPage">
                       <i className="bi bi-person"></i>이메일 :{" "}
                       <span>user_id@popcon.com</span>
                     </Link>
