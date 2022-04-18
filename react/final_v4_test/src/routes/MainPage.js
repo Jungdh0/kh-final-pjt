@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Slider from '../components/Slider/Slider';
-import movies from '../sampledata/샘플.json';
+import React from "react";
+import { Link } from "react-router-dom";
+import Slider from "../components/Slider/Slider";
+import movies from "../sampledata/샘플.json";
 
 const MainPage = () => {
   return (
@@ -59,7 +59,10 @@ const MainPage = () => {
         </section>
         {/*/carousel*/}
         <div className="bg_gray">
-          <div className="container margin_120_90" style={{ paddingTop: '90px' }}>
+          <div
+            className="container margin_120_90"
+            style={{ paddingTop: "90px" }}
+          >
             <div className="main_title version_2">
               <span>
                 <em />
@@ -74,12 +77,22 @@ const MainPage = () => {
                 }
                 return (
                   <div className="col-lg-4 col-md-6" key={i}>
-                    <Link to="/detailPage" className="author" style={{ padding: '15px 15px 15px 55px' }}>
+                    <Link
+                      to="/main/detailPage"
+                      className="author"
+                      style={{ padding: "15px 15px 15px 55px" }}
+                    >
                       <strong>{i + 1}</strong>
                       <div className="author_thumb veryfied">
                         {/* <i class="bi bi-check"></i> */}
                         <figure>
-                          <img src={movie.content_img_ver} alt="" className="lazy" width={100} height={100} />
+                          <img
+                            src={movie.content_img_ver}
+                            alt=""
+                            className="lazy"
+                            width={100}
+                            height={100}
+                          />
                         </figure>
                       </div>
                       <div>
@@ -95,7 +108,7 @@ const MainPage = () => {
             </div>
           </div>
         </div>
-      </main>{' '}
+      </main>{" "}
     </div>
   );
 };

@@ -40,67 +40,75 @@ const EditProfile = () => {
                     </a>
 
                     <Modal show={show} onHide={handleClose}>
-                      <Modal.Header closeButton>
-                        <Modal.Title style={{ color: "black" }}>
-                          프로필 이미지 선택
-                        </Modal.Title>
-                      </Modal.Header>
-                      <Modal.Body>
-                        <div className="row">
-                          <div className="col-md-3" id="profile_change_img">
-                            <figure>
-                              <img
-                                src="https://velog.velcdn.com/images/joyoo1221/post/b52f0acf-f560-4bf4-b0d3-033d27ef7159/image.png"
-                                alt="profile_img_1"
-                                className="lazy"
-                                width="100"
-                                height="100"
-                              />
-                            </figure>
+                      <div id="modal_edit">
+                        <Modal.Header closeButton>
+                          <Modal.Title style={{ color: "black" }}>
+                            프로필 이미지 선택
+                          </Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                          <div className="row">
+                            <div
+                              className="col-md-3 col-sm-2"
+                              id="profile_change_img"
+                            >
+                              <figure>
+                                <img
+                                  src="https://velog.velcdn.com/images/joyoo1221/post/b52f0acf-f560-4bf4-b0d3-033d27ef7159/image.png"
+                                  alt="profile_img_1"
+                                  className="lazy"
+                                  width="100"
+                                  height="100"
+                                />
+                              </figure>
+                            </div>
+                            <div
+                              className="col-md-3 col-sm-2"
+                              id="profile_change_img"
+                            >
+                              <figure>
+                                <img
+                                  src="https://velog.velcdn.com/images/joyoo1221/post/119f9fe8-1462-4dd7-84fd-bda979b75919/image.png"
+                                  alt="profile_img_2"
+                                  className="lazy"
+                                  width="100"
+                                  height="100"
+                                />
+                              </figure>
+                            </div>
+                            <div className="col-md-3" id="profile_change_img">
+                              <figure>
+                                <img
+                                  src="https://velog.velcdn.com/images/joyoo1221/post/53d9047e-4200-4ad2-8e03-d78823fca370/image.png"
+                                  alt="profile_img_3"
+                                  className="lazy"
+                                  width="100"
+                                  height="100"
+                                />
+                              </figure>
+                            </div>
+                            <div className="col-md-3" id="profile_change_img">
+                              <figure>
+                                <img
+                                  src="https://velog.velcdn.com/images/joyoo1221/post/e98f1252-e298-42ce-b262-74d197a1c286/image.png"
+                                  alt="profile_img_4"
+                                  className="lazy"
+                                  width="100"
+                                  height="100"
+                                />
+                              </figure>
+                            </div>
                           </div>
-                          <div className="col-md-3" id="profile_change_img">
-                            <figure>
-                              <img
-                                src="https://velog.velcdn.com/images/joyoo1221/post/119f9fe8-1462-4dd7-84fd-bda979b75919/image.png"
-                                alt="profile_img_2"
-                                className="lazy"
-                                width="100"
-                                height="100"
-                              />
-                            </figure>
-                          </div>
-                          <div className="col-md-3" id="profile_change_img">
-                            <figure>
-                              <img
-                                src="https://velog.velcdn.com/images/joyoo1221/post/53d9047e-4200-4ad2-8e03-d78823fca370/image.png"
-                                alt="profile_img_3"
-                                className="lazy"
-                                width="100"
-                                height="100"
-                              />
-                            </figure>
-                          </div>
-                          <div className="col-md-3" id="profile_change_img">
-                            <figure>
-                              <img
-                                src="https://velog.velcdn.com/images/joyoo1221/post/e98f1252-e298-42ce-b262-74d197a1c286/image.png"
-                                alt="profile_img_4"
-                                className="lazy"
-                                width="100"
-                                height="100"
-                              />
-                            </figure>
-                          </div>
-                        </div>
-                      </Modal.Body>
-                      <Modal.Footer>
-                        <Button id="modal_close_btn" onClick={handleClose}>
-                          닫기
-                        </Button>
-                        <Button id="modal_save_btn" onClick={handleClose}>
-                          저장하기
-                        </Button>
-                      </Modal.Footer>
+                        </Modal.Body>
+                        <Modal.Footer>
+                          <Button id="modal_close_btn" onClick={handleClose}>
+                            닫기
+                          </Button>
+                          <Button id="modal_save_btn" onClick={handleClose}>
+                            저장하기
+                          </Button>
+                        </Modal.Footer>
+                      </div>
                     </Modal>
                     {/*<Link to="/main/editProfile">*/}
                     {/*  <i className="bi bi-gear"></i>프로필 수정하기*/}
