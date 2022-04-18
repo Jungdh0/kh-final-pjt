@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
@@ -7,15 +7,15 @@ const Footer = () => {
         <div className="container">
           <div className="row add_bottom_25">
             <div className="col-md-6">
-              <ul className="footer-selector clearfix">
-                <li>
-                  <div className="styled-select lang-selector">
-                    <select>
-                      <option defaultValue="Korean">Korean</option>
-                    </select>
-                  </div>
-                </li>
-              </ul>
+              {/*<ul className="footer-selector clearfix">*/}
+              {/*  <li>*/}
+              {/*    <div className="styled-select lang-selector">*/}
+              {/*      <select>*/}
+              {/*        <option defaultValue="Korean">Korean</option>*/}
+              {/*      </select>*/}
+              {/*    </div>*/}
+              {/*  </li>*/}
+              {/*</ul>*/}
             </div>
             <div className="col-md-6">
               <ul className="additional_links">

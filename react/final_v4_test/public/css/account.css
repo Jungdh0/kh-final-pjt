@@ -841,3 +841,7 @@ p {
 #genre_list{
   list-style: none;
 }
+
+#modal_edit{
+  background-color: var(--background-color-2);
+}
