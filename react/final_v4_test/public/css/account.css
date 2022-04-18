@@ -803,7 +803,7 @@ p {
   padding-bottom: 45.6px;
 }
 
-#ott_logo{
+#ott_logo, #profile_imgs{
   border: none;
   outline: none; !important;
   background: none;
@@ -817,7 +817,7 @@ p {
   opacity: 0.25;
 }
 
-#ott_logo:active, #ott_logo:focus{
+#ott_logo:active, #ott_logo:focus, #profile_imgs:focus{
   outline: none; !important;
   box-shadow: none; !important;
 }
@@ -852,4 +852,17 @@ p {
 
 #modal_edit{
   background-color: var(--background-color-2);
+}
+
+#modal_header{
+  border-bottom: 2px solid #36313d;
+}
+
+#modal_body{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#modal_footer{
+  border-top: 2px solid #36313d;
 }
