@@ -10,7 +10,8 @@ const Header = () => {
           <Navbar.Brand as={Link} to="/coverPage">
             <img
               src="./img/logo/main_logo.png"
-              // height="30"
+              width="142.48"
+              height="31"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
