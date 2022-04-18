@@ -825,3 +825,7 @@ p {
   font-size: 0.875rem;
   font-weight: 600;
 }
+
+#genre_list{
+  list-style: none;
+}
