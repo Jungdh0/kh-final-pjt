@@ -10,8 +10,8 @@ const CoverPage = () => {
             <div className="banner-wrapper">
               <div className="row align-items-center justify-content-center">
                 <div className="col-lg-8">
-                  <div className="banner-content text-center">
-                    <img src="./img/logo/big_pop.png" alt=""></img>
+                  <div className="banner-content text-center ">
+                    <img src="./img/logo/big_pop.png" alt="" className="py-2"></img>
                     <p>당신의 취향을 찾아보세요</p>
                     <div className="banner-btns d-flex flex-wrap justify-content-center">
                       <Link to="/testPage" className="default-btn" onClick="start();">
