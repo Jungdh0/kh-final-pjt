@@ -12,6 +12,19 @@ import TestPage from "../routes/TestPage";
 import CoverPage from "../routes/CoverPage";
 import DetailPage from "../routes/DetailPage";
 import SearchPage from "../routes/SearchPage";
+import { RecoilRoot, atom } from "recoil";
+
+// const layoutState = atom({
+//   key: "layout",
+//   default: true,
+// });
+//
+// const loginState = atom({
+//   key: "login",
+//   default: false,
+// });
+//
+// export { layoutState, loginState };
 
 const AppRouter = () => {
   return (
