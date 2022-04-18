@@ -12,7 +12,7 @@ const Login = () => {
         <div id="login" className="mx-auto my-5 px-4">
             <figure>
               <Link to="/coverPage" className="logo_account">
-                <img src="img/popcon_logo_test.png" alt="" width="181.35" height="35" className="dark" />
+                <img src="img/logo/big_pop.png" alt="" className="dark" />
               </Link>
             </figure>
 
