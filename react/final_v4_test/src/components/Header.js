@@ -9,8 +9,8 @@ const Header = () => {
         <Container>
           <Navbar.Brand as={Link} to="/coverPage">
             <img
-              src="./img/popcon_logo_test.png"
-              height="30"
+              src="./img/logo/main_logo.png"
+              // height="30"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />

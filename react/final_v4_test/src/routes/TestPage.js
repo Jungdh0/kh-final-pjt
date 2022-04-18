@@ -136,7 +136,7 @@ const TestPage = () => {
         <section id="main" className="mx-auto my-5 py-5 px-3">
           <h3>당신의 영화와 드라마 취향을 찾아보세요</h3>
           <div className="col-lg-6 col-md-8 col-sm-10 mx-auto">
-            <img src="https://img.icons8.com/color/344/popcorn.png" alt="" className="img-fluid" />
+            <img src="./img/logo/big_pop.png" alt="" className="img-fluid" />
           </div>
           <p>
             간단한 테스트를 통해 취향에 맞는 콘텐츠를 알아 볼 수 있습니다!
