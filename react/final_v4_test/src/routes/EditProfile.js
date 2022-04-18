@@ -41,18 +41,18 @@ const EditProfile = () => {
 
                     <Modal show={show} onHide={handleClose}>
                       <div id="modal_edit">
-                        <Modal.Header closeButton>
-                          <Modal.Title style={{ color: "black" }}>
+                        <Modal.Header closeButton id="modal_header">
+                          <Modal.Title style={{ fontWeight: 600 }}>
                             프로필 이미지 선택
                           </Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                          <div className="row">
+                          <div className="row" id="modal_body">
                             <div
                               className="col-md-3 col-sm-2"
                               id="profile_change_img"
                             >
-                              <figure>
+                              <Button id="profile_imgs">
                                 <img
                                   src="https://velog.velcdn.com/images/joyoo1221/post/b52f0acf-f560-4bf4-b0d3-033d27ef7159/image.png"
                                   alt="profile_img_1"
@@ -60,13 +60,13 @@ const EditProfile = () => {
                                   width="100"
                                   height="100"
                                 />
-                              </figure>
+                              </Button>
                             </div>
                             <div
                               className="col-md-3 col-sm-2"
                               id="profile_change_img"
                             >
-                              <figure>
+                              <Button id="profile_imgs">
                                 <img
                                   src="https://velog.velcdn.com/images/joyoo1221/post/119f9fe8-1462-4dd7-84fd-bda979b75919/image.png"
                                   alt="profile_img_2"
@@ -74,10 +74,10 @@ const EditProfile = () => {
                                   width="100"
                                   height="100"
                                 />
-                              </figure>
+                              </Button>
                             </div>
                             <div className="col-md-3" id="profile_change_img">
-                              <figure>
+                              <Button id="profile_imgs">
                                 <img
                                   src="https://velog.velcdn.com/images/joyoo1221/post/53d9047e-4200-4ad2-8e03-d78823fca370/image.png"
                                   alt="profile_img_3"
@@ -85,10 +85,10 @@ const EditProfile = () => {
                                   width="100"
                                   height="100"
                                 />
-                              </figure>
+                              </Button>
                             </div>
                             <div className="col-md-3" id="profile_change_img">
-                              <figure>
+                              <Button id="profile_imgs">
                                 <img
                                   src="https://velog.velcdn.com/images/joyoo1221/post/e98f1252-e298-42ce-b262-74d197a1c286/image.png"
                                   alt="profile_img_4"
@@ -96,11 +96,11 @@ const EditProfile = () => {
                                   width="100"
                                   height="100"
                                 />
-                              </figure>
+                              </Button>
                             </div>
                           </div>
                         </Modal.Body>
-                        <Modal.Footer>
+                        <Modal.Footer id="modal_footer">
                           <Button id="modal_close_btn" onClick={handleClose}>
                             닫기
                           </Button>
