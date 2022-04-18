@@ -11,7 +11,8 @@
 #login,
 #register {
   box-shadow: 3px 0 30px rgba(0, 0, 0, 0.2);
-  width: 50%;
+  width: 550px;
+  height: 750px;
   text-align: center;
   border-radius: 10px;
   background-color: #36313d;
@@ -20,19 +21,19 @@
 #login figure,
 #register figure {
   text-align: center;
-  padding: 170px 0 180px 0;
+  padding: 120px 0 50px 0;
   margin-bottom: 0;
 }
+
 @media (max-width: 767px) {
   #login,
   #register {
-    width: 100%;
+    width: 80%;
     box-shadow: none;
   }
 }
 #login form,
 #register form {
-  margin-bottom: 30px;
   display: block;
 }
 #login .copy,
@@ -67,6 +68,11 @@ a#forgot:hover {
   display: inline-block;
   padding: 10px;
   font-style: italic;
+}
+.access_social {
+  display: block;
+  margin: auto;
+  width: 300px;
 }
 
 a.social_bt {
@@ -303,18 +309,18 @@ input[type='radio'] {
 }
 .banner-section.style-1 .banner-wrapper {
   z-index: 1;
-  padding-top: 120px;
+  padding-top: 150px;
   padding-bottom: 120px;
   height: 100vh;
 }
 @media (min-width: 992px) {
   .banner-section.style-1 .banner-wrapper {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 130px;
+    padding-bottom: 100px;
   }
 }
 .banner-section.style-1 .banner-wrapper .banner-content > p {
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .banner-section.style-1 .banner-wrapper .banner-content > p {
@@ -776,6 +782,12 @@ p {
   #ott_edit {
     /*column-width: unset;*/
   }
+}
+
+.logo_account img{
+ display: block;
+ margin: auto;
+ padding: 20px;
 }
 
 #ott_logos {
