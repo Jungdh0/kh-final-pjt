@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
-// import { useRecoilState } from "recoil";
-// import { layoutState } from "../components/Router";
-//
-// const [layoutVisible, setLayoutVisible] = useRecoilState(layoutState);
-// setLayoutVisible(false);
+
+import { layoutState } from "../state";
+import { useRecoilState } from "recoil";
 
 const Login = () => {
+  const [layoutVisible, setLayoutVisible] = useRecoilState(layoutState);
+  setLayoutVisible(false);
+
   const href =
     "https://kauth.kakao.com/oauth/authorize?client_id=00ce48db774c8e8effcc16b9758ad126&redirect_uri=http://localhost:8080/auth/kakao/callback&response_type=code";
+
+  useEffect(() => {
+    return () => {
+      setLayoutVisible(true);
+    };
+  }, []);
 
   return (
     <div>
@@ -20,7 +27,7 @@ const Login = () => {
               <img src="img/logo/big_pop.png" alt="" className="dark" />
             </Link>
             <img src="img/logo/full.png" alt="" style={{ width: "25%" }} />
-            </figure>
+          </figure>
 
           <form className=" mx-auto mx-5">
             <div className="access_social ">

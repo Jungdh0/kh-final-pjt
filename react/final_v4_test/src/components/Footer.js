@@ -1,43 +1,51 @@
 import React from "react";
+import { layoutState } from "../state";
+import { useRecoilState } from "recoil";
 
 const Footer = () => {
+  const [layoutVisible] = useRecoilState(layoutState);
+
   return (
-    <div>
-      <footer>
-        <div className="container">
-          <div className="row add_bottom_25">
-            <div className="col-md-6">
-              {/*<ul className="footer-selector clearfix">*/}
-              {/*  <li>*/}
-              {/*    <div className="styled-select lang-selector">*/}
-              {/*      <select>*/}
-              {/*        <option defaultValue="Korean">Korean</option>*/}
-              {/*      </select>*/}
-              {/*    </div>*/}
-              {/*  </li>*/}
-              {/*</ul>*/}
+    <>
+      {layoutVisible ? (
+        <div>
+          <footer>
+            <div className="container">
+              <div className="row add_bottom_25">
+                <div className="col-md-6">
+                  {/*<ul className="footer-selector clearfix">*/}
+                  {/*  <li>*/}
+                  {/*    <div className="styled-select lang-selector">*/}
+                  {/*      <select>*/}
+                  {/*        <option defaultValue="Korean">Korean</option>*/}
+                  {/*      </select>*/}
+                  {/*    </div>*/}
+                  {/*  </li>*/}
+                  {/*</ul>*/}
+                </div>
+                <div className="col-md-6">
+                  <ul className="additional_links">
+                    <li>
+                      <a href="#0">Terms and conditions</a>
+                    </li>
+                    <li>© 2022 PopCon</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div className="col-md-6">
-              <ul className="additional_links">
-                <li>
-                  <a href="#0">Terms and conditions</a>
-                </li>
-                <li>© 2022 PopCon</li>
-              </ul>
-            </div>
-          </div>
+          </footer>
+          {/*/footer*/}
+
+          <div id="toTop"></div>
+          {/*Back to top button*/}
+
+          {/*COMMON SCRIPTS*/}
+          <script src="js/common_scripts.min.js"></script>
+          <script src="js/bootstrap.bundle.min.js"></script>
+          <script src="js/common_func.js"></script>
         </div>
-      </footer>
-      {/*/footer*/}
-
-      <div id="toTop"></div>
-      {/*Back to top button*/}
-
-      {/*COMMON SCRIPTS*/}
-      <script src="js/common_scripts.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/common_func.js"></script>
-    </div>
+      ) : null}
+    </>
   );
 };
 
