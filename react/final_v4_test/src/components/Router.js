@@ -41,7 +41,7 @@ const AppRouter = () => {
         <Route path="/main" element={<MainPage />}></Route>
         <Route path="/main/searchPage" element={<SearchPage />}></Route>
         <Route path="/main/explorePage" element={<ExplorePage />}></Route>
-        <Route path="/main/detailPage/:contentCode" element={<DetailPage movies={movies} />}></Route>
+        <Route path="/main/detailPage/:contentCode" element={<DetailPage />}></Route>
         <Route path="/main/likePage" element={<LikePage />}></Route>
         <Route path="/main/myPage" element={<MyPage />}></Route>
         <Route path="/main/editProfile" element={<EditProfile />}></Route>
