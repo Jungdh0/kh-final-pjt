@@ -11,7 +11,7 @@ const MainPage = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/main/ranking`);
+        const res = await axios.get(`${BASE_URL}/ranking`);
         setMovies(res.data.content);
         console.log(res.data.content);
       } catch (e) {

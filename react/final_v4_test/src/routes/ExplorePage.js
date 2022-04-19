@@ -17,8 +17,7 @@ const ExplorePage = () => {
     try {
       setIsLoading(true);
 
-      const res = await axios.get(`${BASE_URL}/main/explore/list?page=${page}`);
-
+      const res = await axios.get(`${BASE_URL}/movies?page=${page}`);
       console.log(res.data.content);
       setMovies(movies.concat(res.data.content));
       setTotal(res.data.totalElements);
