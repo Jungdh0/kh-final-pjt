@@ -87,12 +87,12 @@ const DetailPage = (props) => {
                     </li>
                     <li className="nav-item">
                       <a id="tab-B" href="#pane-B" className="nav-link" data-bs-toggle="tab" role="tab">
-                        출연진
+                        개봉연도
                       </a>
                     </li>
                     <li className="nav-item">
                       <a id="tab-C" href="#pane-C" className="nav-link" data-bs-toggle="tab" role="tab">
-                        장르
+                        감독/출연
                       </a>
                     </li>
                   </ul>
@@ -106,8 +106,8 @@ const DetailPage = (props) => {
                         </h5>
                       </div>
                       <div id="collapse-A" className="collapse" role="tabpanel" aria-labelledby="heading-A">
-                        <div className="pt-4" id="service_ott">
-                          <div className="author_list">
+                        <div className="pt-4">
+                          <div className="author_list pt-5">
                             <a href="author.html" className="author">
                               <div className="author_thumb veryfied">
                                 <figure>
@@ -132,20 +132,17 @@ const DetailPage = (props) => {
                     <div id="pane-B" className="card tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
                       <div className="card-header" role="tab" id="heading-B">
                         <h5>
-                          <a className="collapsed" data-bs-toggle="collapse" href="#collapse-B">
-                            시즌
-                          </a>
+                          <a className="collapsed" data-bs-toggle="collapse" href="#collapse-B">개봉연도</a>
                         </h5>
                       </div>
                       <div id="collapse-B" className="collapse" role="tabpanel" aria-labelledby="heading-B">
-                        <div className="pt-4">
+                        <div className="pt-5">
                           <div className="row author_list">
-                            <div className="col-lg-12">
+                            <div className="col-lg-12 pt-4">
                               <a href="" className="author">
                                 <div className="author_thumb veryfied"></div>
                                 <div>
-                                  <span>완결</span>
-                                  <h6>시즌 5</h6>
+                                  <span>{props.movies[id].release_year}</span>
                                 </div>
                               </a>
                             </div>
@@ -165,17 +162,17 @@ const DetailPage = (props) => {
                       <div id="collapse-C" className="collapse" role="tabpanel" aria-labelledby="heading-C">
                         <div className="pt-4">
                           <div className="row">
-                            <div className="col-lg-12">
+                            <div className="col-lg-12 pt-5">
                               <ul className="bullets">
                                 <li>
-                                  감독 <span>빈스 길리건</span>
+                                  감독 <span>{props.movies[id].director}</span>
                                 </li>
                                 <li>
                                   출연
-                                  <span>브라이언 크랜스턴, 아론 폴, 안나 건 외</span>
+                                  <span>{props.movies[id].actor}</span>
                                 </li>
                                 <li>
-                                  장르 <span>범죄, 스릴러</span>
+                                  태그 <span>#{props.movies[id].tag_code}</span>
                                 </li>
                               </ul>
                             </div>
