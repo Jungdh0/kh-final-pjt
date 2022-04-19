@@ -1,7 +1,7 @@
-import { atom } from "recoil";
+import { atom } from 'recoil';
 
 const layoutState = atom({
-  key: "layout",
+  key: 'layout',
   default: true,
 });
 
