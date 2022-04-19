@@ -1,9 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from '../components/Slider/Slider';
-import movies from '../sampledata/샘플.json';
+import { BASE_URL } from '../config';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 const MainPage = () => {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}/main/ranking`);
+        setMovies(res.data.content);
+        console.log(res.data.content);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
   return (
     <div>
       <main id="wrapper">
@@ -68,30 +83,25 @@ const MainPage = () => {
             </div>
             {/* /main_title */}
             <div className="row author_list">
-              {movies.map((movie, i) => {
-                if (i > 8) {
-                  return;
-                }
-                return (
-                  <div className="col-lg-4 col-md-6" key={i}>
-                    <Link to={`/main/detailPage/${movie.content_code}`} className="author" style={{ padding: '15px 15px 15px 55px' }}>
-                      <strong>{i + 1}</strong>
-                      <div className="author_thumb veryfied">
-                        {/* <i class="bi bi-check"></i> */}
-                        <figure>
-                          <img src={movie.content_img_ver} alt="" className="lazy" width={100} height={100} />
-                        </figure>
-                      </div>
-                      <div>
-                        <h6>{movie.content_name}</h6>
-                        <figure>
-                          <img src={movie.ott_code} width="20px" alt="" />
-                        </figure>
-                      </div>
-                    </Link>
-                  </div>
-                );
-              })}
+              {movies.map((movie, i) => (
+                <div className="col-lg-4 col-md-6" key={i}>
+                  <Link to={`/main/detailPage/${movie.contentCode}`} className="author" style={{ padding: '15px 15px 15px 55px' }}>
+                    <strong>{i + 1}</strong>
+                    <div className="author_thumb veryfied">
+                      {/* <i class="bi bi-check"></i> */}
+                      <figure>
+                        <img src={movie.contentImgVer} alt="" className="lazy" width={100} height={100} />
+                      </figure>
+                    </div>
+                    <div>
+                      <h6>{movie.contentName}</h6>
+                      <figure>
+                        <img src={movie.ottImg} width="20px" height="20px" alt={movie.ottName} style={{ objectFit: 'cover' }} />
+                      </figure>
+                    </div>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </div>
