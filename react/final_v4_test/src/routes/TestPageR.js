@@ -44,7 +44,7 @@ const TestPageR = () => {
         style={mainVisible ? visible : hidden}
       >
         <h3>당신의 영화와 드라마 취향을 찾아보세요</h3>
-        <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
+        <div class="col-lg-6 col-md-8 col-sm-10 py-5 mx-auto">
           <img src="/img/logo/big_pop.png" alt="" class="img-fluid" />
         </div>
         <p>

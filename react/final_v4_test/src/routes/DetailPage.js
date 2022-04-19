@@ -87,7 +87,7 @@ const DetailPage = (props) => {
                     </li>
                     <li className="nav-item">
                       <a id="tab-B" href="#pane-B" className="nav-link" data-bs-toggle="tab" role="tab">
-                        개봉연도
+                        개봉년도
                       </a>
                     </li>
                     <li className="nav-item">
@@ -132,7 +132,9 @@ const DetailPage = (props) => {
                     <div id="pane-B" className="card tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
                       <div className="card-header" role="tab" id="heading-B">
                         <h5>
-                          <a className="collapsed" data-bs-toggle="collapse" href="#collapse-B">개봉연도</a>
+                          <a className="collapsed" data-bs-toggle="collapse" href="#collapse-B">
+                            개봉년도
+                          </a>
                         </h5>
                       </div>
                       <div id="collapse-B" className="collapse" role="tabpanel" aria-labelledby="heading-B">
@@ -209,15 +211,15 @@ const DetailPage = (props) => {
                         <div className="strip">
                           <figure>
                             <img src={movie.content_img_ver} className="lazy" alt="" width="533" height="400" />
-                            <a href="detail-page.html" className="strip_info">
+                            <Link to={`/main/detailPage/${movie.content_code}`} className="strip_info">
                               <div className="item_title">
                                 <h3>{movie.content_name}</h3>
                               </div>
-                            </a>
+                            </Link>
                           </figure>
                           <ul>
                             <li>
-                              <Link to="/detailPage" className="author">
+                              <div className="author">
                                 <div className="author_thumb veryfied">
                                   <figure>
                                     <img
@@ -230,7 +232,7 @@ const DetailPage = (props) => {
                                   </figure>
                                 </div>
                                 <h6>Tving</h6>
-                              </Link>
+                              </div>
                             </li>
                             <li>
                               <a href="#0" className="wish_bt">
@@ -252,11 +254,6 @@ const DetailPage = (props) => {
           {/* /row */}
         </div>
       </main>
-
-      {/* COMMON SCRIPTS */}
-      <script src="js/common_scripts.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/common_func.js"></script>
     </div>
   );
 };
