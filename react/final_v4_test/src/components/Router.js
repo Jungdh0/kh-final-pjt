@@ -12,6 +12,7 @@ import TestPage from "../routes/TestPage";
 import CoverPage from "../routes/CoverPage";
 import DetailPage from "../routes/DetailPage";
 import SearchPage from "../routes/SearchPage";
+import TestPageR from "../routes/TestPageR";
 import { RecoilRoot, atom } from "recoil";
 
 // const layoutState = atom({
@@ -33,7 +34,8 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<CoverPage />}></Route>
         <Route path="/coverPage" element={<CoverPage />}></Route>
-        <Route path="/testPage" element={<TestPage />}></Route>
+        {/* <Route path="/testPage" element={<TestPage />}></Route> */}
+        <Route path="/testPage" element={<TestPageR />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/main" element={<MainPage />}></Route>
         <Route path="/main/searchPage" element={<SearchPage />}></Route>

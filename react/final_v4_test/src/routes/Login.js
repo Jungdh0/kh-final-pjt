@@ -20,7 +20,7 @@ const Login = () => {
               <img src="img/logo/big_pop.png" alt="" className="dark" />
             </Link>
             <img src="img/logo/full.png" alt="" style={{ width: "25%" }} />
-          </figure>
+            </figure>
 
           <form className=" mx-auto mx-5">
             <div className="access_social ">
