@@ -7,6 +7,9 @@ import Result from "../components/test/Result";
 
 import { useEffect, useState } from "react";
 
+import { layoutState } from "../state";
+import { useRecoilState } from "recoil";
+
 const visible = {
   display: "block",
   animaiton: "FadeIn 0.5s",
@@ -18,12 +21,20 @@ const hidden = {
 };
 
 const TestPageR = () => {
+  const [layoutVisible, setLayoutVisible] = useRecoilState(layoutState);
+  setLayoutVisible(false);
   const [mainVisible, setMainVisible] = useState(true);
   const [qnaVisible, setQnaVisible] = useState(false);
   const [resultVisible, setResultVisible] = useState(false);
   const [select, setSelect] = useState([
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
+
+  useEffect(() => {
+    return () => {
+      setLayoutVisible(true);
+    };
+  }, []);
 
   return (
     <div className="container" id="wrapper">

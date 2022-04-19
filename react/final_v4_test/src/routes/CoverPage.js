@@ -1,7 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
+import { layoutState } from "../state";
+import { useRecoilState } from "recoil";
+
+import { useEffect } from "react";
 
 const CoverPage = () => {
+  const [layoutVisible, setLayoutVisible] = useRecoilState(layoutState);
+  setLayoutVisible(false);
+  useEffect(() => {
+    return () => {
+      setLayoutVisible(true);
+    };
+  }, []);
+
   return (
     <div>
       <main id="wrapper">
@@ -11,14 +24,22 @@ const CoverPage = () => {
               <div className="row align-items-center justify-content-center">
                 <div className="col-lg-8">
                   <div className="banner-content text-center ">
-                    <img src="./img/logo/big_pop.png" alt="" className="py-2"></img>
+                    <img
+                      src="./img/logo/big_pop.png"
+                      alt=""
+                      className="py-2"
+                    ></img>
                     <p>당신의 취향을 찾아보세요</p>
                     <div className="banner-btns d-flex flex-wrap justify-content-center">
-                      <Link to="/testPage" className="default-btn" onClick="start();">
-                        <span>테스트하기</span>{' '}
+                      <Link
+                        to="/testPage"
+                        className="default-btn"
+                        onClick="start();"
+                      >
+                        <span>테스트하기</span>{" "}
                       </Link>
                       <Link to="/login" className="default-btn">
-                        <span>로그인</span>{' '}
+                        <span>로그인</span>{" "}
                       </Link>
                     </div>
                   </div>
@@ -71,7 +92,10 @@ const CoverPage = () => {
                 </div>
                 <div className="col-md-3">
                   <div className="banner_shape__item">
-                    <img src="https://images.justwatch.com/poster/183513923/s718/monseuteo/" alt="banner-item Image" />
+                    <img
+                      src="https://images.justwatch.com/poster/183513923/s718/monseuteo/"
+                      alt="banner-item Image"
+                    />
                   </div>
                 </div>
                 <div className="col-md-3">
@@ -84,7 +108,10 @@ const CoverPage = () => {
                 </div>
                 <div className="col-md-3">
                   <div className="banner_shape__item">
-                    <img src="https://images.justwatch.com/poster/182058633/s718/beomteol/" alt="banner-item Image" />
+                    <img
+                      src="https://images.justwatch.com/poster/182058633/s718/beomteol/"
+                      alt="banner-item Image"
+                    />
                   </div>
                 </div>
                 <div className="col-md-3">
@@ -131,7 +158,10 @@ const CoverPage = () => {
                 </div>
                 <div className="col-md-3">
                   <div className="banner_shape__item">
-                    <img src="https://images.justwatch.com/poster/239555642/s592/seuwiteuhom" alt="banner-item Image" />
+                    <img
+                      src="https://images.justwatch.com/poster/239555642/s592/seuwiteuhom"
+                      alt="banner-item Image"
+                    />
                   </div>
                 </div>
                 <div className="col-md-3">
@@ -416,7 +446,10 @@ const CoverPage = () => {
               <div className="row g-3">
                 <div className="col-md-3">
                   <div className="banner_shape__item">
-                    <img src="https://images.justwatch.com/poster/243994187/s592/sanggyeonni" alt="banner-item Image" />
+                    <img
+                      src="https://images.justwatch.com/poster/243994187/s592/sanggyeonni"
+                      alt="banner-item Image"
+                    />
                   </div>
                 </div>
                 <div className="col-md-3">
@@ -501,7 +534,10 @@ const CoverPage = () => {
                 </div>
                 <div className="col-md-3">
                   <div className="banner_shape__item">
-                    <img src="assets/images/nft-item/category/9.jpg" alt="banner-item Image" />
+                    <img
+                      src="assets/images/nft-item/category/9.jpg"
+                      alt="banner-item Image"
+                    />
                   </div>
                 </div>
               </div>
@@ -516,7 +552,10 @@ const CoverPage = () => {
                 </div>
                 <div className="col-md-3">
                   <div className="banner_shape__item">
-                    <img src="https://images.justwatch.com/poster/239555642/s592/seuwiteuhom" alt="banner-item Image" />
+                    <img
+                      src="https://images.justwatch.com/poster/239555642/s592/seuwiteuhom"
+                      alt="banner-item Image"
+                    />
                   </div>
                 </div>
                 <div className="col-md-3">
