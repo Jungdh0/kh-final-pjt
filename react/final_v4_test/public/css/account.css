@@ -619,9 +619,17 @@ input[type="radio"] {
 ========================================================*/
 #main {
   background-color: #36313d;
-  width: 60%;
+  width: 500px;
   text-align: center;
   border-radius: 10px;
+  
+}
+
+@media (max-width: 767px) {
+  #main {
+    width: 80%;
+    box-shadow: none;
+  }
 }
 
 .default-btn:hover,

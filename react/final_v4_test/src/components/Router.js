@@ -14,6 +14,7 @@ import DetailPage from "../routes/DetailPage";
 import SearchPage from "../routes/SearchPage";
 import TestPageR from "../routes/TestPageR";
 import { RecoilRoot, atom } from "recoil";
+import movies from '../sampledata/샘플.json';
 
 // const layoutState = atom({
 //   key: "layout",
@@ -40,7 +41,7 @@ const AppRouter = () => {
         <Route path="/main" element={<MainPage />}></Route>
         <Route path="/main/searchPage" element={<SearchPage />}></Route>
         <Route path="/main/explorePage" element={<ExplorePage />}></Route>
-        <Route path="/main/detailPage" element={<DetailPage />}></Route>
+        <Route path="/main/detailPage/:id" element={<DetailPage movies={movies} />}></Route>
         <Route path="/main/likePage" element={<LikePage />}></Route>
         <Route path="/main/myPage" element={<MyPage />}></Route>
         <Route path="/main/editProfile" element={<EditProfile />}></Route>
