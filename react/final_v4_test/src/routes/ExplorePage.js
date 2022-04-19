@@ -178,13 +178,6 @@ const ExplorePage = () => {
             </div>
           </InfiniteScroll>
           {/* /row */}
-          <div className="pagination_fg mb-4">
-            <Link to="#">«</Link>
-            <Link to="#" className="active">
-              1
-            </Link>
-            <Link to="#">»</Link>
-          </div>
         </div>
         {/* /container */}
       </main>
