@@ -1,7 +1,7 @@
-import React from "react";
-import movies from "../sampledata/샘플.json";
-import { Link } from "react-router-dom";
-import { Dropdown } from "bootstrap";
+import React from 'react';
+import movies from '../sampledata/샘플.json';
+import { Link } from 'react-router-dom';
+import { Dropdown } from 'bootstrap';
 
 const ExplorePage = () => {
   return (
@@ -10,31 +10,19 @@ const ExplorePage = () => {
         <div className="filters_full element_to_stick">
           <div className="container">
             <div className="add_top_10 clearfix row">
-              <div className="col-md-5 row" style={{ alignContent: "center" }}>
+              <div className="col-md-5 row" style={{ alignContent: 'center' }}>
                 <div className="custom_select">
-                  <select
-                    name="sort"
-                    id="sort"
-                    className="col-md-3"
-                    style={{ marginRight: 10 }}
-                  >
-                        <option defaultValue="popularity">인기순</option>
+                  <select name="sort" id="sort" className="col-md-3" style={{ marginRight: 10 }}>
+                    <option defaultValue="popularity">인기순</option>
                     <option value="rating">최신순</option>
                   </select>
 
                   {/*</div>*/}
                 </div>
               </div>
-              <div
-                className="col-md-5 search_bar"
-                style={{ marginLeft: "auto" }}
-              >
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="무엇을 찾고 있나요?"
-                />
-                <input type="submit" value={"검색"} />
+              <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
+                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" />
+                <input type="submit" value={'검색'} />
               </div>
             </div>
           </div>
@@ -47,11 +35,7 @@ const ExplorePage = () => {
           {/* /filters */}
           <div className="collapse" id="collapseSearch">
             <div className="search_bar_list">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search..."
-              />
+              <input type="text" className="form-control" placeholder="Search..." />
             </div>
           </div>
           {/* /collapseSearch */}
@@ -124,14 +108,8 @@ const ExplorePage = () => {
                   <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                     <div className="strip" key={i}>
                       <figure>
-                        <img
-                          src={movie.content_img_ver}
-                          className="lazy"
-                          alt=""
-                          width="533"
-                          height="400"
-                        />
-                        <Link to="/main/detailPage" className="strip_info">
+                        <img src={movie.content_img_ver} className="lazy" alt="" width="533" height="400" />
+                        <Link to={`/main/detailPage/${movie.content_code}`} className="strip_info">
                           <div className="item_title">
                             <h3>{movie.content_name}</h3>
                           </div>
@@ -142,20 +120,8 @@ const ExplorePage = () => {
                           <a href="" className="author">
                             <div className="author_thumb veryfied">
                               <figure>
-                                <img
-                                  src={movie.ott_code}
-                                  alt=""
-                                  className="lazy"
-                                  width="100"
-                                  height="100"
-                                />
-                                <img
-                                  src={movie.age_rating}
-                                  alt=""
-                                  className="lazy"
-                                  width="100"
-                                  height="100"
-                                />
+                                <img src={movie.ott_code} alt="" className="lazy" width="100" height="100" />
+                                <img src={movie.age_rating} alt="" className="lazy" width="100" height="100" />
                               </figure>
                             </div>
                             <h6>티빙</h6>

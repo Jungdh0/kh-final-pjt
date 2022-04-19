@@ -1,7 +1,7 @@
 import React from 'react';
 import movies from '../sampledata/샘플.json';
 import { Link } from 'react-router-dom';
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const DetailPage = (props) => {
   let { id } = useParams();
