@@ -18,7 +18,7 @@ const ExplorePage = () => {
                     className="col-md-3"
                     style={{ marginRight: 10 }}
                   >
-                    <option defaultValue="popularity">인기순</option>
+                        <option defaultValue="popularity">인기순</option>
                     <option value="rating">최신순</option>
                   </select>
 
