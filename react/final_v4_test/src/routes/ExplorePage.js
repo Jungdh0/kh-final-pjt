@@ -1,30 +1,38 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Dropdown } from "bootstrap";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { BASE_URL } from "../config";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Dropdown } from 'bootstrap';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { BASE_URL } from '../config';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 const ExplorePage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [movies, setMovies] = useState([]);
-  const [total, setTotal] = useState("");
+  const [total, setTotal] = useState('');
+  const [page, setPage] = useState(0);
+  const [hasMore, setHasMore] = useState(true);
+
+  const moreData = async () => {
+    try {
+      setIsLoading(true);
+
+      const res = await axios.get(`${BASE_URL}/main/explore/list?page=${page}`);
+
+      console.log(res.data.content);
+      setMovies(movies.concat(res.data.content));
+      setTotal(res.data.totalElements);
+      console.log(page);
+
+      res.data.last ? setHasMore(false) : setPage(page + 1);
+      setIsLoading(false);
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   useEffect(() => {
-    (async () => {
-      try {
-        setIsLoading(true);
-
-        const res = await axios.get(`${BASE_URL}/main/explore/list`);
-        console.log(res);
-        console.log(res.data.totalElements);
-        setMovies(res.data.content);
-        setTotal(res.data.totalElements);
-      } catch (e) {
-        console.error(e);
-      }
-      setIsLoading(false);
-    })();
+    moreData();
   }, []);
 
   return (
@@ -33,14 +41,9 @@ const ExplorePage = () => {
         <div className="filters_full element_to_stick">
           <div className="container">
             <div className="add_top_10 clearfix row">
-              <div className="col-md-5 row" style={{ alignContent: "center" }}>
+              <div className="col-md-5 row" style={{ alignContent: 'center' }}>
                 <div className="custom_select">
-                  <select
-                    name="sort"
-                    id="sort"
-                    className="col-md-3"
-                    style={{ marginRight: 10 }}
-                  >
+                  <select name="sort" id="sort" className="col-md-3" style={{ marginRight: 10 }}>
                     <option defaultValue="popularity">인기순</option>
                     <option value="rating">최신순</option>
                   </select>
@@ -48,16 +51,9 @@ const ExplorePage = () => {
                   {/*</div>*/}
                 </div>
               </div>
-              <div
-                className="col-md-5 search_bar"
-                style={{ marginLeft: "auto" }}
-              >
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="무엇을 찾고 있나요?"
-                />
-                <input type="submit" value={"검색"} />
+              <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
+                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" />
+                <input type="submit" value={'검색'} />
               </div>
             </div>
           </div>
@@ -70,11 +66,7 @@ const ExplorePage = () => {
           {/* /filters */}
           <div className="collapse" id="collapseSearch">
             <div className="search_bar_list">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search..."
-              />
+              <input type="text" className="form-control" placeholder="Search..." />
             </div>
           </div>
           {/* /collapseSearch */}
@@ -137,62 +129,54 @@ const ExplorePage = () => {
             </nav>
           </div>
           {/* /page_header */}
-          <div className="row">
-            {movies.map((movie, i) => (
-              <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div className="strip" key={i}>
-                  <figure>
-                    <img
-                      src={movie.contentImgVer}
-                      className="lazy"
-                      alt=""
-                      width="533"
-                      height="400"
-                    />
-                    <Link
-                      to={`/main/detailPage/${movie.contentCode}`}
-                      className="strip_info"
-                    >
-                      <div className="item_title">
-                        <h3>{movie.contentName}</h3>
-                      </div>
-                    </Link>
-                  </figure>
-                  <ul>
-                    <li>
-                      <a href="" className="author">
-                        <div className="author_thumb veryfied">
-                          <figure>
-                            <img
-                              src={movie.ottImg}
-                              alt=""
-                              className="lazy"
-                              width="100"
-                              height="100"
-                            />
-                            <img
-                              src={movie.ageRating}
-                              alt=""
-                              className="lazy"
-                              width="100"
-                              height="100"
-                            />
-                          </figure>
+          <InfiniteScroll
+            dataLength={movies.length}
+            next={moreData}
+            hasMore={hasMore}
+            // hasMore={this.state.hasMore}
+            loader={<h4>Loading...</h4>}
+            endMessage={
+              <p style={{ textAlign: 'center' }}>
+                <b>Yay! You have seen it all</b>
+              </p>
+            }
+          >
+            <div className="row">
+              {movies.map((movie, i) => (
+                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={i}>
+                  <div className="strip">
+                    <figure>
+                      <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
+                      <Link to={`/main/detailPage/${movie.contentCode}`} className="strip_info">
+                        <div className="item_title">
+                          <h3>{movie.contentName}</h3>
                         </div>
-                        <h6>{movie.ottName}</h6>
-                      </a>
-                    </li>
-                    <li>
-                      <Link to="#0" className="wish_bt">
-                        <i className="bi bi-heart-fill"></i>
                       </Link>
-                      view: {movie.detailsViewCount}
-                    </li>
-                  </ul>
+                    </figure>
+                    <ul>
+                      <li>
+                        <a href="" className="author">
+                          <div className="author_thumb veryfied">
+                            <figure>
+                              <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" />
+                              <img src={movie.ageRating} alt="" className="lazy" width="100" height="100" />
+                            </figure>
+                          </div>
+                          <h6>{movie.ottName}</h6>
+                        </a>
+                      </li>
+                      <li>
+                        <Link to="#0" className="wish_bt">
+                          <i className="bi bi-heart-fill"></i>
+                        </Link>
+                        view: {movie.detailsViewCount}
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </InfiniteScroll>
           {/* /row */}
           <div className="pagination_fg mb-4">
             <Link to="#">«</Link>
