@@ -78,7 +78,7 @@ const MainPage = () => {
                 return (
                   <div className="col-lg-4 col-md-6" key={i}>
                     <Link
-                      to="/main/detailPage"
+                      to={`/main/detailPage/${movie.content_code}`}
                       className="author"
                       style={{ padding: "15px 15px 15px 55px" }}
                     >

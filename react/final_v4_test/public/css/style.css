@@ -8070,6 +8070,7 @@ a.wallet_connect:hover h3 {
   border: none;
   border-bottom: 2px solid var(--border-color-1);
   display: flex;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .tabs_detail .nav-tabs {

@@ -1,19 +1,19 @@
-import React from "react";
-import { Route, Routes, HashRouter as Router } from "react-router-dom";
-import Login from "../routes/Login";
-import MyPage from "../routes/MyPage";
-import EditProfile from "../routes/EditProfile";
-import Header from "./Header";
-import Footer from "./Footer";
-import MainPage from "../routes/MainPage";
-import ExplorePage from "../routes/ExplorePage";
-import LikePage from "../routes/LikePage";
-import TestPage from "../routes/TestPage";
-import CoverPage from "../routes/CoverPage";
-import DetailPage from "../routes/DetailPage";
-import SearchPage from "../routes/SearchPage";
-import TestPageR from "../routes/TestPageR";
-import { RecoilRoot, atom } from "recoil";
+import React from 'react';
+import { Route, Routes, HashRouter as Router } from 'react-router-dom';
+import Login from '../routes/Login';
+import MyPage from '../routes/MyPage';
+import EditProfile from '../routes/EditProfile';
+import Header from './Header';
+import Footer from './Footer';
+import MainPage from '../routes/MainPage';
+import ExplorePage from '../routes/ExplorePage';
+import LikePage from '../routes/LikePage';
+import TestPage from '../routes/TestPage';
+import CoverPage from '../routes/CoverPage';
+import DetailPage from '../routes/DetailPage';
+import SearchPage from '../routes/SearchPage';
+import TestPageR from '../routes/TestPageR';
+import { RecoilRoot, atom } from 'recoil';
 import movies from '../sampledata/샘플.json';
 
 // const layoutState = atom({
