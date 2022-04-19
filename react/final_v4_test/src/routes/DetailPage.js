@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-// import movies from "../sampledata/샘플.json";
 import { Link, useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../config';
 
 const DetailPage = () => {
-  const { movies, setMovies } = useState('');
+  const [movie, setMovie] = useState('');
   let { contentCode } = useParams();
 
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/main/detailPage/${contentCode}`);
-        setMovies(res.data.content);
-        console.log(res.data.content);
+        const res = await axios.get(`${BASE_URL}/movies/${contentCode}`);
+        setMovie(res.data);
+        console.log(res);
       } catch (e) {
         console.error(e);
       }
@@ -27,7 +26,7 @@ const DetailPage = () => {
           <div className="row">
             <div className="col-xl-7 col-lg-7" style={{ display: 'flex', justifyContent: 'center' }}>
               <figure>
-                <img src={movies.contentImgVer} alt="" className="img-fluid rounded" height="700" width="400" />
+                <img src={movie.contentImgVer} alt="" className="img-fluid rounded" height="700" width="400" />
               </figure>
             </div>
             {/* /col */}
@@ -40,7 +39,7 @@ const DetailPage = () => {
                       <a href="author.html" className="author">
                         <div className="author_thumb veryfied" style={{ display: 'flex' }}>
                           <figure style={{ height: 30, width: 30 }}>
-                            <img src={movies.ottImg} alt="" className="lazy loaded" data-was-processed="true" />
+                            <img src={movie.ottImg} style={{ objectFit: 'cover' }} alt={movie.ottName} className="lazy loaded" data-was-processed="true" />
                           </figure>
                         </div>
                       </a>
@@ -48,13 +47,13 @@ const DetailPage = () => {
                   </div>
                   <div className="age">
                     <figure>
-                      <img src={movies.ageRating} style={{ width: 30 }} />
+                      <img src={movie.ageRating} style={{ width: 30, height: 30, objectFit: 'cover' }} />
                     </figure>
                   </div>
                 </div>
                 <hr />
-                <h1 className="mb-md-2">{movies.contentName}</h1>
-                <p>{movies.contentPlot}</p>
+                <h1 className="mb-md-2">{movie.contentName}</h1>
+                <p>{movie.contentPlot}</p>
                 <br />
                 <br />
                 {/* <p className="item_price clearfix" style={{ display: 'flex', justifyContent: 'end' }}>
@@ -96,11 +95,11 @@ const DetailPage = () => {
                             <a href="author.html" className="author">
                               <div className="author_thumb veryfied">
                                 <figure>
-                                  <img src={movies.ottImg} alt="" className="lazy" width="100" height="100" />
+                                  <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" />
                                 </figure>
                               </div>
                               <div>
-                                <h6>{movies.ottName}</h6>
+                                <h6>{movie.ottName}</h6>
                               </div>
                             </a>
                           </div>
@@ -123,7 +122,7 @@ const DetailPage = () => {
                               <a href="" className="author">
                                 <div className="author_thumb veryfied"></div>
                                 <div>
-                                  <span>{movies.releaseYear}</span>
+                                  <span>{movie.releaseYear}</span>
                                   {/* <h6>시즌 5</h6> */}
                                 </div>
                               </a>
@@ -147,11 +146,11 @@ const DetailPage = () => {
                             <div className="col-lg-12">
                               <ul className="bullets">
                                 <li>
-                                  감독 <span>{movies.director}</span>
+                                  감독 <span>{movie.director}</span>
                                 </li>
                                 <li>
                                   출연
-                                  <span>{movies.actor}</span>
+                                  <span>{movie.actor}</span>
                                 </li>
                               </ul>
                             </div>
@@ -177,7 +176,7 @@ const DetailPage = () => {
                 <h2>비슷한 콘텐츠</h2>
               </div>
               <div className="row">
-                {movies.map((movie, i) => {
+                {movie.map((movie, i) => {
                   if (i > 4) {
                     return;
                   }
