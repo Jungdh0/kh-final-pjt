@@ -57,7 +57,7 @@ function Slider() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/main/ranking`);
+        const res = await axios.get(`${BASE_URL}/ranking`);
         const posters = res.data.content.slice(0, itemSize).map((v) => v.contentImgHor);
         setItems(posters);
       } catch (e) {
