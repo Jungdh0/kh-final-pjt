@@ -2,6 +2,8 @@ import './Slider.css';
 import './SliderItem.css';
 import React, { useLayoutEffect, useRef, useEffect, useState } from 'react';
 import SlideButton from './SlideButton';
+import axios from 'axios';
+import { BASE_URL } from '../../config';
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -35,27 +37,40 @@ function useInterval(callback, delay) {
 
 function Slider() {
   const [windowWidth, windowHeight] = useWindowSize();
-  const items = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg'];
-  const itemSize = items.length;
+  // const items = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg'];
+  const itemSize = 3; //슬라이드 수
   const sliderPadding = 40;
   const sliderPaddingStyle = `0 ${sliderPadding}px`;
   const newItemWidth = getNewItemWidth();
   const transitionTime = 500;
   const transitionStyle = `transform ${transitionTime}ms ease 0s`;
-  const 양끝에_추가될_데이터수 = 2;
-  const [currentIndex, setCurrentIndex] = useState(양끝에_추가될_데이터수);
+  const bothData = 2;
+  const [currentIndex, setCurrentIndex] = useState(bothData);
   const [slideTransition, setTransition] = useState(transitionStyle);
   const [isSwiping, setIsSwiping] = useState(false);
   const [slideX, setSlideX] = useState(null);
   const [prevSlideX, setPrevSlideX] = useState(false);
   let isResizing = useRef(false);
 
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}/main/ranking`);
+        const posters = res.data.content.slice(0, itemSize).map((v) => v.contentImgHor);
+        setItems(posters);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
   let slides = setSlides();
   function setSlides() {
     let addedFront = [];
     let addedLast = [];
     var index = 0;
-    while (index < 양끝에_추가될_데이터수) {
+    while (index < bothData) {
       addedLast.push(items[index % items.length]);
       addedFront.unshift(items[items.length - 1 - (index % items.length)]);
       index++;
@@ -95,10 +110,10 @@ function Slider() {
 
   function handleSlide(index) {
     setCurrentIndex(index);
-    if (index - 양끝에_추가될_데이터수 < 0) {
+    if (index - bothData < 0) {
       index += itemSize;
       replaceSlide(index);
-    } else if (index - 양끝에_추가될_데이터수 >= itemSize) {
+    } else if (index - bothData >= itemSize) {
       index -= itemSize;
       replaceSlide(index);
     }
@@ -111,7 +126,7 @@ function Slider() {
   }
 
   function getItemIndex(index) {
-    index -= 양끝에_추가될_데이터수;
+    index -= bothData;
     if (index < 0) {
       index += itemSize;
     } else if (index >= itemSize) {
@@ -121,11 +136,7 @@ function Slider() {
   }
 
   function getClientX(event) {
-    return event._reactName == 'onTouchStart'
-      ? event.touches[0].clientX
-      : event._reactName == 'onTouchMove' || event._reactName == 'onTouchEnd'
-      ? event.changedTouches[0].clientX
-      : event.clientX;
+    return event._reactName == 'onTouchStart' ? event.touches[0].clientX : event._reactName == 'onTouchMove' || event._reactName == 'onTouchEnd' ? event.changedTouches[0].clientX : event.clientX;
   }
 
   function handleTouchStart(e) {
@@ -182,7 +193,7 @@ function Slider() {
                   onMouseLeave={handleMouseSwipe}
                 >
                   <a>
-                    <img src={items[itemIndex]} alt={`banner${itemIndex}`} style={{maxWidth:'100%'}} />
+                    <img src={items[itemIndex]} alt={`banner${itemIndex}`} style={{ maxWidth: '100%' }} />
                   </a>
                 </div>
               );
