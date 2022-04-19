@@ -173,7 +173,7 @@ body {
 }
 .sausage-links:before,
 .sausage-links:after {
-  content: '';
+  content: "";
   height: calc(100% - 2em);
   pointer-events: none;
   position: absolute;
@@ -182,7 +182,11 @@ body {
   z-index: 2;
 }
 .sausage-links:before {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #25222a 100%);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    #25222a 100%
+  );
   right: 0;
 }
 .sausage-links:after {
@@ -223,7 +227,7 @@ body {
   user-select: none;
 }
 
-input[type='radio'] {
+input[type="radio"] {
   display: none;
 }
 
@@ -436,14 +440,15 @@ input[type='radio'] {
   font-size: 1.125rem;
   font-weight: 700;
   color: #ebf0ff;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 .banner-content .banner-btns {
   gap: 30px;
 }
 
 .banner-image {
-  animation: floating 3s cubic-bezier(0.45, -0.36, 0.72, 1.03) infinite alternate;
+  animation: floating 3s cubic-bezier(0.45, -0.36, 0.72, 1.03) infinite
+    alternate;
 }
 
 @keyframes floating {
@@ -514,7 +519,12 @@ input[type='radio'] {
 }
 
 .item-desc-part .item-desc-content .history-tab .item-histo-list .histo-item,
-.item-desc-part .item-desc-content .details-tab .other-info-list .item-other-info .item-info-title,
+.item-desc-part
+  .item-desc-content
+  .details-tab
+  .other-info-list
+  .item-other-info
+  .item-info-title,
 .item-desc-part .item-desc-content .nav-tabs .nav-link,
 .help-item.style-2,
 .media-wrapper .tab-content .tab-pane .media-content .album .album-thumb,
@@ -537,8 +547,17 @@ input[type='radio'] {
   overflow: hidden;
 }
 
-.item-desc-part .item-desc-content .history-tab .item-histo-list .histo-item::before,
-.item-desc-part .item-desc-content .details-tab .other-info-list .item-other-info .item-info-title:after,
+.item-desc-part
+  .item-desc-content
+  .history-tab
+  .item-histo-list
+  .histo-item::before,
+.item-desc-part
+  .item-desc-content
+  .details-tab
+  .other-info-list
+  .item-other-info
+  .item-info-title:after,
 .item-desc-part .item-desc-content .nav-tabs .nav-link.active:after,
 .help-item.style-2 span,
 .media-wrapper .tab-content .tab-pane .media-content .album .album-thumb::after,
@@ -546,7 +565,12 @@ input[type='radio'] {
 .media-wrapper .nav-tp-abs .nav-item .nav-link.active span:before,
 .media-wrapper .nav-tp-abs .nav-item .nav-link span:before,
 .info-card .info-card-content .info-list li .info-name:after,
-.profile-section .member-profile .profile-item .profile-information .profile-pic .custom-upload,
+.profile-section
+  .member-profile
+  .profile-item
+  .profile-information
+  .profile-pic
+  .custom-upload,
 .profile-section .member-profile .profile-item .profile-cover .custom-upload,
 .banner_shape__1,
 .banner_shape__2,
@@ -557,16 +581,21 @@ input[type='radio'] {
 .nft-search-input button,
 .preloader .preloader-inner .preloader-icon span,
 .preloader .preloader-inner,
-.custom-upload input[type='file'],
+.custom-upload input[type="file"],
 .seller-icon:after,
 .veryfied:after,
 .nft-item-bottom .nft-thumb .nft-countdown {
   position: absolute;
-  content: '';
+  content: "";
 }
 .or::before,
 .or::after,
-.profile-section .member-profile .profile-item .profile-information .profile-pic img,
+.profile-section
+  .member-profile
+  .profile-item
+  .profile-information
+  .profile-pic
+  img,
 .banner_shape__1 img,
 .banner_shape__2 img,
 .banner_shape__1,
@@ -792,10 +821,10 @@ p {
   }
 }
 
-.logo_account img{
- display: block;
- margin: auto;
- padding: 20px;
+.logo_account img {
+  display: block;
+  margin: auto;
+  padding: 20px;
 }
 
 #ott_logos {
@@ -803,34 +832,37 @@ p {
   padding-bottom: 45.6px;
 }
 
-#ott_logo, #profile_imgs{
+#ott_logo,
+#profile_imgs {
   border: none;
-  outline: none; !important;
+  outline: none !important;
   background: none;
 }
 
-#ott_logo:hover{
+#ott_logo:hover {
   filter: brightness(120%);
 }
 
-#ott_logo:disabled{
+#ott_logo:disabled {
   opacity: 0.25;
 }
 
-#ott_logo:active, #ott_logo:focus, #profile_imgs:focus{
-  outline: none; !important;
-  box-shadow: none; !important;
+#ott_logo:active,
+#ott_logo:focus,
+#profile_imgs:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 #service_ott {
   padding-top: 5.5rem !important;
 }
 
-#profile_edit_btn:hover{
+#profile_edit_btn:hover {
   cursor: pointer;
 }
 
-#modal_close_btn{
+#modal_close_btn {
   background-color: #555;
   border: none;
   padding: 9px 20px;
@@ -838,31 +870,31 @@ p {
   font-weight: 600;
 }
 
-#modal_save_btn{
-  background-color: #7E2AD1;
+#modal_save_btn {
+  background-color: #7e2ad1;
   border: none;
   padding: 9px 20px;
   font-size: 0.875rem;
   font-weight: 600;
 }
 
-#genre_list{
+#genre_list {
   list-style: none;
 }
 
-#modal_edit{
+#modal_edit {
   background-color: var(--background-color-2);
 }
 
-#modal_header{
+#modal_header {
   border-bottom: 2px solid #36313d;
 }
 
-#modal_body{
+#modal_body {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-#modal_footer{
+#modal_footer {
   border-top: 2px solid #36313d;
 }

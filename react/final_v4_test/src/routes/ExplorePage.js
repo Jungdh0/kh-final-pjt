@@ -18,19 +18,11 @@ const ExplorePage = () => {
                     className="col-md-3"
                     style={{ marginRight: 10 }}
                   >
-                    <option defaultValue="popularity">인기순</option>
+                        <option defaultValue="popularity">인기순</option>
                     <option value="rating">최신순</option>
                   </select>
 
                   {/*</div>*/}
-                  <a
-                    href="#collapseFilters"
-                    data-bs-toggle="collapse"
-                    className="col-md-5 btn_filters"
-                  >
-                    <i className="bi bi-filter"></i>
-                    {/*<span>Filters</span>*/}
-                  </a>
                 </div>
               </div>
               <div
@@ -48,79 +40,7 @@ const ExplorePage = () => {
           </div>
           <div className="collapse filters_2" id="collapseFilters">
             <div className="container margin_detail">
-              <div className="row">
-                <div className="col-md-3">
-                  <div className="filter_type">
-                    <h6>장르별</h6>
-                    <ul id="genre_list">
-                      <li>
-                        <label className="container_check">
-                          드라마 <small>112</small>
-                          <input type="checkbox" />
-                          <span className="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label className="container_check">
-                          SF <small>90</small>
-                          <input type="checkbox" />
-                          <span className="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label className="container_check">
-                          로맨스 <small>140</small>
-                          <input type="checkbox" />
-                          <span className="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label className="container_check">
-                          액션 <small>43</small>
-                          <input type="checkbox" />
-                          <span className="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label className="container_check">
-                          공포 <small>23</small>
-                          <input type="checkbox" />
-                          <span className="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label className="container_check">
-                          스릴러 <small>23</small>
-                          <input type="checkbox" />
-                          <span className="checkmark"></span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="col-md-3">
-                  <div className="filter_type">
-                    <h6>Status</h6>
-                    <ul>
-                      <li>
-                        <label className="container_radio">
-                          시즌 진행중<small>11</small>
-                          <input type="radio" name="filter_4" />
-                          <span className="checkmark"></span>
-                        </label>
-                      </li>
-                      <li>
-                        <label className="container_radio">
-                          완결<small>08</small>
-                          <input type="radio" name="filter_4" />
-                          <span className="checkmark"></span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <div className="row"></div>
               {/* /row */}
             </div>
           </div>
