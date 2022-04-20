@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { BASE_URL } from '../config';
+import Heart from '../components/Heart';
 
 const LikePage = () => {
   const [movies, setMovies] = useState([]);
@@ -91,9 +92,7 @@ const LikePage = () => {
                               </a>
                             </li>
                             <li>
-                              <Link to="#0" className="wish_bt">
-                                <i className="bi bi-heart-fill"></i>
-                              </Link>
+                              <Heart isLiked={true} contentCode={movie.content.contentCode} />
                               view: {movie.content.detailsViewCount}
                             </li>
                           </ul>

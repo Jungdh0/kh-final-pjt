@@ -1,0 +1,17 @@
+.heartPurple {
+  color: #6610f2;
+  transition: all 300ms ease;
+}
+
+.heartPurple:hover {
+  color: #fff;
+}
+
+.heartWhite {
+  color: #fff;
+  transition: all 300ms ease;
+}
+
+.heartWhite:hover {
+  color: #6610f2;
+}

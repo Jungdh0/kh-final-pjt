@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../config';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Heart from '../components/Heart';
 
 const ExplorePage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,16 +13,17 @@ const ExplorePage = () => {
   const [total, setTotal] = useState('');
   const [page, setPage] = useState(0);
   const [hasMore, setHasMore] = useState(true);
+  const [likes, setLikes] = useState([]);
+
+  const userCode = 1; //임시
 
   const moreData = async () => {
     try {
       setIsLoading(true);
 
       const res = await axios.get(`${BASE_URL}/movies?page=${page}`);
-      console.log(res.data.content);
       setMovies(movies.concat(res.data.content));
       setTotal(res.data.totalElements);
-      console.log(page);
 
       res.data.last ? setHasMore(false) : setPage(page + 1);
       setIsLoading(false);
@@ -31,8 +33,26 @@ const ExplorePage = () => {
   };
 
   useEffect(() => {
-    moreData();
+    (async () => {
+      try {
+        setIsLoading(true);
+        const res = await axios.get(`${BASE_URL}/user/${userCode}/like`);
+
+        const likes = res.data.map((element) => (element = element.contentCode));
+        setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장
+
+        moreData();
+
+        setIsLoading(false);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
   }, []);
+
+  const isLiked = (contentCode) => {
+    return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
+  };
 
   return (
     <div>
@@ -148,7 +168,7 @@ const ExplorePage = () => {
           >
             <div className="row">
               {movies.map((movie, i) => (
-                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={i}>
+                <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={movie.contentCode}>
                   <div className="strip">
                     <figure>
                       <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
@@ -171,9 +191,7 @@ const ExplorePage = () => {
                         </a>
                       </li>
                       <li>
-                        <Link to="#0" className="wish_bt">
-                          <i className="bi bi-heart-fill"></i>
-                        </Link>
+                        <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
                         view: {movie.detailsViewCount}
                       </li>
                     </ul>
