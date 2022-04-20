@@ -61,6 +61,30 @@ const ExplorePage = () => {
     return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
   };
 
+  //********검색 ...?********//
+  // const MovieSearch = () => {
+  //   const [query, setQuery] = useState('');
+  //   const handleQuery = (e) => {
+  //     setQuery(e.target.value);
+  //   };
+  // };
+  // const handleButton = async () => {
+  //   try {
+  //     const res = await axios.get(`${BASE_URL}/movies/searchText`, {
+  //       params: {
+  //         query: query,
+  //       },
+  //     });
+  //     if (res && res.status === 200) {
+  //       const { data } = res;
+  //       console.log(data);
+  //       setMovies(data.movies);
+  //     }
+  //   } catch (e) {
+  //     console.log('error', e);
+  //   }
+  // };
+
   return (
     <div>
       <main>
@@ -86,10 +110,11 @@ const ExplorePage = () => {
                   {/*</div>*/}
                 </div>
               </div>
-              <form className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
-                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" autoFocus />
+              <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
+                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" onSearch={(value) => console.log(value)} />
+                {/* /onChange={handleQuery}/*/}
                 <input type="submit" value={'검색'} />
-              </form>
+              </div>
             </div>
           </div>
           <div className="collapse filters_2" id="collapseFilters">
