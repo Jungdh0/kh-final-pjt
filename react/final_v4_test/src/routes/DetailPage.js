@@ -1,3 +1,4 @@
+/* eslint-disable default-case */
 import React, { useEffect, useState } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
@@ -94,7 +95,7 @@ const DetailPage = () => {
                           <div className="author_list">
                             <a href="author.html" className="author">
                               <div className="author_thumb veryfied">
-                                  <img src={movie.ottImg} alt="" className="lazy" style={{ width: 60, height: 60, objectFit: 'cover' }} />
+                                <img src={movie.ottImg} alt="" className="lazy" style={{ width: 60, height: 60, objectFit: 'cover' }} />
                               </div>
                               <div>
                                 <h6>{movie.ottName}</h6>
@@ -151,7 +152,21 @@ const DetailPage = () => {
                                 </li>
                                 <li>
                                   태그
-                                  <span>#{movie.tagName}</span>
+                                  <span>
+                                    {() => {
+                                      let tag = movie.tagName
+                                      switch (tag) {
+                                        case 1 :
+                                          tag = '#퀸카가되고싶어';
+                                          break;
+                                        case 2:
+                                          tag = '#맛깔나는';
+                                          break;
+                                        default:
+                                          return '태그 없음';
+                                      }
+                                    }}
+                                  </span>
                                 </li>
                               </ul>
                             </div>

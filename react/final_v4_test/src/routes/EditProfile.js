@@ -11,24 +11,14 @@ const EditProfile = () => {
   return (
     <div>
       <main>
-        <div
-          className="container margin_30_40"
-          id="wrapper"
-          style={{ paddingTop: 60 }}
-        >
+        <div className="container margin_30_40" id="wrapper" style={{ paddingTop: 60 }}>
           <div className="row">
             <div className="col-lg-3">
               <div className="main_profile edit_section">
                 <div className="author">
                   <div className="author_thumb veryfied">
                     <figure>
-                      <img
-                        src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
-                        alt=""
-                        className="lazy"
-                        width="100"
-                        height="100"
-                      />
+                      <img src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png" alt="" className="lazy" width="100" height="100" />
                     </figure>
                   </div>
                 </div>
@@ -42,16 +32,11 @@ const EditProfile = () => {
                     <Modal show={show} onHide={handleClose}>
                       <div id="modal_edit">
                         <Modal.Header closeButton id="modal_header">
-                          <Modal.Title style={{ fontWeight: 600 }}>
-                            프로필 이미지 선택
-                          </Modal.Title>
+                          <Modal.Title style={{ fontWeight: 600 }}>프로필 이미지 선택</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                           <div className="row" id="modal_body">
-                            <div
-                              className="col-md-3 col-sm-2"
-                              id="profile_change_img"
-                            >
+                            <div className="col-md-3 col-sm-2" id="profile_change_img">
                               <Button id="profile_imgs">
                                 <img
                                   src="https://velog.velcdn.com/images/joyoo1221/post/b52f0acf-f560-4bf4-b0d3-033d27ef7159/image.png"
@@ -62,10 +47,7 @@ const EditProfile = () => {
                                 />
                               </Button>
                             </div>
-                            <div
-                              className="col-md-3 col-sm-2"
-                              id="profile_change_img"
-                            >
+                            <div className="col-md-3 col-sm-2" id="profile_change_img">
                               <Button id="profile_imgs">
                                 <img
                                   src="https://velog.velcdn.com/images/joyoo1221/post/119f9fe8-1462-4dd7-84fd-bda979b75919/image.png"
@@ -156,7 +138,7 @@ const EditProfile = () => {
                       </div>
 
                       <div className="row col-lg-4 ps-lg-6 pt-3">
-                        <div className="col-md-7" id="ott_edit">
+                        <div className="col-md-7 col-sm-5" id="ott_edit">
                           <img
                             id="tving_edit"
                             src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
@@ -166,14 +148,14 @@ const EditProfile = () => {
                             height="95"
                           />
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-md-5 col-sm-7">
                           <Form.Check type="switch" id="custom-switch" />
                           <p>티빙</p>
                         </div>
                       </div>
 
                       <div className="row col-lg-4 ps-lg-6 pt-3">
-                        <div className="col-md-7" id="ott_edit">
+                        <div className="col-md-7 col-sm-5" id="ott_edit">
                           <img
                             id="wavve_edit"
                             src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png"
@@ -183,7 +165,7 @@ const EditProfile = () => {
                             height="95"
                           />
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-md-5 col-sm-7">
                           <Form.Check type="switch" id="custom-switch" />
                           <p>웨이브</p>
                         </div>
