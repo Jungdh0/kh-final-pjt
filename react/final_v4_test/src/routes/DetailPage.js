@@ -3,11 +3,28 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../config';
+// 자료형에 보여주고 싶은 html 저장
+let tag = {
+  1: <span>#퀸카가되고싶어</span>,
+  2: <span>#맛깔나는</span>,
+  3: <span>#폰할머니집</span>,
+  4: <span>#방구석여행</span>,
+  5: <span>#냠냠쩝쩝</span>,
+  6: <span>#브금맛집</span>,
+  7: <span>#감정을파고드는</span>,
+  8: <span>#빨간맛궁금해허니</span>,
+  9: <span>#당신의기숙사는</span>,
+  10: <span>#미친상상력의비밀</span>,
+  11: <span>#잔혹한</span>,
+  12: <span>#심장마비오는</span>,
+  13: <span>#흥미진진한</span>,
+  14: <span>#아이들과보기좋은</span>,
+};
 
 const DetailPage = () => {
   const [movie, setMovie] = useState('');
-  let { contentCode } = useParams();
-
+  let { contentCode } = useParams(); 
+  let settag = movie.tagName;
   useEffect(() => {
     (async () => {
       try {
@@ -72,12 +89,12 @@ const DetailPage = () => {
                     </li>
                     <li className="nav-item">
                       <a id="tab-B" href="#pane-B" className="nav-link" data-bs-toggle="tab" role="tab">
-                        출연진
+                        개봉년도
                       </a>
                     </li>
                     <li className="nav-item">
                       <a id="tab-C" href="#pane-C" className="nav-link" data-bs-toggle="tab" role="tab">
-                        장르
+                        정보
                       </a>
                     </li>
                   </ul>
@@ -134,7 +151,7 @@ const DetailPage = () => {
                       <div className="card-header" role="tab" id="heading-C">
                         <h5>
                           <a className="collapsed" data-bs-toggle="collapse" href="#collapse-C">
-                            출연진/감독
+                            정보
                           </a>
                         </h5>
                       </div>
@@ -151,22 +168,9 @@ const DetailPage = () => {
                                   <span>{movie.actor}</span>
                                 </li>
                                 <li>
-                                  태그
-                                  <span>
-                                    {() => {
-                                      let tag = movie.tagName
-                                      switch (tag) {
-                                        case 1 :
-                                          tag = '#퀸카가되고싶어';
-                                          break;
-                                        case 2:
-                                          tag = '#맛깔나는';
-                                          break;
-                                        default:
-                                          return '태그 없음';
-                                      }
-                                    }}
-                                  </span>
+                                  태그 
+                                  {/* // key값이 settag인 자료를 뽑아 */}
+                                  {tag[settag]}
                                 </li>
                               </ul>
                             </div>
