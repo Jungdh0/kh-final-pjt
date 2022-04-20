@@ -8,25 +8,35 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import Heart from '../components/Heart';
 
 const ExplorePage = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [movies, setMovies] = useState([]);
   const [total, setTotal] = useState('');
   const [page, setPage] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const [likes, setLikes] = useState([]);
+  const [sort, setSort] = useState('detailsViewCount,desc');
 
   const userCode = 1; //임시
 
+  const newData = async () => {
+    try {
+      const res = await axios.get(`${BASE_URL}/movies?page=0&sort=${sort}`);
+      console.log(res.data.content);
+      setMovies(res.data.content);
+      setTotal(res.data.totalElements);
+
+      res.data.last ? setHasMore(false) : setPage(page + 1);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   const moreData = async () => {
     try {
-      setIsLoading(true);
-
-      const res = await axios.get(`${BASE_URL}/movies?page=${page}`);
+      const res = await axios.get(`${BASE_URL}/movies?page=${page}&sort=${sort}`);
       setMovies(movies.concat(res.data.content));
       setTotal(res.data.totalElements);
 
       res.data.last ? setHasMore(false) : setPage(page + 1);
-      setIsLoading(false);
     } catch (e) {
       console.error(e);
     }
@@ -35,20 +45,17 @@ const ExplorePage = () => {
   useEffect(() => {
     (async () => {
       try {
-        setIsLoading(true);
         const res = await axios.get(`${BASE_URL}/user/${userCode}/like`);
 
         const likes = res.data.map((element) => (element = element.contentCode));
         setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장
 
-        moreData();
-
-        setIsLoading(false);
+        newData();
       } catch (e) {
         console.error(e);
       }
     })();
-  }, []);
+  }, [sort]);
 
   const isLiked = (contentCode) => {
     return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
@@ -62,9 +69,18 @@ const ExplorePage = () => {
             <div className="add_top_10 clearfix row">
               <div className="col-md-5 row" style={{ alignContent: 'center' }}>
                 <div className="custom_select">
-                  <select name="sort" id="sort" className="col-md-3" style={{ marginRight: 10 }}>
-                    <option defaultValue="popularity">인기순</option>
-                    <option value="rating">최신순</option>
+                  <select
+                    name="sort"
+                    id="sort"
+                    className="col-md-3"
+                    style={{ marginRight: 10 }}
+                    onChange={(e) => {
+                      console.log(e.target.value);
+                      setSort(e.target.value);
+                    }}
+                  >
+                    <option value="detailsViewCount,desc">인기순</option>
+                    <option value="">인덱스순</option>
                   </select>
 
                   {/*</div>*/}
