@@ -86,10 +86,10 @@ const ExplorePage = () => {
                   {/*</div>*/}
                 </div>
               </div>
-              <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
-                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" name="searchText" />
+              <form className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
+                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" autoFocus />
                 <input type="submit" value={'검색'} />
-              </div>
+              </form>
             </div>
           </div>
           <div className="collapse filters_2" id="collapseFilters">
