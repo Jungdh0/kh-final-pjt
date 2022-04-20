@@ -69,7 +69,7 @@ const DetailPage = () => {
                         </a>
                       </div>
                     </div>
-                    <div className="age">
+                    <div className="age" style={{ margin-left: 'auto' }}>
                       <figure>
                         <img src={movie.ageRating} style={{ width: 30, height: 30, objectFit: 'cover' }} />
                       </figure>
