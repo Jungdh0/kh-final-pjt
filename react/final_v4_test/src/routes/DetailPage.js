@@ -84,7 +84,7 @@ const DetailPage = () => {
                       </li>
                       <li className="nav-item">
                         <a id="tab-C" href="#pane-C" className="nav-link" data-bs-toggle="tab" role="tab">
-                          출연진
+                          출연진/감독
                         </a>
                       </li>
                     </ul>
@@ -100,7 +100,7 @@ const DetailPage = () => {
                         <div id="collapse-A" className="collapse" role="tabpanel" aria-labelledby="heading-A">
                           <div className="pt-4" id="service_ott">
                             <div className="author_list">
-                              <a href="author.html" className="author">
+                              <a className="author">
                                 <div className="author_thumb veryfied">
                                   <img src={movie.ottImg} alt="" className="lazy" style={{ width: 60, height: 60, objectFit: 'cover' }} />
                                 </div>
@@ -117,7 +117,7 @@ const DetailPage = () => {
                         <div className="card-header" role="tab" id="heading-B">
                           <h5>
                             <a className="collapsed" data-bs-toggle="collapse" href="#collapse-B">
-                              개봉년도
+                              개봉연도
                             </a>
                           </h5>
                         </div>
@@ -125,7 +125,7 @@ const DetailPage = () => {
                           <div className="pt-4">
                             <div className="row author_list">
                               <div className="col-lg-12 pt-5">
-                                <a href="" className="author">
+                                <a className="author">
                                   <div className="author_thumb veryfied"></div>
                                   <div>
                                     <span>{movie.releaseYear}</span>
