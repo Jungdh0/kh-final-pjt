@@ -124,6 +124,12 @@ const ExplorePage = () => {
                 <li>
                   <a href="">#당신의기숙사는?</a>
                 </li>
+                <li>
+                  <a href="">#흥미진진한</a>
+                </li>
+                <li>
+                  <a href="">#아이들과보기좋은</a>
+                </li>
               </ul>
             </nav>
           </div>
