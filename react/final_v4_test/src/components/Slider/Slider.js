@@ -37,7 +37,6 @@ function useInterval(callback, delay) {
 
 function Slider() {
   const [windowWidth, windowHeight] = useWindowSize();
-  // const items = ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg'];
   const itemSize = 3; //슬라이드 수
   const sliderPadding = 40;
   const sliderPaddingStyle = `0 ${sliderPadding}px`;
@@ -57,8 +56,8 @@ function Slider() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/movies?page=0&size=9&sort=detailsViewCount,desc`);
-        const posters = res.data.content.slice(0, itemSize).map((v) => v.contentImgHor);
+        const res = await axios.get(`${BASE_URL}/movies?page=0&size=3&sort=detailsViewCount,desc`);
+        const posters = res.data.content.map((v) => v.contentImgHor);
         setItems(posters);
       } catch (e) {
         console.error(e);
@@ -193,7 +192,7 @@ function Slider() {
                   onMouseLeave={handleMouseSwipe}
                 >
                   <a>
-                    <img src={items[itemIndex]} alt={`banner${itemIndex}`} style={{ maxWidth: '100%' }} />
+                    <img src={items[itemIndex]} alt={`banner${itemIndex}`} style={{ maxWidth: '100%', objectFit: 'cover' }} />
                   </a>
                 </div>
               );
