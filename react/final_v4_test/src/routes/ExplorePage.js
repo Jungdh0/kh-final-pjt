@@ -157,7 +157,7 @@ const ExplorePage = () => {
                         <a href="" className="author">
                           <div className="author_thumb veryfied">
                             <figure>
-                              <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" />
+                              <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
                               <img src={movie.ageRating} alt="" className="lazy" width="100" height="100" />
                             </figure>
                           </div>

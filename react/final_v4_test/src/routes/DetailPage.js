@@ -94,9 +94,7 @@ const DetailPage = () => {
                           <div className="author_list">
                             <a href="author.html" className="author">
                               <div className="author_thumb veryfied">
-                                <figure>
-                                  <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" />
-                                </figure>
+                                  <img src={movie.ottImg} alt="" className="lazy" style={{ width: 60, height: 60, objectFit: 'cover' }} />
                               </div>
                               <div>
                                 <h6>{movie.ottName}</h6>
@@ -118,12 +116,11 @@ const DetailPage = () => {
                       <div id="collapse-B" className="collapse" role="tabpanel" aria-labelledby="heading-B">
                         <div className="pt-4">
                           <div className="row author_list">
-                            <div className="col-lg-12">
+                            <div className="col-lg-12 pt-5">
                               <a href="" className="author">
                                 <div className="author_thumb veryfied"></div>
                                 <div>
                                   <span>{movie.releaseYear}</span>
-                                  {/* <h6>시즌 5</h6> */}
                                 </div>
                               </a>
                             </div>
@@ -143,7 +140,7 @@ const DetailPage = () => {
                       <div id="collapse-C" className="collapse" role="tabpanel" aria-labelledby="heading-C">
                         <div className="pt-4">
                           <div className="row">
-                            <div className="col-lg-12">
+                            <div className="col-lg-12 pt-5">
                               <ul className="bullets">
                                 <li>
                                   감독 <span>{movie.director}</span>
@@ -151,6 +148,10 @@ const DetailPage = () => {
                                 <li>
                                   출연
                                   <span>{movie.actor}</span>
+                                </li>
+                                <li>
+                                  태그
+                                  <span>#{movie.tagName}</span>
                                 </li>
                               </ul>
                             </div>
