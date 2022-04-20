@@ -51,7 +51,7 @@ const ExplorePage = () => {
                 </div>
               </div>
               <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
-                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" />
+                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" name="searchText" />
                 <input type="submit" value={'검색'} />
               </div>
             </div>

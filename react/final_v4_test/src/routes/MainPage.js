@@ -11,7 +11,8 @@ const MainPage = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/ranking`);
+        // BASE_URL = 'http://localhost:8080/api';
+        const res = await axios.get(`${BASE_URL}/movies?page=0&size=9&sort=detailsViewCount,desc`);
         setMovies(res.data.content);
         console.log(res.data.content);
       } catch (e) {
@@ -79,7 +80,7 @@ const MainPage = () => {
               <span>
                 <em />
               </span>
-              <h2>당신을 위한 추천 콘텐츠</h2>
+              <h2>인기 콘텐츠</h2>
             </div>
             {/* /main_title */}
             <div className="row author_list">
