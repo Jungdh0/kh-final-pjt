@@ -23,7 +23,7 @@ let tag = {
 
 const DetailPage = () => {
   const [movie, setMovie] = useState('');
-  let { contentCode } = useParams(); 
+  let { contentCode } = useParams();
   let settag = movie.tagName;
   useEffect(() => {
     (async () => {
@@ -80,7 +80,6 @@ const DetailPage = () => {
                   </a>
                 </p> */}
 
-
                 <div className="tabs_detail">
                   <ul className="nav nav-tabs" role="tablist">
                     <li className="nav-item">
@@ -118,19 +117,26 @@ const DetailPage = () => {
                               <div>
                                 <h6>{movie.ottName}</h6>
                               </div>
-
                             </a>
                           </div>
                         </div>
-
-                        <div id="collapse-A" className="collapse" role="tabpanel" aria-labelledby="heading-A">
-                          <div className="pt-4" id="service_ott">
-                            <div className="author_list">
-                              <a className="author">
-                                <div className="author_thumb veryfied">
-                                  <img src={movie.ottImg} alt="" className="lazy" style={{ width: 60, height: 60, objectFit: 'cover' }} />
-                                </div>
-
+                      </div>
+                    </div>
+                    {/* /tab */}
+                    <div id="pane-B" className="card tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
+                      <div className="card-header" role="tab" id="heading-B">
+                        <h5>
+                          <a className="collapsed" data-bs-toggle="collapse" href="#collapse-B">
+                            개봉년도
+                          </a>
+                        </h5>
+                      </div>
+                      <div id="collapse-B" className="collapse" role="tabpanel" aria-labelledby="heading-B">
+                        <div className="pt-4">
+                          <div className="row author_list">
+                            <div className="col-lg-12 pt-5">
+                              <a href="" className="author">
+                                <div className="author_thumb veryfied"></div>
                                 <div>
                                   <span>{movie.releaseYear}</span>
                                 </div>
@@ -139,31 +145,15 @@ const DetailPage = () => {
                           </div>
                         </div>
                       </div>
-
-                      {/* /tab */}
-                      <div id="pane-B" className="card tab-pane fade" role="tabpanel" aria-labelledby="tab-B">
-                        <div className="card-header" role="tab" id="heading-B">
-                          <h5>
-                            <a className="collapsed" data-bs-toggle="collapse" href="#collapse-B">
-                              개봉연도
-                            </a>
-                          </h5>
-                        </div>
-                        <div id="collapse-B" className="collapse" role="tabpanel" aria-labelledby="heading-B">
-                          <div className="pt-4">
-                            <div className="row author_list">
-                              <div className="col-lg-12 pt-5">
-                                <a className="author">
-                                  <div className="author_thumb veryfied"></div>
-                                  <div>
-                                    <span>{movie.releaseYear}</span>
-                                  </div>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
+                    </div>
+                    {/* /tab */}
+                    <div id="pane-C" className="card tab-pane fade" role="tabpanel" aria-labelledby="tab-C">
+                      <div className="card-header" role="tab" id="heading-C">
+                        <h5>
+                          <a className="collapsed" data-bs-toggle="collapse" href="#collapse-C">
+                            정보
+                          </a>
+                        </h5>
                       </div>
                       <div id="collapse-C" className="collapse" role="tabpanel" aria-labelledby="heading-C">
                         <div className="pt-4">
@@ -178,7 +168,7 @@ const DetailPage = () => {
                                   <span>{movie.actor}</span>
                                 </li>
                                 <li>
-                                  태그 
+                                  태그
                                   {/* // key값이 settag인 자료를 뽑아 */}
                                   {tag[settag]}
                                 </li>
