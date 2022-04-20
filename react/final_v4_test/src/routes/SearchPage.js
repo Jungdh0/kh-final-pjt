@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../config';
+import { Link } from 'react-router-dom';
+import Heart from '../components/Heart';
 
 const SearchPage = () => {
-  const [movie, setMovie] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [movie, setMovie] = useState([]);
+  const [likes, setLikes] = useState([]);
 
-  let { contentCode } = useParams();
-  let settag = movie.tagName;
-  useEffect(() => {
-    (async () => {
-      try {
-        setIsLoading(true);
-        const res = await axios.get(`${BASE_URL}/movies/${contentCode}`);
-        setMovie(res.data);
-        setIsLoading(false);
-      } catch (e) {
-        console.error(e);
-      }
-    })();
-  }, []);
+
+
+  const isLiked = (contentCode) => {
+    return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
+  };
 
   return (
     <div>
@@ -90,6 +82,7 @@ const SearchPage = () => {
                 <hr />
                 <h1 className="mb-md-2">{movie.contentName}</h1>
                 <p>{movie.contentPlot}</p>
+
                 <br />
                 <br />
 
@@ -203,101 +196,118 @@ const SearchPage = () => {
           <h4>비슷한 콘텐츠</h4>
           <hr />
           <div className="row">
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={movie.contentCode}>
               <div className="strip">
                 <figure>
-                  <img
-                    src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                    data-src="https://images.justwatch.com/poster/262548358/s592/sanae-majseon"
-                    className="lazy"
-                    alt=""
-                    width="533"
-                    height="400"
-                  />
-                  <a href="detail-page.html" className="strip_info">
+                  <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
+                  <Link to={`/main/detailPage/${movie.contentCode}`} className="strip_info">
                     <div className="item_title">
-                      <h3>사내 맞선</h3>
+                      <h3>{movie.contentName}</h3>
                     </div>
-                  </a>
+                  </Link>
                 </figure>
                 <ul>
                   <li>
-                    <a href="author.html" className="author">
+                    <a href="" className="author">
                       <div className="author_thumb veryfied">
                         <figure>
-                          <img src="img/tving_logo.jpeg" data-src="img/tving_logo.jpeg" alt="" className="lazy" width="100" height="100" />
+                          <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
+                          <img src={movie.ageRating} alt="" className="lazy" width="100" height="100" />
                         </figure>
                       </div>
-                      <h6>Tving</h6>
-                    </a>
-                  </li>
-                  <li></li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div className="strip">
-                <figure>
-                  <img src="img/items/item-1-placeholder.png" data-src="img/poster/오징어게임.jpeg" className="lazy" alt="" width="533" height="400" />
-                  <a href="detail-page.html" className="strip_info">
-                    <div className="item_title">
-                      <h3>오징어게임</h3>
-                    </div>
-                  </a>
-                </figure>
-                <ul>
-                  <li>
-                    <a href="author.html" class="author">
-                      <div className="author_thumb">
-                        <figure>
-                          <img src="img/netflix_logo.jpeg" data-src="img/netflix_logo.jpeg" alt="" className="lazy" width="100" height="100" />
-                        </figure>
-                      </div>
-                      <h6>Netflix</h6>
+                      <h6>{movie.ottName}</h6>
                     </a>
                   </li>
                   <li>
-                    <a href="#0" className="wish_bt">
-                      <i class="bi bi-heart-fill"></i>
-                    </a>
-                    50
+                    <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
+                    view: {movie.detailsViewCount}
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="strip">
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={movie.contentCode}>
+              <div className="strip">
                 <figure>
-                  <img
-                    src="https://image.tving.com/upload/cms/caip/CAIP0900/P001565742.jpg/dims/resize/F_webp,400"
-                    data-src="https://image.tving.com/upload/cms/caip/CAIP0900/P001565742.jpg/dims/resize/F_webp,400"
-                    className="lazy"
-                    alt=""
-                    width="533"
-                    height="400"
-                  />
-                  <a href="detail-page.html" className="strip_info">
+                  <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
+                  <Link to={`/main/detailPage/${movie.contentCode}`} className="strip_info">
                     <div className="item_title">
-                      <h3>돼지의 왕</h3>
+                      <h3>{movie.contentName}</h3>
                     </div>
-                  </a>
+                  </Link>
                 </figure>
                 <ul>
                   <li>
-                    <a href="author.html" className="author">
+                    <a href="" className="author">
                       <div className="author_thumb veryfied">
                         <figure>
-                          <img src="img/tving_logo.jpeg" data-src="img/tving_logo.jpeg" alt="" class="lazy" width="100" height="100" />
+                          <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
+                          <img src={movie.ageRating} alt="" className="lazy" width="100" height="100" />
                         </figure>
                       </div>
-                      <h6>Tving</h6>
+                      <h6>{movie.ottName}</h6>
                     </a>
                   </li>
                   <li>
-                    <a href="#0" class="wish_bt">
-                      <i class="bi bi-heart-fill"></i>
+                    <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
+                    view: {movie.detailsViewCount}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={movie.contentCode}>
+              <div className="strip">
+                <figure>
+                  <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
+                  <Link to={`/main/detailPage/${movie.contentCode}`} className="strip_info">
+                    <div className="item_title">
+                      <h3>{movie.contentName}</h3>
+                    </div>
+                  </Link>
+                </figure>
+                <ul>
+                  <li>
+                    <a href="" className="author">
+                      <div className="author_thumb veryfied">
+                        <figure>
+                          <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
+                          <img src={movie.ageRating} alt="" className="lazy" width="100" height="100" />
+                        </figure>
+                      </div>
+                      <h6>{movie.ottName}</h6>
                     </a>
-                    159
+                  </li>
+                  <li>
+                    <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
+                    view: {movie.detailsViewCount}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={movie.contentCode}>
+              <div className="strip">
+                <figure>
+                  <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
+                  <Link to={`/main/detailPage/${movie.contentCode}`} className="strip_info">
+                    <div className="item_title">
+                      <h3>{movie.contentName}</h3>
+                    </div>
+                  </Link>
+                </figure>
+                <ul>
+                  <li>
+                    <a href="" className="author">
+                      <div className="author_thumb veryfied">
+                        <figure>
+                          <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
+                          <img src={movie.ageRating} alt="" className="lazy" width="100" height="100" />
+                        </figure>
+                      </div>
+                      <h6>{movie.ottName}</h6>
+                    </a>
+                  </li>
+                  <li>
+                    <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
+                    view: {movie.detailsViewCount}
                   </li>
                 </ul>
               </div>
