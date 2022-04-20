@@ -104,6 +104,7 @@ const DetailPage = () => {
                         </a>
                       </li>
                     </ul>
+                    
                     <div className="tab-content" role="tablist">
                       <div id="pane-A" className="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-A">
                         <div className="card-header" role="tab" id="heading-A">
