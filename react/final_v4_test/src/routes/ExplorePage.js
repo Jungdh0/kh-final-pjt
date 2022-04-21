@@ -6,6 +6,7 @@ import axios from 'axios';
 import { BASE_URL, tags } from '../config';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Heart from '../components/Heart';
+import Filter from '../components/Filter';
 
 const ExplorePage = () => {
   const [movies, setMovies] = useState([]);
@@ -14,6 +15,8 @@ const ExplorePage = () => {
   const [hasMore, setHasMore] = useState(true);
   const [likes, setLikes] = useState([]);
   const [sort, setSort] = useState('detailsViewCount,desc');
+  // const [filtered, setFiltered] = useState([]);
+  // const [acvtiveTag, setActiveTag] = useState(0);
 
   const [searchText, setSearchText] = useState('');
 
@@ -43,6 +46,7 @@ const ExplorePage = () => {
       console.log(res.data.content);
       setMovies(res.data.content);
       setTotal(res.data.totalElements);
+      // setFiltered(res.data.content);
 
       res.data.last ? setHasMore(false) : setPage(page + 1);
     } catch (e) {
@@ -182,6 +186,9 @@ const ExplorePage = () => {
                 ))}
               </ul>
             </nav>
+            {/* /filter */}
+            <Filter />
+            {/* <Filter movies={movies} setFiltered={setFiltered} acvtiveTag={acvtiveTag} setActiveTag={setActiveTag} /> */}
           </div>
           {/* /page_header */}
           <InfiniteScroll
