@@ -10,7 +10,7 @@ const Auth = () => {
     (async () => {
       const pathname = window.location.search;
       const code = pathname.split('=')[1];
-      const res = await axios.get(`${BASE_URL}/oauth/json?code=${code}`);
+      const res = await axios.get(`${BASE_URL}/oauth/token?code=${code}`);
       console.log(res);
       navigate('/main');
     })();
