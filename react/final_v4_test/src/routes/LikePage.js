@@ -25,8 +25,6 @@ const LikePage = () => {
     })();
   }, []);
 
-  //movie[0].content.actor
-
   return (
     <div>
       <main>

@@ -2,32 +2,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
-import { BASE_URL } from '../config';
+import { BASE_URL, tags } from '../config';
 import Reco from '../components/Reco';
 // 자료형에 보여주고 싶은 html 저장
-let tag = {
-  1: <span>#퀸카가되고싶어</span>,
-  2: <span>#맛깔나는</span>,
-  3: <span>#폰할머니집</span>,
-  4: <span>#방구석여행</span>,
-  5: <span>#냠냠쩝쩝</span>,
-  6: <span>#브금맛집</span>,
-  7: <span>#감정을파고드는</span>,
-  8: <span>#빨간맛궁금해허니</span>,
-  9: <span>#당신의기숙사는</span>,
-  10: <span>#미친상상력의비밀</span>,
-  11: <span>#잔혹한</span>,
-  12: <span>#심장마비오는</span>,
-  13: <span>#흥미진진한</span>,
-  14: <span>#아이들과보기좋은</span>,
-};
 
 const DetailPage = () => {
   const [movie, setMovie] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  let { contentCode } = useParams();
-  let settag = movie.tagName;
+  const { contentCode } = useParams();
   useEffect(() => {
     (async () => {
       try {
@@ -178,7 +161,7 @@ const DetailPage = () => {
                                   <li>
                                     태그
                                     {/* // key값이 settag인 자료를 뽑아 */}
-                                    {tag[settag]}
+                                    <span>{tags[movie.tagName]}</span>
                                   </li>
                                 </ul>
                               </div>

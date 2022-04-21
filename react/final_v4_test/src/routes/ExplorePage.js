@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Dropdown } from 'bootstrap';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BASE_URL } from '../config';
+import { BASE_URL, tags } from '../config';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Heart from '../components/Heart';
 
@@ -19,8 +19,6 @@ const ExplorePage = () => {
 
   const userCode = 1; //임시
 
-
-
   // const [search, setSearch] = useState('');
   // const onSearch = (e) => {
   //   e.preventDefault();
@@ -35,7 +33,13 @@ const ExplorePage = () => {
 
   const newData = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movies?page=0&sort=${sort}`);
+      const res = await axios.get(`${BASE_URL}/movies`, {
+        params: {
+          page: 0,
+          sort,
+        },
+      });
+
       console.log(res.data.content);
       setMovies(res.data.content);
       setTotal(res.data.totalElements);
@@ -48,7 +52,12 @@ const ExplorePage = () => {
 
   const moreData = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movies?page=${page}&sort=${sort}`);
+      const res = await axios.get(`${BASE_URL}/movies`, {
+        params: {
+          page,
+          sort,
+        },
+      });
       setMovies(movies.concat(res.data.content));
       setTotal(res.data.totalElements);
 
@@ -102,14 +111,13 @@ const ExplorePage = () => {
   // };
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     setSearchText(e.target.value);
   };
 
   const searchMovies = async (e) => {
     try {
-      const res = await axios.get(`${BASE_URL}/movies/searchText?texts=${searchText}`);
-      console.log(res);
+      // const res = await axios.get(`${BASE_URL}/movies/searchText?texts=${searchText}`);
+      console.log(searchText);
     } catch (e) {
       console.error(e);
     }
@@ -166,49 +174,12 @@ const ExplorePage = () => {
             <h1>All: </h1>
             <span>{total}</span>
             <nav className="sausage-links">
-              <ul>
-                <li>
-                  <button>#맛깔나는</button>
-                </li>
-                <li>
-                  <button>#퀸카가되고싶어?</button>
-                </li>
-                <li>
-                  <button>#방구석여행</button>
-                </li>
-                <li>
-                  <button>#미친상상력의비밀</button>
-                </li>
-                <li>
-                  <button>#냠냠쩝쩝</button>
-                </li>
-                <li>
-                  <button>#잔혹한</button>
-                </li>
-                <li>
-                  <button>#심장마비오는</button>
-                </li>
-                <li>
-                  <button>#브금맛집</button>
-                </li>
-                <li>
-                  <button>#빨간맛궁금해허니</button>
-                </li>
-                <li>
-                  <button>#감정을파고드는</button>
-                </li>
-                <li>
-                  <button>#폰할머니집</button>
-                </li>
-                <li>
-                  <button>#당신의기숙사는?</button>
-                </li>
-                <li>
-                  <button>#흥미진진한</button>
-                </li>
-                <li>
-                  <button>#아이들과보기좋은</button>
-                </li>
+              <ul style={{ flexWrap: 'Wrap' }}>
+                {tags.map((v, i) => (
+                  <li style={{ marginBottom: '10px' }} key={i}>
+                    <button>{v}</button>
+                  </li>
+                ))}
               </ul>
             </nav>
           </div>
