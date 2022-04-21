@@ -17,6 +17,18 @@ const ExplorePage = () => {
 
   const userCode = 1; //임시
 
+  // const [search, setSearch] = useState('');
+  // const onSearch = (e) => {
+  //   e.preventDefault();
+  //   if(search === null || search === '') {
+  //     axios.get()
+  //   }
+  // }
+  // const onChangeSearch = (e) => {
+  //   e.preventDefault();
+  //   setSearch(e.target.value);
+  // };
+
   const newData = async () => {
     try {
       const res = await axios.get(`${BASE_URL}/movies?page=0&sort=${sort}`);
@@ -111,9 +123,11 @@ const ExplorePage = () => {
                 </div>
               </div>
               <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
+                {/*<form onSubmit={(e) => onSearch(e)}>*/}
                 <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" onSearch={(value) => console.log(value)} />
-                {/* /onChange={handleQuery}/*/}
+                {/* /onChange={handleQuery} value={search} onChange={onChangeSearch}/*/}
                 <input type="submit" value={'검색'} />
+                {/*</form>*/}
               </div>
             </div>
           </div>
