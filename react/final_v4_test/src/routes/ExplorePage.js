@@ -117,19 +117,6 @@ const ExplorePage = () => {
               </div>
             </div>
           </div>
-          <div className="collapse filters_2" id="collapseFilters">
-            <div className="container margin_detail">
-              <div className="row"></div>
-              {/* /row */}
-            </div>
-          </div>
-          {/* /filters */}
-          <div className="collapse" id="collapseSearch">
-            <div className="search_bar_list">
-              <input type="text" className="form-control" placeholder="Search..." />
-            </div>
-          </div>
-          {/* /collapseSearch */}
         </div>
         {/* /filters_full */}
         <div className="container margin_30_40">
