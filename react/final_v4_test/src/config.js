@@ -1,6 +1,7 @@
 export const BASE_URL = 'http://localhost:8080/api';
 
 export const tags = [
+  null,
   '#퀸카가되고싶어',
   '#맛깔나는',
   '#폰할머니집',
