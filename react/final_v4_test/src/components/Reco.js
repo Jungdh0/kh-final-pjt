@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../config';
+import { Link } from 'react-router-dom';
 
 const Reco = ({ tagIndex }) => {
   console.log(tagIndex);
@@ -10,7 +11,7 @@ const Reco = ({ tagIndex }) => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/movies`);
+        const res = await axios.get(`${BASE_URL}/movies?size=3&sort=tagName,asc `);
         setMovie(res.data.content);
       } catch (e) {
         console.error(e);
@@ -33,31 +34,23 @@ const Reco = ({ tagIndex }) => {
             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div className="strip">
                 <figure>
-                  <img src={movie.content_img_ver} className="lazy" alt="" width="533" height="400" />
+                  <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
                   <a href="detail-page.html" className="strip_info">
                     <div className="item_title">
-                      <h3>{movie.content_name}</h3>
+                      <h3>{movie.contentName}</h3>
                     </div>
                   </a>
                 </figure>
                 <ul>
                   <li>
-                    {/* <Link to="/detailPage" className="author"> */}
-                    <div className="author">
+                    <Link to={`/main/detailPage/${movie.contentCode}`} className="author">
                       <div className="author_thumb veryfied">
                         <figure>
-                          <img
-                            src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
-                            alt=""
-                            className="lazy"
-                            width="100"
-                            height="100"
-                            style={{ objectFit: 'cover' }}
-                          />
+                          <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
                         </figure>
                       </div>
-                      <h6>Tving</h6>
-                    </div>
+                      <h6>{movie.ottName}</h6>
+                    </Link>
                     {/* </Link> */}
                   </li>
                   <li>
