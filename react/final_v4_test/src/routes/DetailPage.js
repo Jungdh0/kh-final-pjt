@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL } from '../config';
+import Reco from '../components/Reco';
 // 자료형에 보여주고 싶은 html 저장
 let tag = {
   1: <span>#퀸카가되고싶어</span>,
@@ -104,7 +105,7 @@ const DetailPage = () => {
                         </a>
                       </li>
                     </ul>
-                    
+
                     <div className="tab-content" role="tablist">
                       <div id="pane-A" className="card tab-pane fade show active" role="tabpanel" aria-labelledby="tab-A">
                         <div className="card-header" role="tab" id="heading-A">
@@ -193,58 +194,7 @@ const DetailPage = () => {
                 </div>
                 {/* /detail_col */}
               </div>
-
-              {/* <div className="container margin_60_40_second" style={{ marginTop: 20 }}>
-              <hr />
-              <div className="main_title version_2">
-                <span>
-                  <em></em>
-                </span>
-                <h2>비슷한 콘텐츠</h2>
-              </div>
-              <div className="row">
-                {movie.map((movie, i) => {
-                  if (i > 4) {
-                    return;
-                  }
-                  if (i) {
-                    return (
-                      <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                        <div className="strip">
-                          <figure>
-                            <img src={movie.content_img_ver} className="lazy" alt="" width="533" height="400" />
-                            <a href="detail-page.html" className="strip_info">
-                              <div className="item_title">
-                                <h3>{movie.content_name}</h3>
-                              </div>
-                            </a>
-                          </figure>
-                          <ul>
-                            <li>
-                              <Link to="/detailPage" className="author">
-                                <div className="author_thumb veryfied">
-                                  <figure>
-                                    <img src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png" alt="" className="lazy" width="100" height="100" />
-                                  </figure>
-                                </div>
-                                <h6>Tving</h6>
-                              </Link>
-                            </li>
-                            <li>
-                              <a href="#0" className="wish_bt">
-                                <i className="bi bi-heart-fill"></i>
-                              </a>
-                              129
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    );
-                  }
-                })}
-              </div>
-            </div> */}
-              {/* /col */}
+              <Reco />
             </div>
           )}
         </div>
