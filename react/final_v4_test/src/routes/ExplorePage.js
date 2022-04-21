@@ -118,7 +118,6 @@ const ExplorePage = () => {
                     <option value="detailsViewCount,desc">인기순</option>
                     <option value="">인덱스순</option>
                   </select>
-
                   {/*</div>*/}
                 </div>
               </div>
