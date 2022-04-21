@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
-import { Link, Redirect } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import axios from 'axios';
 
-import { layoutState } from "../state";
-import { useRecoilState } from "recoil";
+import { layoutState } from '../state';
+import { useRecoilState } from 'recoil';
 
 const Login = () => {
   const [layoutVisible, setLayoutVisible] = useRecoilState(layoutState);
+
   setLayoutVisible(false);
 
-  const href =
-    "https://kauth.kakao.com/oauth/authorize?client_id=00ce48db774c8e8effcc16b9758ad126&redirect_uri=http://localhost:8080/auth/kakao/callback&response_type=code";
+  const API_KEY = process.env.REACT_APP_REST_API_KEY;
+  const REDIRECT_URI = 'http://localhost:3000';
+  const authorize = `https://kauth.kakao.com/oauth/authorize?client_id=${API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
 
   useEffect(() => {
     return () => {
@@ -26,22 +28,17 @@ const Login = () => {
             <Link to="/coverPage" className="logo_account">
               <img src="img/logo/big_pop.png" alt="" className="dark" />
             </Link>
-            <img src="img/logo/full.png" alt="" style={{ width: "25%" }} />
+            <img src="img/logo/full.png" alt="" style={{ width: '25%' }} />
           </figure>
 
           <form className=" mx-auto mx-5">
             <div className="access_social ">
-              <a className="social_bt kakao" href={href}>
-                <img
-                  className="kakao_logo col-2"
-                  src="img/KakaoTalk_logo.png"
-                  style={{ height: "20px", width: "20px" }}
-                />{" "}
-                카카오로 시작하기
+              <a className="social_bt kakao" href={authorize}>
+                <img className="kakao_logo col-2" src="img/KakaoTalk_logo.png" style={{ height: '20px', width: '20px' }} /> 카카오로 시작하기
               </a>
             </div>
             <div className="text-center add_top_10">
-              팝콘은 처음이신가요?{" "}
+              팝콘은 처음이신가요?{' '}
               <strong>
                 <Link to="/#0">카카오로 시작해보세요!</Link>
               </strong>
