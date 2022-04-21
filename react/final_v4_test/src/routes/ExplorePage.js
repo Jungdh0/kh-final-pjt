@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Dropdown } from 'bootstrap';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BASE_URL } from '../config';
+import { BASE_URL, tags } from '../config';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Heart from '../components/Heart';
 import Filter from '../components/Filter';
@@ -35,7 +35,13 @@ const ExplorePage = () => {
 
   const newData = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movies?page=0&sort=${sort}`);
+      const res = await axios.get(`${BASE_URL}/movies`, {
+        params: {
+          page: 0,
+          sort,
+        },
+      });
+
       console.log(res.data.content);
       setMovies(res.data.content);
       setTotal(res.data.totalElements);
@@ -49,7 +55,12 @@ const ExplorePage = () => {
 
   const moreData = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movies?page=${page}&sort=${sort}`);
+      const res = await axios.get(`${BASE_URL}/movies`, {
+        params: {
+          page,
+          sort,
+        },
+      });
       setMovies(movies.concat(res.data.content));
       setTotal(res.data.totalElements);
 
@@ -103,14 +114,13 @@ const ExplorePage = () => {
   // };
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     setSearchText(e.target.value);
   };
 
   const searchMovies = async (e) => {
     try {
-      const res = await axios.get(`${BASE_URL}/movies/searchText?texts=${searchText}`);
-      console.log(res);
+      // const res = await axios.get(`${BASE_URL}/movies/searchText?texts=${searchText}`);
+      console.log(searchText);
     } catch (e) {
       console.error(e);
     }
