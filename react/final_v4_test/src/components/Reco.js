@@ -11,13 +11,18 @@ const Reco = ({ tagIndex }) => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/movies?size=3&sort=tagName,asc `);
+        const res = await axios.get(`${BASE_URL}/movies?tagName=${tagIndex}`, {
+          params: {
+            size: 4,
+          },
+        });
         setMovie(res.data.content);
       } catch (e) {
         console.error(e);
       }
     })();
   }, []);
+
 
   return (
     <div className="container margin_60_40_second" style={{ marginTop: 20 }}>
@@ -53,12 +58,7 @@ const Reco = ({ tagIndex }) => {
                     </Link>
                     {/* </Link> */}
                   </li>
-                  <li>
-                    <a href="#0" className="wish_bt">
-                      <i className="bi bi-heart-fill"></i>
-                    </a>
-                    129
-                  </li>
+                  <li></li>
                 </ul>
               </div>
             </div>
