@@ -2,11 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../config';
 import { Link } from 'react-router-dom';
+import Heart from '../components/Heart';
 
 const Reco = ({ tagIndex }) => {
   console.log(tagIndex);
 
   const [movie, setMovie] = useState([]);
+  const [likes, setLikes] = useState([]);
+  const userCode = 1; //임시
 
   useEffect(() => {
     (async () => {
@@ -23,7 +26,21 @@ const Reco = ({ tagIndex }) => {
     })();
   }, []);
 
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}/user/${userCode}/like`);
 
+        const likes = res.data.map((element) => (element = element.contentCode));
+        setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
+  const isLiked = (contentCode) => {
+    return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
+  };
   return (
     <div className="container margin_60_40_second" style={{ marginTop: 20 }}>
       <hr />
@@ -58,7 +75,10 @@ const Reco = ({ tagIndex }) => {
                     </Link>
                     {/* </Link> */}
                   </li>
-                  <li></li>
+                  <li>
+                    <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
+                    view: {movie.detailsViewCount}
+                  </li>
                 </ul>
               </div>
             </div>
