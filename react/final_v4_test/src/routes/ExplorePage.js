@@ -16,8 +16,7 @@ const ExplorePage = () => {
   const [likes, setLikes] = useState([]);
   const [sort, setSort] = useState('detailsViewCount,desc');
   // const [filtered, setFiltered] = useState([]);
-  // const [acvtiveTag, setActiveTag] = useState(0);
-
+  // const [activeTag, setActiveTag] = useState('');
   const [searchText, setSearchText] = useState('');
 
   const userCode = 1; //임시
@@ -128,6 +127,36 @@ const ExplorePage = () => {
 
     //아직 콘솔에만 찍을거임  ..(위에 고쳐야 됨..)
   };
+
+  // const [tagState, setTagState] = useState({
+  //   tags: {
+  //     1: false,
+  //     2: false,
+  //   },
+  // });
+
+  // const allFilterClick = (e, filterProp) => {
+  //   let name = e.target.tagName;
+  //   if (name === '#퀸카가되고싶어?') {
+  //     name = 1;
+  //   } else if (name === '#맛깔나는') {
+  //     name = 2;
+  //   } else {
+  //     name = e.target.tagName;
+  //   }
+  // };
+  // const searchTag = async (e) => {
+  //   try {
+  //     const res = await axios.get(`${BASE_URL}/movies/searchTag?=${activeTag}`);
+  //     console.log(res);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
+
+  // setTagState({
+
+  // })
 
   return (
     <div>

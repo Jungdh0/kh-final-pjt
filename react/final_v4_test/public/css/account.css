@@ -173,7 +173,7 @@ body {
 }
 .sausage-links:before,
 .sausage-links:after {
-  content: "";
+  content: '';
   height: calc(100% - 2em);
   pointer-events: none;
   position: absolute;
@@ -182,11 +182,7 @@ body {
   z-index: 2;
 }
 .sausage-links:before {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    #25222a 100%
-  );
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #25222a 100%);
   right: 0;
 }
 .sausage-links:after {
@@ -221,7 +217,8 @@ body {
   border: none;
   box-shadow: 0 2px 4px rgba(0, 90, 156, 0.15);
 }
-.sausage-links ul li button.active{
+.sausage-links ul li button.active,
+.sausage-links ul li button.visited {
   background: #7e2ad1;
 }
 /* 메인 -슬라이더 추가*/
@@ -230,7 +227,7 @@ body {
   user-select: none;
 }
 
-input[type="radio"] {
+input[type='radio'] {
   display: none;
 }
 
@@ -443,15 +440,14 @@ input[type="radio"] {
   font-size: 1.125rem;
   font-weight: 700;
   color: #ebf0ff;
-  font-family: "Manrope", sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 .banner-content .banner-btns {
   gap: 30px;
 }
 
 .banner-image {
-  animation: floating 3s cubic-bezier(0.45, -0.36, 0.72, 1.03) infinite
-    alternate;
+  animation: floating 3s cubic-bezier(0.45, -0.36, 0.72, 1.03) infinite alternate;
 }
 
 @keyframes floating {
@@ -522,12 +518,7 @@ input[type="radio"] {
 }
 
 .item-desc-part .item-desc-content .history-tab .item-histo-list .histo-item,
-.item-desc-part
-  .item-desc-content
-  .details-tab
-  .other-info-list
-  .item-other-info
-  .item-info-title,
+.item-desc-part .item-desc-content .details-tab .other-info-list .item-other-info .item-info-title,
 .item-desc-part .item-desc-content .nav-tabs .nav-link,
 .help-item.style-2,
 .media-wrapper .tab-content .tab-pane .media-content .album .album-thumb,
@@ -550,17 +541,8 @@ input[type="radio"] {
   overflow: hidden;
 }
 
-.item-desc-part
-  .item-desc-content
-  .history-tab
-  .item-histo-list
-  .histo-item::before,
-.item-desc-part
-  .item-desc-content
-  .details-tab
-  .other-info-list
-  .item-other-info
-  .item-info-title:after,
+.item-desc-part .item-desc-content .history-tab .item-histo-list .histo-item::before,
+.item-desc-part .item-desc-content .details-tab .other-info-list .item-other-info .item-info-title:after,
 .item-desc-part .item-desc-content .nav-tabs .nav-link.active:after,
 .help-item.style-2 span,
 .media-wrapper .tab-content .tab-pane .media-content .album .album-thumb::after,
@@ -568,12 +550,7 @@ input[type="radio"] {
 .media-wrapper .nav-tp-abs .nav-item .nav-link.active span:before,
 .media-wrapper .nav-tp-abs .nav-item .nav-link span:before,
 .info-card .info-card-content .info-list li .info-name:after,
-.profile-section
-  .member-profile
-  .profile-item
-  .profile-information
-  .profile-pic
-  .custom-upload,
+.profile-section .member-profile .profile-item .profile-information .profile-pic .custom-upload,
 .profile-section .member-profile .profile-item .profile-cover .custom-upload,
 .banner_shape__1,
 .banner_shape__2,
@@ -584,21 +561,16 @@ input[type="radio"] {
 .nft-search-input button,
 .preloader .preloader-inner .preloader-icon span,
 .preloader .preloader-inner,
-.custom-upload input[type="file"],
+.custom-upload input[type='file'],
 .seller-icon:after,
 .veryfied:after,
 .nft-item-bottom .nft-thumb .nft-countdown {
   position: absolute;
-  content: "";
+  content: '';
 }
 .or::before,
 .or::after,
-.profile-section
-  .member-profile
-  .profile-item
-  .profile-information
-  .profile-pic
-  img,
+.profile-section .member-profile .profile-item .profile-information .profile-pic img,
 .banner_shape__1 img,
 .banner_shape__2 img,
 .banner_shape__1,
@@ -625,7 +597,6 @@ input[type="radio"] {
   width: 500px;
   text-align: center;
   border-radius: 10px;
-  
 }
 
 @media (max-width: 767px) {
@@ -687,36 +658,9 @@ input[type="radio"] {
   border-radius: 20px;
 
   background: #b49ace;
-  background: -moz-linear-gradient(
-    top,
-    #b49ace 25%,
-    #a780ce 25%,
-    #b49ace 25%,
-    #b49ace 25%,
-    #b49ace 25%,
-    #7e2ad1 67%,
-    #7e2ad1 100%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    #b49ace 25%,
-    #a780ce 25%,
-    #b49ace 25%,
-    #b49ace 25%,
-    #b49ace 25%,
-    #7e2ad1 67%,
-    #7e2ad1 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    #b49ace 25%,
-    #a780ce 25%,
-    #b49ace 25%,
-    #b49ace 25%,
-    #b49ace 25%,
-    #7e2ad1 67%,
-    #7e2ad1 100%
-  );
+  background: -moz-linear-gradient(top, #b49ace 25%, #a780ce 25%, #b49ace 25%, #b49ace 25%, #b49ace 25%, #7e2ad1 67%, #7e2ad1 100%);
+  background: -webkit-linear-gradient(top, #b49ace 25%, #a780ce 25%, #b49ace 25%, #b49ace 25%, #b49ace 25%, #7e2ad1 67%, #7e2ad1 100%);
+  background: linear-gradient(to bottom, #b49ace 25%, #a780ce 25%, #b49ace 25%, #b49ace 25%, #b49ace 25%, #7e2ad1 67%, #7e2ad1 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b49ace', endColorstr='#7e2ad1',GradientType=0 );
 }
 

@@ -1,16 +1,21 @@
-import react, { useEffect } from 'react';
-
+import { useState, useEffect } from 'react';
 import { tags } from '../config';
 
-const Filter = (/*{ setActiveTag, activeTag, setFiltered, movies }*/) => {
+const Filter = () => {
+  // const Filter = (/*{ setActiveTag, activeTag, setFiltered, movies }*/) => {
   //   useEffect(() => {
   //     if (activeTag === 0) {
   //       setFiltered(movies);
   //       return;
+
   //     }
   //     const filtered = movies.filter((movie) => movie.tagName.includes(activeTag));
   //     setFiltered(filtered);
   //   }, [activeTag]);
+  //   const[isActive, setActive] = useState(isActive);
+  //   const toggleClass=()=>{
+  //       setActive(!isActive);
+  //   }
   return (
     <nav className="sausage-links">
       <ul>
