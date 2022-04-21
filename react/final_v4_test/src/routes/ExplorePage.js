@@ -177,15 +177,6 @@ const ExplorePage = () => {
             </div>
             <h1>All: </h1>
             <span>{total}</span>
-            <nav className="sausage-links">
-              <ul style={{ flexWrap: 'Wrap' }}>
-                {tags.map((v, i) => (
-                  <li style={{ marginBottom: '10px' }} key={i}>
-                    <button>{v}</button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
             {/* /filter */}
             <Filter />
             {/* <Filter movies={movies} setFiltered={setFiltered} acvtiveTag={acvtiveTag} setActiveTag={setActiveTag} /> */}
