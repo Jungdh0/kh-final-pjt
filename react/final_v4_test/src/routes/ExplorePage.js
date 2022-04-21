@@ -17,6 +17,8 @@ const ExplorePage = () => {
 
   const userCode = 1; //임시
 
+
+
   // const [search, setSearch] = useState('');
   // const onSearch = (e) => {
   //   e.preventDefault();
@@ -222,7 +224,7 @@ const ExplorePage = () => {
                     </figure>
                     <ul>
                       <li>
-                        <a href="" className="author">
+                        <div className="author">
                           <div className="author_thumb veryfied">
                             <figure>
                               <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
@@ -230,7 +232,7 @@ const ExplorePage = () => {
                             </figure>
                           </div>
                           <h6>{movie.ottName}</h6>
-                        </a>
+                        </div>
                       </li>
                       <li>
                         <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />

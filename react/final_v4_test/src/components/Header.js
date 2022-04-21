@@ -19,7 +19,7 @@ const Header = () => {
                   width="142.48"
                   height="31"
                   className="d-inline-block align-top"
-                  alt="React Bootstrap logo"
+                  alt=""
                 />
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
