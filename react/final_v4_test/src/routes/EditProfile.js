@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Form, Button, Modal } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Form, Button, Modal } from 'react-bootstrap';
 
 const EditProfile = () => {
   const [show, setShow] = useState(false);
@@ -141,7 +141,7 @@ const EditProfile = () => {
                         <div className="col-md-7 col-sm-5" id="ott_edit">
                           <img
                             id="tving_edit"
-                            src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
+                            src="https://velog.velcdn.com/images/joyoo1221/post/dd975d66-1ecb-4ab1-9067-0b6050ecb399/image.png"
                             alt="tving_logo"
                             className="lazy"
                             width="95"

@@ -1,11 +1,9 @@
-import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const MyPage = () => {
-  const [Image, setImage] = useState(
-    "https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
-  );
+  const [Image, setImage] = useState('https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png');
   const fileInput = useRef(null);
 
   return (
@@ -44,8 +42,7 @@ const MyPage = () => {
                 <ul>
                   <li>
                     <Link to="/main/myPage">
-                      <i className="bi bi-person"></i>이메일 :{" "}
-                      <span>user_id@popcon.com</span>
+                      <i className="bi bi-person"></i>이메일 : <span>user_id@popcon.com</span>
                     </Link>
                   </li>
                   <li>
@@ -62,13 +59,7 @@ const MyPage = () => {
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
                       <Button id="ott_logo" active>
-                        <img
-                          src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png"
-                          alt=""
-                          className="lazy"
-                          width="120"
-                          height="120"
-                        />
+                        <img src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png" alt="" className="lazy" width="120" height="120" />
                       </Button>
                       <p className="ott_name" id="ott_name">
                         넷플릭스
@@ -78,13 +69,7 @@ const MyPage = () => {
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
                       <Button id="ott_logo" disabled>
-                        <img
-                          src="https://velog.velcdn.com/images/joyoo1221/post/1a7edb63-cffc-4401-af47-06bc3e6b742c/image.png"
-                          alt=""
-                          className="lazy"
-                          width="120"
-                          height="120"
-                        />
+                        <img src="https://velog.velcdn.com/images/joyoo1221/post/dd975d66-1ecb-4ab1-9067-0b6050ecb399/image.png" alt="" className="lazy" width="120" height="120" />
                       </Button>
                       <p className="ott_name" id="ott_name">
                         티빙
@@ -94,13 +79,7 @@ const MyPage = () => {
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
                       <Button id="ott_logo" disabled>
-                        <img
-                          src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png"
-                          alt=""
-                          className="lazy"
-                          width="120"
-                          height="120"
-                        />
+                        <img src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png" alt="" className="lazy" width="120" height="120" />
                       </Button>
                       <p className="ott_name" id="ott_name">
                         웨이브
