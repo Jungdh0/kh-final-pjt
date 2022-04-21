@@ -13,8 +13,7 @@ import CoverPage from '../routes/CoverPage';
 import DetailPage from '../routes/DetailPage';
 import SearchPage from '../routes/SearchPage';
 import TestPageR from '../routes/TestPageR';
-import { RecoilRoot, atom } from 'recoil';
-import movies from '../sampledata/샘플.json';
+import Auth from '../routes/Auth';
 
 // const layoutState = atom({
 //   key: "layout",
@@ -45,6 +44,7 @@ const AppRouter = () => {
         <Route path="/main/likePage" element={<LikePage />}></Route>
         <Route path="/main/myPage" element={<MyPage />}></Route>
         <Route path="/main/editProfile" element={<EditProfile />}></Route>
+        <Route path="/auth" element={<Auth />}></Route>
       </Routes>
       <Footer></Footer>
     </Router>
