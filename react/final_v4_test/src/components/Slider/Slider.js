@@ -56,7 +56,13 @@ function Slider() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/movies?page=0&size=3&sort=detailsViewCount,desc`);
+        const res = await axios.get(`${BASE_URL}/movies`, {
+          params: {
+            size: 3,
+            sort: 'detailsViewCount,desc',
+          },
+        });
+
         const posters = res.data.content.map((v) => v.contentImgHor);
         setItems(posters);
       } catch (e) {

@@ -12,7 +12,14 @@ const MainPage = () => {
     (async () => {
       try {
         // BASE_URL = 'http://localhost:8080/api';
-        const res = await axios.get(`${BASE_URL}/movies?page=0&size=9&sort=detailsViewCount,desc`);
+        // const res = await axios.get(`${BASE_URL}/movies?page=0&size=9&sort=detailsViewCount,desc`);
+        const res = await axios.get(`${BASE_URL}/movies`, {
+          params: {
+            size: 9,
+            sort: 'detailsViewCount,desc',
+          },
+        });
+
         setMovies(res.data.content);
         console.log(res.data.content);
       } catch (e) {
