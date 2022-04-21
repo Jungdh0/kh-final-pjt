@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { tags } from '../config';
 
-const Filter = ({ isActive, tagName }) => {
+const Filter = () => {
   // const Filter = (/*{ setActiveTag, activeTag, setFiltered, movies }*/) => {
   //   useEffect(() => {
   //     if (activeTag === 0) {
   //       setFiltered(movies);
   //       return;
+
   //     }
   //     const filtered = movies.filter((movie) => movie.tagName.includes(activeTag));
   //     setFiltered(filtered);
