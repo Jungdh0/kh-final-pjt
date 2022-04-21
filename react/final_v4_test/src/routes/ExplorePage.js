@@ -18,6 +18,8 @@ const ExplorePage = () => {
   // const [filtered, setFiltered] = useState([]);
   // const [acvtiveTag, setActiveTag] = useState(0);
 
+  const [searchText, setSearchText] = useState('');
+
   const userCode = 1; //임시
 
   // const [search, setSearch] = useState('');
@@ -101,6 +103,22 @@ const ExplorePage = () => {
   //   }
   // };
 
+  const handleChange = (e) => {
+    console.log(e.target.value);
+    setSearchText(e.target.value);
+  };
+
+  const searchMovies = async (e) => {
+    try {
+      const res = await axios.get(`${BASE_URL}/movies/searchText?texts=${searchText}`);
+      console.log(res);
+    } catch (e) {
+      console.error(e);
+    }
+
+    //아직 콘솔에만 찍을거임  ..(위에 고쳐야 됨..)
+  };
+
   return (
     <div>
       <main>
@@ -126,11 +144,8 @@ const ExplorePage = () => {
                 </div>
               </div>
               <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
-                {/*<form onSubmit={(e) => onSearch(e)}>*/}
-                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" onSearch={(value) => console.log(value)} />
-                {/* /onChange={handleQuery} value={search} onChange={onChangeSearch}/*/}
-                <input type="submit" value={'검색'} />
-                {/*</form>*/}
+                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" onChange={handleChange} />
+                <input type="submit" value="검색" onClick={searchMovies} />
               </div>
             </div>
           </div>
