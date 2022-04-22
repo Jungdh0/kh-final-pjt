@@ -12,7 +12,7 @@ const Reco = ({ tagIndex }) => {
   const userCode = 1; //임시
 
   useEffect(() => {
-    let isComponentMounted = true;
+    let isMount = true;
     (async () => {
       try {
         const res = await axios.get(`${BASE_URL}/movies?tagName=${tagIndex}`, {
@@ -25,13 +25,13 @@ const Reco = ({ tagIndex }) => {
         console.error(e);
       }
       return () => {
-        isComponentMounted = false;
+        isMount = false;
       };
     })();
   }, []);
 
   useEffect(() => {
-    let isComponentMounted = true;
+    let isMount = true;
     (async () => {
       try {
         const res = await axios.put(`${BASE_URL}/user/${userCode}/like`);
@@ -42,7 +42,7 @@ const Reco = ({ tagIndex }) => {
         console.error(e);
       }
       return () => {
-        isComponentMounted = false;
+        isMount = false;
       };
     })();
   }, []);
