@@ -800,7 +800,13 @@ p {
   outline: none !important;
   box-shadow: none !important;
 }
-
+/* .ott_logo {
+  opacity: 0.25;
+}
+.ott_logo_active {
+  outline: none !important;
+  box-shadow: none !important;
+} */
 #service_ott {
   padding-top: 5.5rem !important;
 }
