@@ -14,7 +14,7 @@ const Reco = ({ tagIndex }) => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.put(`${BASE_URL}/movies?tagName=${tagIndex}`, {
+        const res = await axios.get(`${BASE_URL}/movies?tagName=${tagIndex}`, {
           params: {
             size: 4,
           },
@@ -29,7 +29,7 @@ const Reco = ({ tagIndex }) => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/user/${userCode}/like`);
+        const res = await axios.put(`${BASE_URL}/user/${userCode}/like`);
 
         const likes = res.data.map((element) => (element = element.contentCode));
         setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장
@@ -41,6 +41,7 @@ const Reco = ({ tagIndex }) => {
   const isLiked = (contentCode) => {
     return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
   };
+
   return (
     <div className="container margin_60_40_second" style={{ marginTop: 20 }}>
       <hr />
@@ -53,26 +54,26 @@ const Reco = ({ tagIndex }) => {
       <div className="row">
         {movie.map((movie, i) => {
           return (
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={movie.contentCode}>
               <div className="strip">
                 <figure>
                   <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
-                  <a href="detail-page.html" className="strip_info">
+                  <Link to={`/main/detailPage/${movie.contentCode}`} className="strip_info">
                     <div className="item_title">
                       <h3>{movie.contentName}</h3>
                     </div>
-                  </a>
+                  </Link>
                 </figure>
                 <ul>
                   <li>
-                    <Link to={`/main/detailPage/${movie.contentCode}`} className="author">
+                    <div className="author">
                       <div className="author_thumb veryfied">
                         <figure>
                           <img src={movie.ottImg} alt="" className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
                         </figure>
                       </div>
                       <h6>{movie.ottName}</h6>
-                    </Link>
+                    </div>
                     {/* </Link> */}
                   </li>
                   <li>
