@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Dropdown } from 'bootstrap';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BASE_URL, tags } from '../config';
+import { BASE_URL, tags as hashtags } from '../config';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Heart from '../components/Heart';
 import Filter from '../components/Filter';
@@ -20,6 +20,8 @@ const ExplorePage = () => {
   const [change, setChange] = useState('');
   const [query, setQuery] = useState('');
   const [filters, setFilters] = useState([]);
+
+  const [category, setCategory] = useState('All');
 
   const userCode = 1; //임시
 
@@ -48,6 +50,7 @@ const ExplorePage = () => {
         console.log(res.data.content);
         setMovies(res.data.content);
         setTotal(res.data.totalElements);
+        setCategory('All');
 
         res.data.last ? setHasMore(false) : setPage(page + 1);
         return;
@@ -60,6 +63,12 @@ const ExplorePage = () => {
         setPage(0);
         setHasMore(false);
         setTotal(res.data.length);
+
+        const filteredCategory = filters.map((v) => {
+          return hashtags[v];
+        });
+
+        setCategory(filteredCategory.join(', '));
       }
     } catch (e) {
       console.error(e);
@@ -223,7 +232,7 @@ const ExplorePage = () => {
                 <li>인기 콘텐츠</li>
               </ul>
             </div>
-            <h1>All: </h1>
+            <h1>{category}: </h1>
             <span>{total}</span>
             {/* /filter */}
             <Filter setFilters={setFilters} filters={filters} />
