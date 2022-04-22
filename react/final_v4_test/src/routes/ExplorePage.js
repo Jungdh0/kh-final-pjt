@@ -40,11 +40,12 @@ const ExplorePage = () => {
   const newData = async () => {
     try {
       if (filters.length == 0) {
+        const title = query || null;
         const res = await axios.get(`${BASE_URL}/movies`, {
           params: {
             page: 0,
-            title: query,
-            sort,
+            title: title,
+            sort: sort,
           },
         });
 
