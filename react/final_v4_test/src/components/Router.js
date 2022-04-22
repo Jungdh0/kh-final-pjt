@@ -11,7 +11,6 @@ import LikePage from '../routes/LikePage';
 import TestPage from '../routes/TestPage';
 import CoverPage from '../routes/CoverPage';
 import DetailPage from '../routes/DetailPage';
-import SearchPage from '../routes/SearchPage';
 import TestPageR from '../routes/TestPageR';
 import Auth from '../routes/Auth';
 
