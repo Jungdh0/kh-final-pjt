@@ -1,10 +1,25 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import { BASE_URL } from '../config';
+import axios from 'axios';
 
 const MyPage = () => {
   // const [image, setImage] = useState('https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png');
   // const fileInput = useRef(null);
+  const [ott, setOtt] = useState([]);
+  const userCode = 1; //임시
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}/user/${userCode}/ott`);
+        console.log(res.data);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
 
   return (
     <div>
