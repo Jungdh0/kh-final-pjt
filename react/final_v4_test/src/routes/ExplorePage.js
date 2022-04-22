@@ -253,7 +253,6 @@ const ExplorePage = () => {
             <span>{total}</span>
             {/* /filter */}
             <Filter setFilters={setFilters} filters={filters} />
-            {/* <Filter movies={movies} setFiltered={setFiltered} acvtiveTag={acvtiveTag} setActiveTag={setActiveTag} /> */}
           </div>
           {/* /page_header */}
           <InfiniteScroll
