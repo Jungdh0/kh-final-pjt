@@ -17,7 +17,8 @@ const ExplorePage = () => {
   const [sort, setSort] = useState('detailsViewCount,desc');
   // const [filtered, setFiltered] = useState([]);
   // const [activeTag, setActiveTag] = useState('');
-  const [searchText, setSearchText] = useState('');
+  const [change, setChange] = useState('');
+  const [query, setQuery] = useState('');
   const [filters, setFilters] = useState([]);
 
   const userCode = 1; //임시
@@ -36,19 +37,30 @@ const ExplorePage = () => {
 
   const newData = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movies`, {
-        params: {
-          page: 0,
-          sort,
-        },
-      });
+      if (filters.length == 0) {
+        const res = await axios.get(`${BASE_URL}/movies`, {
+          params: {
+            page: 0,
+            sort,
+          },
+        });
 
-      console.log(res.data.content);
-      setMovies(res.data.content);
-      setTotal(res.data.totalElements);
-      // setFiltered(res.data.content);
+        console.log(res.data.content);
+        setMovies(res.data.content);
+        setTotal(res.data.totalElements);
 
-      res.data.last ? setHasMore(false) : setPage(page + 1);
+        res.data.last ? setHasMore(false) : setPage(page + 1);
+        return;
+      } else if (filters.length !== 0) {
+        const tags = filters.length == 1 ? 'tags=' + filters[0] : filters.join('&tags=');
+        console.log(filters[0]);
+        const res = await axios.get(`${BASE_URL}/movies/searchTag?${tags}`);
+
+        setMovies(res.data);
+        setPage(0);
+        setHasMore(false);
+        setTotal(res.data.length);
+      }
     } catch (e) {
       console.error(e);
     }
@@ -79,14 +91,12 @@ const ExplorePage = () => {
         const likes = res.data.map((element) => (element = element.contentCode));
         setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장
 
-        console.log('gd');
-
         newData();
       } catch (e) {
         console.error(e);
       }
     })();
-  }, [sort]);
+  }, [sort, filters, query]);
 
   const isLiked = (contentCode) => {
     return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
@@ -117,13 +127,13 @@ const ExplorePage = () => {
   // };
 
   const handleChange = (e) => {
-    setSearchText(e.target.value);
+    setChange(e.target.value);
   };
 
   const searchMovies = async () => {
     try {
-      // const res = await axios.get(`${BASE_URL}/movies/searchText?texts=${searchText}`);
-      // console.log(res);
+      setQuery(change);
+      console.log(change);
     } catch (e) {
       console.error(e);
     }
@@ -131,17 +141,11 @@ const ExplorePage = () => {
     //아직 콘솔에만 찍을거임  ..(위에 고쳐야 됨..)
   };
 
-  const searchTag = async () => {
-    const tags = filters.map((v) => '?' + 'tags=' + v);
-    const res = await axios.get(`${BASE_URL}/movies/searchTag&${tags}`);
-    console.log(res);
-  };
-
+  /** 필터  */
   useEffect(() => {
-    // searchTag();
-    console.log(filters);
-  }, [filters]);
-  //필터값이 바뀔때마다 실행!
+    console.log(filters); //필터 배열
+    setMovies([]);
+  }, [filters]); //[fillers]: 필터값이 바뀔때마다 실행
 
   // const [tagState, setTagState] = useState({
   //   tags: {
