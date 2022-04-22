@@ -25,7 +25,7 @@ const DetailPage = () => {
         setIsLoading(false);
       };
     })();
-  }, []);
+  }, [contentCode]);
 
   return (
     <div>
