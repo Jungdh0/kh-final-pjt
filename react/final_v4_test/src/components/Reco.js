@@ -14,7 +14,7 @@ const Reco = ({ tagIndex }) => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/movies?tagName=${tagIndex}`, {
+        const res = await axios.put(`${BASE_URL}/movies?tagName=${tagIndex}`, {
           params: {
             size: 4,
           },

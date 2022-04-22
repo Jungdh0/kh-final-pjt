@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const MyPage = () => {
-  const [Image, setImage] = useState('https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png');
-  const fileInput = useRef(null);
+  // const [image, setImage] = useState('https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png');
+  // const fileInput = useRef(null);
 
   return (
     <div>
@@ -25,16 +25,7 @@ const MyPage = () => {
                 <div className="author">
                   <div className="author_thumb veryfied">
                     <figure>
-                      <img
-                        src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png"
-                        alt="profile_img"
-                        className="lazy"
-                        width="105"
-                        height="105"
-                        onClick={() => {
-                          fileInput.current.click();
-                        }}
-                      />
+                      <img src="https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png" alt="profile_img" className="lazy" width="105" height="105" />
                     </figure>
                   </div>
                 </div>

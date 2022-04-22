@@ -117,15 +117,25 @@ const ExplorePage = () => {
     setSearchText(e.target.value);
   };
 
-  const searchMovies = async (e) => {
+  const searchMovies = async () => {
     try {
       // const res = await axios.get(`${BASE_URL}/movies/searchText?texts=${searchText}`);
-      console.log(searchText);
+      // console.log(res);
     } catch (e) {
       console.error(e);
     }
 
     //아직 콘솔에만 찍을거임  ..(위에 고쳐야 됨..)
+  };
+
+  const searchTag = async () => {
+    const res = await axios.get(`${BASE_URL}/movies/searchTag`, {
+      params: {
+        tags: 1,
+        tags: 2,
+      },
+    });
+    console.log(res);
   };
 
   // const [tagState, setTagState] = useState({

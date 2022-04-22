@@ -25,11 +25,11 @@ const EditProfile = () => {
                 <h1>user_id</h1>
                 <ul>
                   <li>
-                    <a id="profile_edit_btn" onClick={handleShow}>
+                    {/* <a id="profile_edit_btn" onClick={handleShow}>
                       <i className="bi bi-gear"></i>프로필 사진 수정하기
-                    </a>
+                    </a> */}
 
-                    <Modal show={show} onHide={handleClose}>
+                    {/* <Modal show={show} onHide={handleClose}>
                       <div id="modal_edit">
                         <Modal.Header closeButton id="modal_header">
                           <Modal.Title style={{ fontWeight: 600 }}>프로필 이미지 선택</Modal.Title>
@@ -91,7 +91,7 @@ const EditProfile = () => {
                           </Button>
                         </Modal.Footer>
                       </div>
-                    </Modal>
+                    </Modal> */}
                     {/*<Link to="/main/editProfile">*/}
                     {/*  <i className="bi bi-gear"></i>프로필 수정하기*/}
                     {/*</Link>*/}

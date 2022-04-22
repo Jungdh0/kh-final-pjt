@@ -10,7 +10,7 @@ const Heart = ({ isLiked, contentCode }) => {
 
   const toggleLike = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}/movies/${contentCode}/like`);
+      const res = await axios.put(`${BASE_URL}/movies/${contentCode}/like`);
       res.data ? setIsPurple(true) : setIsPurple(false);
       console.log(res);
     } catch (error) {
