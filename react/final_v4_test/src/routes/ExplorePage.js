@@ -104,6 +104,10 @@ const ExplorePage = () => {
       } catch (e) {
         console.error(e);
       }
+
+      return () => {
+        setHasMore(false);
+      };
     })();
   }, [sort, filters, query]);
 

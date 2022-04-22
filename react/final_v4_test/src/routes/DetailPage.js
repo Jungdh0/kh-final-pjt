@@ -12,7 +12,6 @@ const DetailPage = () => {
 
   const { contentCode } = useParams();
   useEffect(() => {
-    let isMount = true;
     (async () => {
       try {
         setIsLoading(true);
@@ -23,7 +22,7 @@ const DetailPage = () => {
         console.error(e);
       }
       return () => {
-        isMount = false;
+        setIsLoading(false);
       };
     })();
   }, []);

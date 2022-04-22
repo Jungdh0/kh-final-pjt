@@ -34,7 +34,7 @@ const Reco = ({ tagIndex }) => {
     let isMount = true;
     (async () => {
       try {
-        const res = await axios.put(`${BASE_URL}/user/${userCode}/like`);
+        const res = await axios.get(`${BASE_URL}/user/${userCode}/like`);
 
         const likes = res.data.map((element) => (element = element.contentCode));
         setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장
