@@ -43,6 +43,7 @@ const ExplorePage = () => {
         const res = await axios.get(`${BASE_URL}/movies`, {
           params: {
             page: 0,
+            title: query,
             sort,
           },
         });
@@ -81,6 +82,7 @@ const ExplorePage = () => {
         params: {
           page,
           sort,
+          title: query,
         },
       });
       setMovies(movies.concat(res.data.content));
@@ -145,6 +147,7 @@ const ExplorePage = () => {
 
   const searchMovies = async () => {
     try {
+      setFilters([]);
       setQuery(change);
       console.log(change);
     } catch (e) {
@@ -215,7 +218,17 @@ const ExplorePage = () => {
                 </div>
               </div>
               <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
-                <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" onChange={handleChange} />
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="무엇을 찾고 있나요?"
+                  onChange={handleChange}
+                  onKeyUp={(e) => {
+                    if (e.key == 'Enter') {
+                      searchMovies();
+                    }
+                  }}
+                />
                 <input type="submit" value="검색" onClick={searchMovies} />
               </div>
             </div>
