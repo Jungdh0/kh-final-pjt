@@ -18,6 +18,7 @@ const ExplorePage = () => {
   // const [filtered, setFiltered] = useState([]);
   // const [activeTag, setActiveTag] = useState('');
   const [searchText, setSearchText] = useState('');
+  const [filters, setFilters] = useState([]);
 
   const userCode = 1; //임시
 
@@ -78,6 +79,8 @@ const ExplorePage = () => {
         const likes = res.data.map((element) => (element = element.contentCode));
         setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장
 
+        console.log('gd');
+
         newData();
       } catch (e) {
         console.error(e);
@@ -129,14 +132,16 @@ const ExplorePage = () => {
   };
 
   const searchTag = async () => {
-    const res = await axios.get(`${BASE_URL}/movies/searchTag`, {
-      params: {
-        tags: 1,
-        tags: 2,
-      },
-    });
+    const tags = filters.map((v) => '?' + 'tags=' + v);
+    const res = await axios.get(`${BASE_URL}/movies/searchTag&${tags}`);
     console.log(res);
   };
+
+  useEffect(() => {
+    // searchTag();
+    console.log(filters);
+  }, [filters]);
+  //필터값이 바뀔때마다 실행!
 
   // const [tagState, setTagState] = useState({
   //   tags: {
@@ -217,7 +222,7 @@ const ExplorePage = () => {
             <h1>All: </h1>
             <span>{total}</span>
             {/* /filter */}
-            <Filter />
+            <Filter setFilters={setFilters} filters={filters} />
             {/* <Filter movies={movies} setFiltered={setFiltered} acvtiveTag={acvtiveTag} setActiveTag={setActiveTag} /> */}
           </div>
           {/* /page_header */}
