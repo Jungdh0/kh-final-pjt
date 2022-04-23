@@ -55,12 +55,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check
-                            type="switch"
-                            id="custom-switch"
-                            name="otts"
-                            // label="Netflix"
-                          />
+                          <Form.Check type="switch" id="custom-switch" name="otts" />
                           <p>넷플릭스</p>
                         </div>
                         <div className="col-md-2" />
@@ -78,12 +73,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check
-                            type="switch"
-                            id="custom-switch"
-                            name="otts"
-                            // label="Tving"
-                          />
+                          <Form.Check type="switch" id="custom-switch" name="otts" />
                           <p>티빙</p>
                         </div>
                       </div>
@@ -100,12 +90,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check
-                            type="switch"
-                            id="custom-switch"
-                            name="otts"
-                            // label="Wave"
-                          />
+                          <Form.Check type="switch" id="custom-switch" name="otts" />
                           <p>웨이브</p>
                         </div>
                       </div>
