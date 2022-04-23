@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Form, Button, Modal } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 
 const EditProfile = () => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <div>
       <main>
