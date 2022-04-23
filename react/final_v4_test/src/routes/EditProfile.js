@@ -1,8 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< Updated upstream
 import { Form } from 'react-bootstrap';
 
 const EditProfile = () => {
+=======
+import { Form, Button, Modal } from 'react-bootstrap';
+import axios from 'axios';
+import { BASE_URL } from '../config';
+
+const EditProfile = () => {
+  const [ischecked, setIsChecked] = useState();
+  const userCode = 1; //임시
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await axios.put(`${BASE_URL}/user/${userCode}/ott`);
+        console.log(res.data);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
+
+>>>>>>> Stashed changes
   return (
     <div>
       <main>
@@ -50,7 +71,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" />
+                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.netflix ? true : false} />
                           <p>넷플릭스</p>
                         </div>
                         <div className="col-md-2" />
@@ -68,7 +89,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" />
+                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.tving ? true : false} />
                           <p>티빙</p>
                         </div>
                       </div>
@@ -85,7 +106,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" />
+                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.wavve ? true : false} />
                           <p>웨이브</p>
                         </div>
                       </div>
