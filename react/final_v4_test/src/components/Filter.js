@@ -23,7 +23,6 @@ const Filter = ({ filters, setFilters }) => {
                 onClick={(e) => {
                   handleTags(i + 1);
                 }}
-                className={{ handleTags } ? 'active' : ''}
               >
                 {v}
               </button>

@@ -791,7 +791,7 @@ p {
 }
 
 #ott_logo:disabled {
-  opacity: 0.25;
+  opacity: 0.65;
 }
 
 #ott_logo:active,
@@ -799,6 +799,7 @@ p {
 #profile_imgs:focus {
   outline: none !important;
   box-shadow: none !important;
+  
 }
 /* .ott_logo {
   opacity: 0.25;
