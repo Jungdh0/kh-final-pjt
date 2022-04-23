@@ -13,6 +13,10 @@ const Filter = ({ filters, setFilters }) => {
   };
   // 중복 체크 될 수 있게 해야 해서 이런식으로 구현했는데 버튼 말고 체크 박스로 해서 스타일을 변경하는 게 나을듯
 
+  // const checkOtt = () => {
+  //   const
+  // }
+
   return (
     <nav className="sausage-links">
       <ul>
