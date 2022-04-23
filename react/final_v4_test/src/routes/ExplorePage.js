@@ -206,7 +206,7 @@ const ExplorePage = () => {
                     name="sort"
                     id="sort"
                     className="col-md-3"
-                    style={{ marginRight: 10 }}
+                    style={{ marginRight: 10, backgroundColor: '#201d24', borderStyle: 'none', color: '#ccc', width: '20%', padding: 5 }}
                     onChange={(e) => {
                       console.log(e.target.value);
                       setSort(e.target.value);
