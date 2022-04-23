@@ -1,29 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< Updated upstream
-import { Form } from 'react-bootstrap';
-
-const EditProfile = () => {
-=======
 import { Form, Button, Modal } from 'react-bootstrap';
 import axios from 'axios';
 import { BASE_URL } from '../config';
 
 const EditProfile = () => {
-  const [ischecked, setIsChecked] = useState();
+  const [isChecked, setIsChecked] = useState([]);
   const userCode = 1; //임시
+
   useEffect(() => {
     (async () => {
       try {
         const res = await axios.put(`${BASE_URL}/user/${userCode}/ott`);
         console.log(res.data);
+        setIsChecked(res.data);
       } catch (e) {
         console.error(e);
       }
     })();
   }, []);
+  const handleCheckbox = (e) => {
+    isChecked[e.target.value] = e.target.checked;
+    setIsChecked(isChecked);
+    console.log(isChecked);
+    // 콘솔에 값 출력
+  };
 
->>>>>>> Stashed changes
   return (
     <div>
       <main>
@@ -71,7 +73,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.netflix ? true : false} />
+                          <Form.Check type="switch" id="custom-switch" name="otts" value="netflix" onChange={handleCheckbox} checked={isChecked.netfix} />
                           <p>넷플릭스</p>
                         </div>
                         <div className="col-md-2" />
@@ -89,7 +91,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.tving ? true : false} />
+                          <Form.Check type="switch" id="custom-switch" name="otts" value="tving" onChange={handleCheckbox} checked={isChecked.tving} />
                           <p>티빙</p>
                         </div>
                       </div>
@@ -106,7 +108,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.wavve ? true : false} />
+                          <Form.Check type="switch" id="custom-switch" name="otts" value="wavve" onChange={handleCheckbox} checked={isChecked.wavve} />
                           <p>웨이브</p>
                         </div>
                       </div>
