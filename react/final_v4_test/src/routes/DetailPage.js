@@ -45,24 +45,13 @@ const DetailPage = () => {
               <div className="col-xl-5 col-lg-5">
                 <div className="detail_col">
                   <div className="main_info clearfix mb-1" style={{ display: 'flex' }}>
-                    <div className="item_desc">
-                      <div className="mb-3">
-                        <a href="author.html" className="author">
-                          <div className="author_thumb veryfied" style={{ display: 'flex' }}>
-                            <figure style={{ height: 30, width: 30 }}>
-                              <img src={movie.ottImg} style={{ objectFit: 'cover' }} alt={movie.ottName} className="lazy loaded" data-was-processed="true" />
-                            </figure>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    <div className="age" style={{ marginLeft: 'auto' }}>
+                    <div className="age">
                       <figure>
                         <img src={movie.ageRating} style={{ width: 30, height: 30, objectFit: 'cover' }} />
                       </figure>
                     </div>
                   </div>
-                  <hr />
+                  <hr style={{marginTop:10}} />
                   <h1 className="mb-md-2">{movie.contentName}</h1>
                   <p>{movie.contentPlot}</p>
                   <br />
@@ -185,11 +174,6 @@ const DetailPage = () => {
           )}
         </div>
       </main>
-
-      {/* COMMON SCRIPTS */}
-      <script src="js/common_scripts.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/common_func.js"></script>
     </div>
   );
 };
