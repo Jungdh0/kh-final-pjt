@@ -15,7 +15,7 @@ const Header = () => {
             <Container>
               <Navbar.Brand as={Link} to="/coverPage">
                 <img
-                  src="./img/logo/main_logo.png"
+                  src="/img/logo/main_logo.png"
                   width="142.48"
                   height="31"
                   className="d-inline-block align-top"
