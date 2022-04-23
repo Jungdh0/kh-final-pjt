@@ -218,7 +218,6 @@ const ExplorePage = () => {
                   {/*</div>*/}
                 </div>
               </div>
-<<<<<<< Updated upstream
               <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
                 <input
                   type="text"
@@ -233,12 +232,6 @@ const ExplorePage = () => {
                 />
                 <input type="submit" value="검색" onClick={searchMovies} />
               </div>
-=======
-                <div className="col-md-5 search_bar" style={{ marginLeft: 'auto' }}>
-                  <input type="text" className="form-control" placeholder="무엇을 찾고 있나요?" name="searchText" />
-                  <input type="submit" value={'검색'} />
-                </div>
->>>>>>> Stashed changes
             </div>
           </div>
         </div>
