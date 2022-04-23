@@ -9,15 +9,15 @@ const MyPage = () => {
   // const fileInput = useRef(null);
 
   const navigate = useNavigate();
-  const [isOtt, setIsOtt] = useState();
+  const [ottList, setOttList] = useState('');
   const userCode = 1; //임시
+
   useEffect(() => {
     (async () => {
       try {
         const res = await axios.get(`${BASE_URL}/user/${userCode}/ott`);
-        // res.data? setIsOtt(true) : setIsOtt(false);
         console.log(res.data);
-        setIsOtt(res.data);
+        setOttList(res.data);
       } catch (e) {
         console.error(e);
       }
@@ -73,7 +73,7 @@ const MyPage = () => {
                 <div className="row" id="ott_logos">
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
-                      <Button id="ott_logo" className={isOtt?.netflix ? 'active' : 'disabled'}>
+                      <Button id="ott_logo" className={ottList.netflix ? 'active' : 'disabled'}>
                         <img src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png" alt="" className="lazy" width="120" height="120" />
                       </Button>
                       <p className="ott_name" id="ott_name">
@@ -83,7 +83,7 @@ const MyPage = () => {
                   </div>
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
-                      <Button id="ott_logo" className={isOtt?.tving ? 'active' : 'disabled'}>
+                      <Button id="ott_logo" className={ottList.tving ? 'active' : 'disabled'}>
                         <img src="https://velog.velcdn.com/images/joyoo1221/post/dd975d66-1ecb-4ab1-9067-0b6050ecb399/image.png" alt="" className="lazy" width="120" height="120" />
                       </Button>
                       <p className="ott_name" id="ott_name">
@@ -93,7 +93,7 @@ const MyPage = () => {
                   </div>
                   <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
                     <div className="author_thumb veryfied">
-                      <Button id="ott_logo" className={isOtt?.wavve ? 'active' : 'disabled'}>
+                      <Button id="ott_logo" className={ottList.wavve ? 'active' : 'disabled'}>
                         <img src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png" alt="" className="lazy" width="120" height="120" />
                       </Button>
                       <p className="ott_name" id="ott_name">
@@ -117,7 +117,6 @@ const MyPage = () => {
         {/*/container*/}
       </main>
       {/*/main*/}
-
       {/*COMMON SCRIPTS*/}
       <script src="js/common_scripts.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>

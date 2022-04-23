@@ -1,29 +1,52 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< Updated upstream
+import { Link, useNavigate } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
-
-const EditProfile = () => {
-=======
-import { Form, Button, Modal } from 'react-bootstrap';
 import axios from 'axios';
 import { BASE_URL } from '../config';
 
 const EditProfile = () => {
-  const [ischecked, setIsChecked] = useState();
+  const [ottList, setOttList] = useState('');
+
+  const navigate = useNavigate();
+
   const userCode = 1; //임시
+
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.put(`${BASE_URL}/user/${userCode}/ott`);
-        console.log(res.data);
+        const res = await axios.get(`${BASE_URL}/user/${userCode}/ott`);
+        setOttList(res.data);
       } catch (e) {
         console.error(e);
       }
     })();
   }, []);
 
->>>>>>> Stashed changes
+  const handleChange = (e) => {
+    const ottName = e.target.value;
+    const isChecked = e.target.checked;
+
+    console.log(ottName + ':' + isChecked);
+
+    const nextOttList = ottList;
+    nextOttList[ottName] = isChecked;
+    console.log(nextOttList);
+
+    setOttList(nextOttList);
+  };
+
+  const onSubmit = async (e) => {
+    console.log(ottList);
+
+    try {
+      const res = await axios.put(`${BASE_URL}/user/${userCode}/ott`, ottList);
+      console.log(res);
+      navigate('/main/myPage');
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div>
       <main>
@@ -71,7 +94,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.netflix ? true : false} />
+                          <Form.Check value="netflix" type="switch" id="custom-switch" name="otts" onClick={handleChange} defaultChecked={ottList.netflix} />
                           <p>넷플릭스</p>
                         </div>
                         <div className="col-md-2" />
@@ -89,7 +112,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.tving ? true : false} />
+                          <Form.Check value="tving" type="switch" id="custom-switch" name="otts" onClick={handleChange} defaultChecked={ottList.tving} />
                           <p>티빙</p>
                         </div>
                       </div>
@@ -106,7 +129,7 @@ const EditProfile = () => {
                           />
                         </div>
                         <div className="col-md-5 col-sm-7">
-                          <Form.Check type="switch" id="custom-switch" name="otts" checked={isOtt?.wavve ? true : false} />
+                          <Form.Check value="wavve" type="switch" id="custom-switch" name="otts" onClick={handleChange} defaultChecked={ottList.wavve} />
                           <p>웨이브</p>
                         </div>
                       </div>
@@ -123,9 +146,9 @@ const EditProfile = () => {
               {/*/row*/}
               <hr className="mt-3 mb-5"></hr>
               <p className="text-end mt-4">
-                <Link to="/main/myPage" className="btn_1">
+                <button onClick={onSubmit} className="btn_1">
                   저장하기
-                </Link>
+                </button>
               </p>
             </div>
           </div>
