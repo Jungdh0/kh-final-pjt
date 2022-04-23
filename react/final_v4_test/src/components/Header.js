@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { layoutState } from "../state";
-import { useRecoilState } from "recoil";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import { layoutState } from '../state';
+import { useRecoilState } from 'recoil';
 
 const Header = () => {
   const [layoutVisible] = useRecoilState(layoutState);
@@ -13,14 +13,8 @@ const Header = () => {
         <div>
           <Navbar collapseOnSelect expand="lg" variant="dark">
             <Container>
-              <Navbar.Brand as={Link} to="/coverPage">
-                <img
-                  src="/img/logo/main_logo.png"
-                  width="142.48"
-                  height="31"
-                  className="d-inline-block align-top"
-                  alt=""
-                />
+              <Navbar.Brand as={Link} to="/main">
+                <img src="/img/logo/main_logo.png" width="142.48" height="31" className="d-inline-block align-top" alt="" />
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">

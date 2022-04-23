@@ -17,3 +17,11 @@ export const tags = [
   '#흥미진진한',
   '#아이들과보기좋은',
 ];
+
+export const isLogin = () => {
+  const token = window.localStorage.getItem('token');
+
+  return !!token;
+};
+
+//로그인 여부를 로컬스토리지의 token이 존재하는지로 확인
