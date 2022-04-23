@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { BASE_URL } from '../config';
 import axios from 'axios';
@@ -7,6 +7,8 @@ import axios from 'axios';
 const MyPage = () => {
   // const [image, setImage] = useState('https://velog.velcdn.com/images/joyoo1221/post/b268dd99-ddf0-40b8-8d94-17abf8ca2933/image.png');
   // const fileInput = useRef(null);
+
+  const navigate = useNavigate();
   const [isOtt, setIsOtt] = useState();
   const userCode = 1; //임시
   useEffect(() => {
@@ -52,10 +54,16 @@ const MyPage = () => {
                       <i className="bi bi-person"></i>이메일 : <span>user_id@popcon.com</span>
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/login">
-                      <i className="bi bi-box-arrow-right"></i>로그아웃
-                    </Link>
+
+                  <li
+                    style={{ cursor: 'pointer' }}
+                    onClick={(e) => {
+                      window.localStorage.removeItem('token');
+                      navigate('/');
+                    }}
+                  >
+                    <i className="bi bi-box-arrow-right"></i>
+                    로그아웃
                   </li>
                 </ul>
               </div>

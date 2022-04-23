@@ -13,7 +13,7 @@ import CoverPage from '../routes/CoverPage';
 import DetailPage from '../routes/DetailPage';
 import TestPageR from '../routes/TestPageR';
 import Auth from '../routes/Auth';
-
+import { isLogin } from '../config';
 // const layoutState = atom({
 //   key: "layout",
 //   default: true,
@@ -29,9 +29,9 @@ import Auth from '../routes/Auth';
 const AppRouter = () => {
   return (
     <Router>
-      <Header></Header>
+      <Header />
       <Routes>
-        <Route path="/" element={<CoverPage />}></Route>
+        <Route path="/*" element={<CoverPage />}></Route>
         <Route path="/coverPage" element={<CoverPage />}></Route>
         {/* <Route path="/testPage" element={<TestPage />}></Route> */}
         <Route path="/testPage" element={<TestPageR />}></Route>
@@ -44,7 +44,7 @@ const AppRouter = () => {
         <Route path="/main/editProfile" element={<EditProfile />}></Route>
         <Route path="/auth" element={<Auth />}></Route>
       </Routes>
-      <Footer></Footer>
+      <Footer />
     </Router>
   );
 };
