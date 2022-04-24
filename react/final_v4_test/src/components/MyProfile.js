@@ -12,21 +12,17 @@ const MyProfile = ({ myProfile, col }) => {
   return (
     <div className={`col-lg-${col}`}>
       <div className="main_profile edit_section">
-        <div className="author">
-          <div className="author_thumb veryfied">
-            <figure>
-              <img src={kakaoProfileImg} alt="profile_img" className="lazy" width="105" height="105" />
-            </figure>
-          </div>
+        <div className="profile_box">
+          <img src={kakaoProfileImg} alt="profile_img" className="profile" />
         </div>
         <h1>{kakaoNickname}</h1>
         <ul>
           <li>
-            <i className="bi bi-person"></i>이메일 : <span>{kakaoEmail}</span>
+            <span>{kakaoEmail}</span>
           </li>
 
           <li
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: 'pointer', marginTop: '30px' }}
             onClick={(e) => {
               window.localStorage.removeItem('token');
               navigate('/');
