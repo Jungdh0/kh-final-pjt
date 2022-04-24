@@ -12,12 +12,27 @@ const MyPage = () => {
   const [ottList, setOttList] = useState('');
   const userCode = 1; //임시
 
+  const token = window.localStorage.getItem('token');
+  console.log(token);
+
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/user/${userCode}/ott`);
+        const res = await axios.get(`${BASE_URL}/user/${userCode}/ott`, {
+          headers: {
+            Authrozation: token,
+          },
+        });
         console.log(res.data);
         setOttList(res.data);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+
+    (async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}/me`);
       } catch (e) {
         console.error(e);
       }

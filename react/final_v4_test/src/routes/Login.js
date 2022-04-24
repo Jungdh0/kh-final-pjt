@@ -26,9 +26,9 @@ const Login = () => {
         <div id="login" className="mx-auto my-5 px-4">
           <figure>
             <Link to="/coverPage" className="logo_account">
-              <img src="img/logo/big_pop.png" alt="" className="dark" />
+              <img src="img/logo/big_pop.png" alt="logo" className="dark" />
             </Link>
-            <img src="img/logo/full.png" alt="" style={{ width: '25%' }} />
+            <img src="img/logo/full.png" alt="logo" style={{ width: '25%' }} />
           </figure>
 
           <form className=" mx-auto mx-5">
