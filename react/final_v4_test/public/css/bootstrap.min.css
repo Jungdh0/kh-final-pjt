@@ -2709,6 +2709,7 @@ fieldset:disabled .btn {
     color: #fff;
     background-color: #0d6efd;
     border-color: #0d6efd;
+    opacity: 20%;
 }
 .btn-secondary {
     color: #fff;
