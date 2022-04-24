@@ -95,7 +95,7 @@ const EditProfile = () => {
                     <div className="form-group">
                       <div className="row col-md-12 ps-lg-12 mx-auto edit_ott_logos">
                         <div className="row col-lg-4 ps-lg-6 pt-3 ">
-                          <div className="col-md-7 col-sm-5" id="ott_edit">
+                          <div className="col" id="ott_edit">
                             <img
                               id="netflix_edit"
                               src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png"
@@ -105,15 +105,14 @@ const EditProfile = () => {
                               height="100"
                             />
                           </div>
-                          <div className="col-md-5 col-sm-7">
+                          <div className="col">
                             <Form.Check value="netflix" type="switch" id="custom-switch" name="otts" onClick={handleChange} defaultChecked={ottList.netflix} />
                             <p>넷플릭스</p>
                           </div>
-                          <div className="col-md-2" />
                         </div>
 
                         <div className="row col-lg-4 ps-lg-6 pt-3">
-                          <div className="col-md-7 col-sm-5" id="ott_edit">
+                          <div className="col" id="ott_edit">
                             <img
                               id="tving_edit"
                               src="https://velog.velcdn.com/images/joyoo1221/post/dd975d66-1ecb-4ab1-9067-0b6050ecb399/image.png"
@@ -123,14 +122,14 @@ const EditProfile = () => {
                               height="95"
                             />
                           </div>
-                          <div className="col-md-5 col-sm-7">
+                          <div className="col">
                             <Form.Check value="tving" type="switch" id="custom-switch" name="otts" onClick={handleChange} defaultChecked={ottList.tving} />
                             <p>티빙</p>
                           </div>
                         </div>
 
                         <div className="row col-lg-4 ps-lg-6 pt-3">
-                          <div className="col-md-7 col-sm-5" id="ott_edit">
+                          <div className="col" id="ott_edit">
                             <img
                               id="wavve_edit"
                               src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png"
@@ -140,7 +139,7 @@ const EditProfile = () => {
                               height="95"
                             />
                           </div>
-                          <div className="col-md-5 col-sm-7">
+                          <div className="col">
                             <Form.Check value="wavve" type="switch" id="custom-switch" name="otts" onClick={handleChange} defaultChecked={ottList.wavve} />
                             <p>웨이브</p>
                           </div>
