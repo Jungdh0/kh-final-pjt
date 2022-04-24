@@ -7300,6 +7300,10 @@ ul.top_menu > li a.btn_access:hover {
 .author .author_thumb {
   position: relative;
 }
+.author_thumb.disabled,
+.author .thumb:disabled{
+  opacity: 20%;
+}
 .author .author_thumb figure {
   margin: 0 10px 0 0;
   width: 30px;

@@ -75,8 +75,9 @@ const MyPage = () => {
                   <div className="main_profile edit_section">
                     <div className="row" id="ott_logos">
                       <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
-                        <div className="author_thumb veryfied">
-                          <Button id="ott_logo" className={ottList.netflix ? 'active' : 'disabled'}>
+                        <div className={ottList.netflix ? 'author_thumb' + ' ' + 'active' : 'author_thumb' + ' ' + 'disabled'}>
+                          {' '}
+                          <Button id="ott_logo">
                             <img src="https://velog.velcdn.com/images/joyoo1221/post/b807b710-c2e1-41a5-9175-b6607eac20d5/image.png" alt="" className="lazy" width="120" height="120" />
                           </Button>
                           <p className="ott_name" id="ott_name">
@@ -85,8 +86,9 @@ const MyPage = () => {
                         </div>
                       </div>
                       <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
-                        <div className="author_thumb veryfied">
-                          <Button id="ott_logo" className={ottList.tving ? 'active' : 'disabled'}>
+                        <div className={ottList.tving ? 'author_thumb' + ' ' + 'active' : 'author_thumb' + ' ' + 'disabled'}>
+                          {' '}
+                          <Button id="ott_logo">
                             <img src="https://velog.velcdn.com/images/joyoo1221/post/dd975d66-1ecb-4ab1-9067-0b6050ecb399/image.png" alt="" className="lazy" width="120" height="120" />
                           </Button>
                           <p className="ott_name" id="ott_name">
@@ -95,8 +97,8 @@ const MyPage = () => {
                         </div>
                       </div>
                       <div className="col-lg-4 ps-lg-12 author" id="ott_hover">
-                        <div className="author_thumb veryfied">
-                          <Button id="ott_logo" className={ottList.wavve ? 'active' : 'disabled'}>
+                        <div className={ottList.wavve ? 'author_thumb' + ' ' + 'active' : 'author_thumb' + ' ' + 'disabled'}>
+                          <Button id="ott_logo">
                             <img src="https://velog.velcdn.com/images/joyoo1221/post/ee7a9963-cfbc-4531-a6b0-db244cf5d447/image.png" alt="" className="lazy" width="120" height="120" />
                           </Button>
                           <p className="ott_name" id="ott_name">
