@@ -23,7 +23,7 @@ const ExplorePage = () => {
 
   const [category, setCategory] = useState('All');
 
-  const userCode = 1; //임시
+  const token = window.localStorage.getItem('token');
 
   // const [search, setSearch] = useState('');
   // const onSearch = (e) => {
@@ -98,7 +98,11 @@ const ExplorePage = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await axios.get(`${BASE_URL}/user/${userCode}/like`);
+        const res = await axios.get(`${BASE_URL}/me/like`, {
+          headers: {
+            Authorization: token,
+          },
+        });
 
         const likes = res.data.map((element) => (element = element.contentCode));
         setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장

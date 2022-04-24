@@ -13,7 +13,6 @@ const MyPage = () => {
   const [ottList, setOttList] = useState('');
   const [myProfile, setMyProfile] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const userCode = 1; //임시
 
   const token = window.localStorage.getItem('token');
   console.log(token);
@@ -22,7 +21,11 @@ const MyPage = () => {
     (async () => {
       try {
         setIsLoading(true);
-        const res = await axios.get(`${BASE_URL}/user/${userCode}/ott`);
+        const res = await axios.get(`${BASE_URL}/me/ott`, {
+          headers: {
+            Authorization: token,
+          },
+        });
         setOttList(res.data);
         setIsLoading(false);
       } catch (e) {

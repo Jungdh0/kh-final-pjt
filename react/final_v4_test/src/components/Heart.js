@@ -7,10 +7,15 @@ import './Heart.css';
 
 const Heart = ({ isLiked, contentCode }) => {
   const [isPurple, setIsPurple] = useState(isLiked);
+  const token = window.localStorage.getItem('token');
 
   const toggleLike = async () => {
     try {
-      const res = await axios.put(`${BASE_URL}/movies/${contentCode}/like`);
+      const res = await axios.put(`${BASE_URL}/movies/${contentCode}/like`, null, {
+        headers: {
+          Authorization: token,
+        },
+      });
       res.data ? setIsPurple(true) : setIsPurple(false);
       console.log(res);
     } catch (error) {

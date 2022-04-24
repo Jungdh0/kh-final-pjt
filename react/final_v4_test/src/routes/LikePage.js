@@ -12,13 +12,15 @@ const LikePage = () => {
   const [myProfile, setMyProfile] = useState('');
   const token = window.localStorage.getItem('token');
 
-  const userCode = 1; //임시
-
   useEffect(() => {
     (async () => {
       try {
         setIsLoading(true);
-        const res = await axios.get(`${BASE_URL}/user/${userCode}/like`);
+        const res = await axios.get(`${BASE_URL}/me/like`, {
+          headers: {
+            Authorization: token,
+          },
+        });
         setMovies(res.data);
         console.log(res.data);
         setIsLoading(false);
