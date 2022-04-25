@@ -21,7 +21,7 @@ const Result = ({ resultVisible, visible, hidden, select }) => {
         <div class="px-3 mt-3 text-center">
           <h3 class="py-3">당신의 유형은?</h3>
           <span class="resultname highlight">{infoList[point].name}</span>
-          <div class="resultDesc col-lg-6 col-md-8 col-sm-10 mx-auto py-3">{infoList[point].desc}</div>
+          <div class="resultDesc col-lg-6 col-md-8 col-sm-10 mx-auto py-3" style={{fontSize:'1rem'}}>{infoList[point].desc}</div>
         </div>
         <div class="row" id="resultImgs">
           <div class="col-sm-4">
