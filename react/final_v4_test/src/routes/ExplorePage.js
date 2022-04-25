@@ -280,7 +280,8 @@ const ExplorePage = () => {
                       <img src={movie.contentImgVer} className="lazy" alt="" width="533" height="400" />
                       <Link to={`/main/detailPage/${movie.contentCode}`} className="strip_info">
                         <div className="item_title">
-                          <h3>{movie.contentName}</h3>
+                          <h5>{movie.contentName}</h5>
+                          view: {movie.detailsViewCount}
                         </div>
                       </Link>
                     </figure>
@@ -298,7 +299,6 @@ const ExplorePage = () => {
                       </li>
                       <li>
                         <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
-                        view: {movie.detailsViewCount}
                       </li>
                     </ul>
                   </div>

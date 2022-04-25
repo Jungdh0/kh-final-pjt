@@ -164,10 +164,7 @@ const CoverPage = () => {
                 </div>
                 <div className="col-md-3">
                   <div className="banner_shape__item">
-                    <img
-                      src="https://ww.namu.la/s/4a0b91c5b421272ff80e467d2fb478579fcd77f12e32489818b74de676a967908da91bb8522b92a5a6e74aa9eaee9b56e6828502b530ef15b5e376df12056803648bf6f378507e15e8081eb2f926dd2fcf14379d68c3b427555a41d3a19f6e7c6659e980935c58c1956acb61486af245"
-                      alt="banner-item Image"
-                    />
+                    <img src="https://images.justwatch.com/poster/189837997/s592/a-werewolf-boy.{format}" alt="banner-item Image" />
                   </div>
                 </div>
                 <div className="col-md-3">

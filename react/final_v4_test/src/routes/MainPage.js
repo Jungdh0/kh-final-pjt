@@ -101,12 +101,11 @@ const MainPage = () => {
                         <img src={movie.contentImgVer} alt="" className="lazy" width={100} height={100} />
                       </figure>
                     </div>
-                    <div>
+                    <div style={{ marginRight: 'auto' }}>
                       <h6>{movie.contentName}</h6>
-                      <figure>
-                        <img src={movie.ottImg} width="20px" height="20px" alt={movie.ottName} style={{ objectFit: 'cover' }} />
-                      </figure>
                     </div>
+                    <img src={movie.ottImg} width="20px" height="20px" alt={movie.ottName} style={{ objectFit: 'cover', marginRight: '7px', borderRadius: '3px' }} />
+                    <img src={movie.ageRating} width="20px" height="20px" style={{ objectFit: 'cover' }} />
                   </Link>
                 </div>
               ))}

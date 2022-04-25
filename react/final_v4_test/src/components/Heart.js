@@ -36,7 +36,9 @@ const Heart = ({ isLiked, contentCode }) => {
         toggleLike(contentCode);
       }}
     >
-      <i className={isPurple ? 'heartPurple' + ' ' + 'bi bi-heart-fill' : 'heartWhite' + ' ' + 'bi bi-heart-fill'}> </i>
+      <i className={isPurple ? 'heartPurple' + ' ' + 'bi bi-heart-fill' : 'heartWhite' + ' ' + 'bi bi-heart-fill'} style={{ fontSize: '20px' }}>
+        {' '}
+      </i>
     </Link>
   );
 };
