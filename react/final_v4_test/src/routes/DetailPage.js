@@ -4,11 +4,15 @@ import { Link, useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import { BASE_URL, tags } from '../config';
 import Reco from '../components/Reco';
+import Heart from '../components/Heart';
 // 자료형에 보여주고 싶은 html 저장
 
 const DetailPage = () => {
   const [movie, setMovie] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [likes, setLikes] = useState([]);
+
+  const token = window.localStorage.getItem('token');
 
   const { contentCode } = useParams();
   useEffect(() => {
@@ -27,6 +31,31 @@ const DetailPage = () => {
     })();
   }, [contentCode]);
 
+  useEffect(() => {
+    let isMount = true;
+    (async () => {
+      try {
+        const res = await axios.get(`${BASE_URL}/me/like`, {
+          headers: {
+            Authorization: token,
+          },
+        });
+
+        const likes = res.data.map((element) => (element = element.contentCode));
+        setLikes(likes); // 좋아요 누른 컨텐츠 contentCode만 추출해서 배열에 저장
+      } catch (e) {
+        console.error(e);
+      }
+      return () => {
+        isMount = false;
+      };
+    })();
+  }, []);
+
+  const isLiked = (contentCode) => {
+    return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
+  };
+
   return (
     <div>
       <main>
@@ -44,14 +73,17 @@ const DetailPage = () => {
 
               <div className="col-xl-5 col-lg-5">
                 <div className="detail_col">
-                  <div className="main_info clearfix mb-1" style={{ display: 'flex' }}>
+                  <div className="main_info clearfix mx-1 px-1" style={{ display: 'flex' }}>
                     <div className="age">
                       <figure>
-                        <img src={movie.ageRating} style={{ width: 30, height: 30, objectFit: 'cover' }} />
+                        <img src={movie.ageRating} alt="" style={{ width: 30, height: 30, objectFit: 'cover' }} />
                       </figure>
                     </div>
+                    <div style={{ marginLeft: 'auto' }}>
+                      <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
+                    </div>
                   </div>
-                  <hr style={{ marginTop: 10 }} />
+                  <hr style={{ marginTop: 5 }} />
                   <h1 className="mb-md-2">{movie.contentName}</h1>
                   <p>{movie.contentPlot}</p>
                   <br />
@@ -61,7 +93,6 @@ const DetailPage = () => {
                     보러 가기
                   </a>
                 </p> */}
-
                   <div className="tabs_detail">
                     <ul className="nav nav-tabs" role="tablist">
                       <li className="nav-item">

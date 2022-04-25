@@ -46,6 +46,7 @@ const Reco = ({ tagIndex }) => {
       };
     })();
   }, []);
+  
   const isLiked = (contentCode) => {
     return likes.includes(contentCode); //값이 likes 배열에 있는지 확인함
   };
