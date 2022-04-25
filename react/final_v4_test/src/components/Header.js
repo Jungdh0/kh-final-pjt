@@ -20,16 +20,16 @@ const Header = () => {
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="navbar-nav">
                   <Nav.Link as={Link} to="/main">
-                    Home
+                    홈
                   </Nav.Link>
                   <Nav.Link as={Link} to="/main/explorePage">
-                    Explore
+                    콘텐츠
                   </Nav.Link>
                   <Nav.Link as={Link} to="/main/likePage">
-                    Like
+                    찜한 콘텐츠
                   </Nav.Link>
                   <Nav.Link as={Link} to="/main/myPage">
-                    Mypage
+                    마이 페이지
                   </Nav.Link>
                 </Nav>
               </Navbar.Collapse>

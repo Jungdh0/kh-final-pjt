@@ -51,7 +51,7 @@ const DetailPage = () => {
                       </figure>
                     </div>
                   </div>
-                  <hr style={{marginTop:10}} />
+                  <hr style={{ marginTop: 10 }} />
                   <h1 className="mb-md-2">{movie.contentName}</h1>
                   <p>{movie.contentPlot}</p>
                   <br />
@@ -93,7 +93,7 @@ const DetailPage = () => {
                         <div id="collapse-A" className="collapse" role="tabpanel" aria-labelledby="heading-A">
                           <div className="pt-4" id="service_ott">
                             <div className="author_list">
-                              <a href="author.html" className="author">
+                              <a className="author">
                                 <div className="author_thumb veryfied">
                                   <img src={movie.ottImg} alt="" className="lazy" style={{ width: 60, height: 60, objectFit: 'cover' }} />
                                 </div>
