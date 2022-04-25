@@ -7,6 +7,8 @@ import { BASE_URL, tags as hashtags } from '../config';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Heart from '../components/Heart';
 import Filter from '../components/Filter';
+import Loading from '../components/Loading';
+
 
 const ExplorePage = () => {
   const [movies, setMovies] = useState([]);
@@ -265,7 +267,7 @@ const ExplorePage = () => {
             next={moreData}
             hasMore={hasMore}
             // hasMore={this.state.hasMore}
-            loader={<h4>Loading...</h4>}
+            loader={<Loading/>}
             endMessage={
               <p style={{ textAlign: 'center' }}>
                 <b>Yay! You have seen it all</b>

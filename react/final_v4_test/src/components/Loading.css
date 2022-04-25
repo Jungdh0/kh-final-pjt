@@ -1,0 +1,6 @@
+.loading {
+  display: block;
+  margin: auto;
+  padding: auto;
+  object-fit: contain;
+}
