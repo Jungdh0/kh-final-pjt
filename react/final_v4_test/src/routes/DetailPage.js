@@ -184,7 +184,7 @@ const DetailPage = () => {
                                   <li>
                                     태그
                                     {/* // key값이 settag인 자료를 뽑아 */}
-                                    <span>{tags[movie.tagName]}</span>
+                                    <span className='tag'>{tags[movie.tagName]}</span>
                                   </li>
                                 </ul>
                               </div>

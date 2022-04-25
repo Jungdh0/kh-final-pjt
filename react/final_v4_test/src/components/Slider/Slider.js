@@ -4,6 +4,7 @@ import React, { useLayoutEffect, useRef, useEffect, useState } from 'react';
 import SlideButton from './SlideButton';
 import axios from 'axios';
 import { BASE_URL } from '../../config';
+import Loading from '../Loading';
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -52,10 +53,13 @@ function Slider() {
   let isResizing = useRef(false);
 
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     (async () => {
       try {
+        setIsLoading(true);
+
         const res = await axios.get(`${BASE_URL}/movies`, {
           params: {
             size: 3,
@@ -65,6 +69,7 @@ function Slider() {
 
         const posters = res.data.content.map((v) => v.contentImgHor);
         setItems(posters);
+        setIsLoading(false);
       } catch (e) {
         console.error(e);
       }
@@ -169,43 +174,47 @@ function Slider() {
 
   return (
     <div className="slider-area">
-      <div className="slider">
-        <SlideButton direction="prev" onClick={() => handleSwipe(-1)} />
-        <SlideButton direction="next" onClick={() => handleSwipe(1)} />
-        <div className="slider-list" style={{ padding: sliderPaddingStyle }}>
-          <div
-            className="slider-track"
-            onMouseOver={() => setIsSwiping(true)}
-            onMouseOut={() => setIsSwiping(false)}
-            style={{
-              transform: `translateX(calc(${(-100 / slides.length) * (0.5 + currentIndex)}% + ${slideX || 0}px))`,
-              transition: slideTransition,
-            }}
-          >
-            {slides.map((slide, slideIndex) => {
-              const itemIndex = getItemIndex(slideIndex);
-              return (
-                <div
-                  key={slideIndex}
-                  className={`slider-item ${currentIndex === slideIndex ? 'current-slide' : ''}`}
-                  style={{ width: newItemWidth || 'auto' }}
-                  onMouseDown={handleTouchStart}
-                  onTouchStart={handleTouchStart}
-                  onTouchMove={handleTouchMove}
-                  onMouseMove={handleTouchMove}
-                  onMouseUp={handleMouseSwipe}
-                  onTouchEnd={handleMouseSwipe}
-                  onMouseLeave={handleMouseSwipe}
-                >
-                  <a>
-                    <img src={items[itemIndex]} alt={`banner${itemIndex}`} style={{ maxWidth: '100%', objectFit: 'cover' }} />
-                  </a>
-                </div>
-              );
-            })}
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className="slider">
+          <SlideButton direction="prev" onClick={() => handleSwipe(-1)} />
+          <SlideButton direction="next" onClick={() => handleSwipe(1)} />
+          <div className="slider-list" style={{ padding: sliderPaddingStyle }}>
+            <div
+              className="slider-track"
+              onMouseOver={() => setIsSwiping(true)}
+              onMouseOut={() => setIsSwiping(false)}
+              style={{
+                transform: `translateX(calc(${(-100 / slides.length) * (0.5 + currentIndex)}% + ${slideX || 0}px))`,
+                transition: slideTransition,
+              }}
+            >
+              {slides.map((slide, slideIndex) => {
+                const itemIndex = getItemIndex(slideIndex);
+                return (
+                  <div
+                    key={slideIndex}
+                    className={`slider-item ${currentIndex === slideIndex ? 'current-slide' : ''}`}
+                    style={{ width: newItemWidth || 'auto' }}
+                    onMouseDown={handleTouchStart}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onMouseMove={handleTouchMove}
+                    onMouseUp={handleMouseSwipe}
+                    onTouchEnd={handleMouseSwipe}
+                    onMouseLeave={handleMouseSwipe}
+                  >
+                    <a>
+                      <img src={items[itemIndex]} alt={`banner${itemIndex}`} style={{ maxWidth: '100%', objectFit: 'cover' }} />
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

@@ -865,3 +865,13 @@ p {
   height: 100%;
   object-fit: cover;
 }
+.tag {
+  border-radius: 50px;
+  background-color: #7e2ad1;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  border: 0;
+  line-height: 17px;
+}
