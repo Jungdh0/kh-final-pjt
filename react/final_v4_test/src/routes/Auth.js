@@ -26,7 +26,22 @@ const Auth = () => {
   }, []);
 
   //코드를 백엔드로 보내서 토큰 받아와야 됨~~!!
-  return <>로그인중~~!</>;
+  return (
+    <div class="cssload-container">
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+      <div class="cssload-thing"></div>
+    </div>
+  );
 };
 
 export default Auth;
