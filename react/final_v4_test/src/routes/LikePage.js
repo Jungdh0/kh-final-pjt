@@ -66,19 +66,19 @@ const LikePage = () => {
                 <div className="tabs_detail">
                   <div className="row">
                     {movies.map((movie) => (
-                      <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6" key={movie.userContentIndex}>
+                      <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6" key={movie.userContentIndex}>
                         <div className="strip">
                           <figure>
                             <img src={movie.content.contentImgVer} className="lazy" alt={movie.content.contentName} width="533" height="400" />
                             <Link to={`/main/detailPage/${movie.contentCode}`} className="strip_info">
                               <div className="item_title">
-                                <h3>{movie.content.contentName}</h3>
+                                <h5>{movie.content.contentName}</h5> view: {movie.content.detailsViewCount}
                               </div>
                             </Link>
                           </figure>
                           <ul>
                             <li>
-                              <a href="" className="author">
+                              <div className="author">
                                 <div className="author_thumb veryfied">
                                   <figure>
                                     <img src={movie.content.ottImg} alt={movie.content.ottName} className="lazy" width="100" height="100" style={{ objectFit: 'cover' }} />
@@ -86,11 +86,10 @@ const LikePage = () => {
                                   </figure>
                                 </div>
                                 <h6>{movie.content.ottName}</h6>
-                              </a>
+                              </div>
                             </li>
                             <li>
                               <Heart isLiked={true} contentCode={movie.content.contentCode} />
-                              view: {movie.content.detailsViewCount}
                             </li>
                           </ul>
                         </div>
