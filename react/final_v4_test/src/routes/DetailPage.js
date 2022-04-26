@@ -64,7 +64,7 @@ const DetailPage = () => {
             <>loading...</>
           ) : (
             <div className="row">
-              <div className="col-xl-7 col-lg-7" style={{ display: 'flex', justifyContent: 'center' }}>
+              <div className="col-xl-7 col-lg-7" style={{ display: 'flex', justifyContent: 'center'}}>
                 <figure>
                   <img src={movie.contentImgVer} alt="" className="img-fluid rounded" height="700" width="400" />
                 </figure>
@@ -74,17 +74,18 @@ const DetailPage = () => {
               <div className="col-xl-5 col-lg-5">
                 <div className="detail_col">
                   <div className="main_info clearfix mx-1 px-1" style={{ display: 'flex' }}>
-                    <div className="age">
-                      <figure>
-                        <img src={movie.ageRating} alt="" style={{ width: 30, height: 30, objectFit: 'cover' }} />
-                      </figure>
-                    </div>
                     <div style={{ marginLeft: 'auto' }}>
                       <Heart isLiked={isLiked(movie.contentCode)} contentCode={movie.contentCode} />
                     </div>
                   </div>
-                  <hr style={{ marginTop: 5 }} />
-                  <h1 className="mb-md-2">{movie.contentName}</h1>
+                  <hr style={{ marginBottom: 10, marginTop: 10 }} />
+                  <h1 className="pb-1 px-2">{movie.contentName}</h1>
+                  <div className="age px-2 pb-2">
+                    <img src={movie.ageRating} alt="" style={{ width: 20, height: 20, objectFit: 'cover' }} />
+                    <span> | {movie.runningTime}</span>
+                    <span> | {movie.seasonsInfo}</span>
+                    <span> | {tags[movie.tagName]}</span>
+                  </div>
                   <p>{movie.contentPlot}</p>
                   <br />
                   <br />
@@ -184,7 +185,7 @@ const DetailPage = () => {
                                   <li>
                                     태그
                                     {/* // key값이 settag인 자료를 뽑아 */}
-                                    <span className='tag'>{tags[movie.tagName]}</span>
+                                    <span className="tag">{tags[movie.tagName]}</span>
                                   </li>
                                 </ul>
                               </div>
