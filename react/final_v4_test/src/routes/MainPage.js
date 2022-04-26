@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Slider from '../components/Slider/Slider';
-import { BASE_URL } from '../config';
+import {BASE_URL, tags} from '../config';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
@@ -103,9 +103,10 @@ const MainPage = () => {
                     </div>
                     <div style={{ marginRight: 'auto' }}>
                       <h6>{movie.contentName}</h6>
+                      <span>{tags[movie.tagName]}</span>
                     </div>
                     <img src={movie.ottImg} width="20px" height="20px" alt={movie.ottName} style={{ objectFit: 'cover', marginRight: '7px', borderRadius: '3px' }} />
-                    <img src={movie.ageRating} width="20px" height="20px" style={{ objectFit: 'cover' }} />
+                    {/*<img src={movie.ageRating} width="20px" height="20px" style={{ objectFit: 'cover' }} />*/}
                   </Link>
                 </div>
               ))}
