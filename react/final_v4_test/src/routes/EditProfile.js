@@ -37,13 +37,8 @@ const EditProfile = () => {
           },
         });
         console.log(res.data);
-<<<<<<< Updated upstream
         setMyProfile(res.data);
         setIsLoading(false);
-=======
-        setIsChecked(res.data);
-        // res.data ? setIsChecked(true) : setIsChecked(false);
->>>>>>> Stashed changes
       } catch (e) {
         console.error(e);
       }
